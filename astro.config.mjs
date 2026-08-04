@@ -1,11 +1,13 @@
 import { defineConfig } from 'astro/config';
 
 // Public medical reference + calculator toolkit.
-// Static build -> GitHub Pages (RDx75.github.io/medkit) or Cloudflare Pages (med.mark.com).
-// Base path is applied at deploy time (files copied under /medkit/), so we keep base '/'
-// and the workflow places dist into the gh-pages/medkit/ folder.
+// Static build -> GitHub Pages project site at https://RDx75.github.io/medkit/.
+// Because it's a *project* site, every URL needs the /medkit/ base prefix so
+// links resolve under the repo path. Files are uploaded to the artifact root
+// (the /medkit/ part comes from the repo name, not a folder).
 export default defineConfig({
   site: 'https://med.mark.com',
+  base: '/medkit/',
   output: 'static',
   trailingSlash: 'ignore',
 });
