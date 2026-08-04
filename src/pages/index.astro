@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import { categories, toolsByCategory } from '../data/tools';
+---
+
+<Base title="MedKit" description="40+ free, fast, privacy-first medical calculators and references. Everything runs locally in your browser.">
+  <section class="hero">
+    <span class="pill">⚕️ Free · Private · Runs in your browser</span>
+    <h1>All the Medical Tools.<br />Built for Clinicians &amp; Students.</h1>
+    <p>Calculators, references and study aids — BMI, GCS, APGAR, drug dosing, CPR protocols and more. Nothing is uploaded; every tool runs 100% on your device.</p>
+  </section>
+
+  {categories.map((c) => (
+    <section class="cat" id={c.id}>
+      <div class="cat-head">
+        <span class="emoji">{c.emoji}</span>
+        <h2>{c.title}</h2>
+      </div>
+      <p class="cat-desc">{c.description}</p>
+      <div class="grid">
+        {toolsByCategory(c.id).map((t) => (
+          <a class="card" href={`/tools/${t.slug}/`}>
+            <span class="ico">{t.emoji}</span>
+            <h3>{t.title}</h3>
+            <p>{t.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+</Base>
