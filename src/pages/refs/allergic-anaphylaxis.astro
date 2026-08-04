@@ -1,0 +1,113 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Allergic Anaphylaxis — MedKit" activeSlug="ref-allergic-anaphylaxis">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Allergic Anaphylaxis</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Allergic Reaction &amp; Anaphylaxis</h2>
+<blockquote>"Epinephrine ช่วยชีวิต — ใช้เร็ว อย่ารอ"</blockquote>
+<h3>ภาพรวม</h3>
+<p>Allergic reaction มี spectrum ตั้งแต่ mild → life-threatening:</p>
+<pre class="code"><code>Mild allergic reaction → Moderate allergic reaction → Anaphylaxis → Cardiac arrest</code></pre>
+<h3>Allergic Reaction Severity</h3>
+<h4>Mild (localized)</h4>
+<ul><li><strong>Urticaria (hives)</strong> — red, raised, itchy welts</li><li><strong>Pruritus (itching)</strong></li><li><strong>Localized angioedema</strong></li><li><strong>No airway/breathing/circulation compromise</strong></li><li><strong>Treatment:</strong> Diphenhydramine 25-50mg PO/IV, monitor</li></ul>
+<h4>Moderate (systemic)</h4>
+<ul><li><strong>Widespread urticaria</strong></li><li><strong>Angioedema</strong> (lips, tongue, face)</li><li><strong>Mild bronchospasm</strong> (wheezing)</li><li><strong>GI symptoms</strong> (nausea, vomiting, diarrhea)</li><li><strong>Treatment:</strong> Epinephrine if progressing, H1 + H2 blockers, steroids</li></ul>
+<h4>Anaphylaxis (Life-threatening) ⭐</h4>
+<h5>Diagnostic Criteria (≥1 of 3)</h5>
+<p>1. <strong>Acute onset</strong> (minutes-hours) + <strong>skin/mucosal involvement</strong> (urticaria, angioedema) + <strong>respiratory compromise</strong> OR <strong>hypotension</strong></p>
+<p>2. <strong>≥2 of 4</strong> after allergen exposure:</p>
+<ul><li>Skin/mucosal involvement</li><li>Respiratory compromise (stridor, wheezing, dyspnea)</li><li>Hypotension or end-organ dysfunction</li><li>Persistent GI symptoms</li></ul>
+<p>3. <strong>Hypotension</strong> after known allergen exposure</p>
+<h5>Signs &amp; Symptoms by System</h5>
+<table>
+<tr><th>System</th><th>Symptoms</th></tr>
+<tr><td><strong>Skin (90%)</strong></td><td>Urticaria, angioedema, flushing, pruritus, warmth</td></tr>
+<tr><td><strong>Respiratory (70%)</strong></td><td>Stridor (upper), wheezing (lower), dyspnea, hoarse voice, sensation of throat closing</td></tr>
+<tr><td><strong>Cardiovascular (45%)</strong></td><td>Hypotension, tachycardia, syncope, cardiac arrest (PEA/asystole)</td></tr>
+<tr><td><strong>GI (45%)</strong></td><td>Nausea, vomiting, diarrhea, abdominal cramping</td></tr>
+<tr><td><strong>Neurological (15%)</strong></td><td>Dizziness, syncope, sense of impending doom</td></tr>
+</table>
+<h4>⚠️ Key Points</h4>
+<ul><li><strong>Biphasic reaction:</strong> 1-72 ชม. หลัง initial episode (usually 8-10 ชม.) → second wave without re-exposure → monitor 4-6 ชม. minimum</li><li><strong>No hives?</strong> → Anaphylaxis can occur WITHOUT skin signs (10-20%)</li><li><strong>Mast cell tryptase</strong> → elevated in anaphylaxis (lab test, hospital)</li><li><strong>Anaphylaxis + β-blocker use</strong> → resistant to epinephrine → need glucagon 1-5mg IV</li></ul>
+<h3>Prehospital Treatment (Anaphylaxis)</h3>
+<h4>IMMEDIATE (Don't Wait!)</h4>
+<table>
+<tr><th>Step</th><th>Treatment</th><th>Dose</th></tr>
+<tr><td><strong>1</strong></td><td><strong>Epinephrine IM</strong></td><td><strong>0.3-0.5mg (1:1,000 = 1mg/mL)</strong> anterolateral thigh</td></tr>
+<tr><td><strong>2</strong></td><td>High-flow O2</td><td>15 L/min NRB</td></tr>
+<tr><td><strong>3</strong></td><td>IV fluid bolus (if hypotensive)</td><td>1-2L NS, rapid</td></tr>
+<tr><td><strong>4</strong></td><td>Position</td><td>Supine with legs elevated (if hypotensive)</td></tr>
+<tr><td><strong>5</strong></td><td>Call for ALS / rapid transport</td><td></td></tr>
+</table>
+<h4>Secondary Medications</h4>
+<table>
+<tr><th>Medication</th><th>Dose</th><th>Mechanism</th><th>Notes</th></tr>
+<tr><td><strong>Albuterol</strong></td><td>2.5-5mg Neb</td><td>Bronchospasm</td><td>If wheezing persistent</td></tr>
+<tr><td><strong>Diphenhydramine (Benadryl)</strong></td><td>25-50mg IV/IM</td><td>H1 blocker</td><td>After epinephrine</td></tr>
+<tr><td><strong>Ranitidine (Zantac)</strong></td><td>50mg IV</td><td>H2 blocker</td><td>Add to H1 blocker</td></tr>
+<tr><td><strong>Methylprednisolone</strong></td><td>125mg IV</td><td>Anti-inflammatory</td><td>Prevents biphasic, slow onset</td></tr>
+<tr><td><strong>Glucagon</strong></td><td>1-5mg IV</td><td>Bypasses β-receptors</td><td>If on β-blockers resistant to epi</td></tr>
+</table>
+<h4>Epinephrine — Key Points</h4>
+<ul><li><strong>IM (anterolateral thigh)</strong> = FIRST line for anaphylaxis</li><li><strong>IV epinephrine</strong> = only in cardiac arrest or refractory shock (1:10,000 = 0.1mg IV)</li><li><strong>Can repeat</strong> every 5-15 minutes if no response</li><li><strong>No contraindication</strong> in anaphylaxis (even in pregnancy, elderly, cardiac patients)</li><li><strong>Adverse effects:</strong> Tachycardia, tremor, anxiety — expected and acceptable</li></ul>
+<h3>Common Allergens</h3>
+<h4>Most Common Causes</h4>
+<table>
+<tr><th>Category</th><th>Examples</th></tr>
+<tr><td><strong>Foods</strong></td><td>Peanuts, tree nuts, shellfish, fish, milk, eggs, soy, wheat</td></tr>
+<tr><td><strong>Medications</strong></td><td>Penicillin, NSAIDs, aspirin, contrast dye, vaccines</td></tr>
+<tr><td><strong>Insect stings</strong></td><td>Bee, wasp, hornet, fire ant</td></tr>
+<tr><td><strong>Latex</strong></td><td>Gloves, medical equipment</td></tr>
+<tr><td><strong>Exercise</strong></td><td>Exercise-induced anaphylasma</td></tr>
+<tr><td><strong>Idiopathic</strong></td><td>No identifiable cause (20%)</td></tr>
+</table>
+<h3>Differential Diagnosis</h3>
+<table>
+<tr><th>Condition</th><th>Differentiating Feature</th></tr>
+<tr><td><strong>Asthma exacerbation</strong></td><td>History of asthma, no urticaria, no hypotension</td></tr>
+<tr><td><strong>Foreign body</strong></td><td>Sudden onset, no skin signs, unilateral wheeze</td></tr>
+<tr><td><strong>Vasovagal</strong></td><td>Bradycardia (not tachycardia), pallor (not urticaria), no bronchospasm</td></tr>
+<tr><td><strong>Panic attack</strong></td><td>No urticaria, no wheezing, no hypotension</td></tr>
+<tr><td><strong>Hereditary angioedema</strong></td><td>No urticaria, C1 esterase inhibitor deficiency, no response to epi</td></tr>
+<tr><td><strong>Mastocytosis</strong></td><td>Flushing, elevated baseline tryptase</td></tr>
+</table>
+<h3>Anaphylaxis in Special Populations</h3>
+<h4>Pregnancy</h4>
+<ul><li><strong>Epinephrine is safe</strong> — fetal distress from maternal hypoxia worse than epi side effects</li><li>Left lateral tilt (aortocaval compression)</li><li>Fetal distress = sign of severe maternal hypoxia</li></ul>
+<h4>Pediatric</h4>
+<ul><li><strong>Dose:</strong> Epinephrine 0.01mg/kg IM (max 0.3-0.5mg)</li><li><strong>EpiPen Jr</strong> = 0.15mg (for &lt;25 kg)</li><li><strong>EpiPen</strong> = 0.3mg (for &gt;25 kg)</li><li>Common causes: Foods (milk, eggs, peanuts), insect stings</li></ul>
+<h4>Elderly / Cardiac Patients</h4>
+<ul><li>Higher risk of cardiac complications from epinephrine</li><li><strong>But still give epinephrine</strong> — anaphylasma kills faster than cardiac events</li><li>Lower threshold for IV epinephrine in severe cases</li><li>If on β-blockers → may need glucagon</li></ul>
+<h3>Post-Treatment Monitoring</h3>
+<h4>Biphasic Anaphylaxis</h4>
+<ul><li>Occurs in <strong>5-20%</strong> of cases</li><li>Typically <strong>8-10 ชม.</strong> after initial episode</li><li>Can occur up to <strong>72 ชม.</strong> later</li><li><strong>Observation:</strong> Minimum 4-6 ชม. after resolution</li><li><strong>Discharge with:</strong> Epinephrine auto-injector prescription, allergy referral, anaphylaxis action plan</li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> Anaphylaxis first-line treatment?</p>
+<p><strong>A1:</strong> <strong>Epinephrine 0.3-0.5mg IM</strong> (anterolateral thigh) — NEVER delay</p>
+<p><strong>Q2:</strong> Biphasic anaphylaxis เกิดเมื่อไหร่?</p>
+<p><strong>A2:</strong> <strong>1-72 ชม.</strong> after initial episode (usually 8-10 ชม.) → monitor 4-6 ชม.</p>
+<p><strong>Q3:</strong> Patient on β-blockers + anaphylaxis resistant to epinephrine — ให้อะไร?</p>
+<p><strong>A3:</strong> <strong>Glucagon 1-5mg IV</strong> — bypasses β-receptors</p>
+<h3>ภาษาไทย: Anaphylaxis สำหรับ EMT</h3>
+<ul><li><strong>Epinephrine IM ทันที</strong> — อย่ารอ antihistamine</li><li><strong>Anaphylaxis ไม่ต้องมี hives</strong> — 10-20% ไม่มี skin signs</li><li><strong>Biphasic reaction</strong> — monitor 4-6 ชม.</li><li><strong>ถ้าได้ epi แล้วไม่ดี</strong> → repeat ทุก 5-15 นาที + IV fluid + albuterol</li><li><strong>Pregnant = ยังให้ epi</strong> — fetal distress แย่กว่า side effects</li></ul>
+<h3>Related</h3>
+<ul><li>[[Respiratory Emergencies - Asthma COPD]]</li><li>[[Epinephrine - Usage Dosage]]</li><li>[[Airway Management]]</li><li>[[IV Fluid Therapy]]</li><li>[[Albuterol - Bronchospasm]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA Medical ↗</a></li>
+      <li><a href="https://wikem.org/" target="_blank" rel="noopener">WikEM ↗</a></li>
+        </ul>
+        <p class="src">Source: WAO</p>
+      </div>
+    </aside>
+  </article>
+</Base>
