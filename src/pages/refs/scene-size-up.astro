@@ -1,0 +1,98 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Scene Size Up — MedKit" activeSlug="ref-scene-size-up">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Scene Size Up</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Scene Size-Up</h2>
+<blockquote>"มองก่อนลงมือ = ปลอดภัย + มีข้อมูล — Scene size-up ทำทุก call ทุกครั้ง"</blockquote>
+<h3>บทนำ</h3>
+<p>Scene size-up คือการประเมินสถานการณ์ก่อนเข้าไปดูแลผู้ป่วย เป็นขั้นตอนแรกและสำคัญที่สุดของทุก EMS call ทำตั้งแต่รับ call จนถึง scene</p>
+<h3>Scene Size-Up vs Primary Assessment</h3>
+<table>
+<tr><th></th><th>Scene Size-Up</th><th>Primary Assessment</th></tr>
+<tr><td><strong>เรื่อง</strong></td><td>สถานที่/สภาพ/จำนวน</td><td>ผู้ป่วย ABCs</td></tr>
+<tr><td><strong>เมื่อ</strong></td><td>ก่อนเข้าถึงผู้ป่วย</td><td>หลังเข้าถึงผู้ป่วย</td></tr>
+<tr><td><strong>คำถาม</strong></td><td>"Scene ปลอดภัยไหม?"</td><td>"ผู้ป่วยจะมีชีวิตไหม?"</td></tr>
+</table>
+<h3>SNAME (Scene Size-Up)</h3>
+<h4>S — Scene Safe?</h4>
+<ul><li>Scene ปลอดภัยไหม?</li><li>มีอันตรายไหม? (traffic, fire, violence, hazmat)</li><li>ต้องใช้ PPE อะไร?</li></ul>
+<h4>N — Number of Patients?</h4>
+<ul><li>มีผู้ป่วย/บาดเจ็บกี่คน?</li><li>ต้องการ resources เพิ่มไหม? (MCI?)</li></ul>
+<h4>A — Additional Resources?</h4>
+<ul><li>ต้องการอะไรเพิ่มไหม?</li><li>Fire department? Police? HazMat? Air medical? Additional ambulances?</li></ul>
+<h4>M — Mechanism of Injury / Nature of Illness?</h4>
+<ul><li><strong>MOI</strong> (trauma): เกิดอะไรขึ้น? รถชน? ตก? ยิง?</li><li><strong>NOI</strong> (medical): อาการอะไร? เจ็บหน้าอก? หายใจลำบาก?</li><li>ช่วย <strong>คาดการณ์</strong> บาดเจ็บที่อาจเกิดขึ้น</li></ul>
+<h4>E — Environmental Conditions?</h4>
+<ul><li>สภาพอากาศเป็นอย่างไร? (ร้อน, หนาว, ฝน)</li><li>สภาพถนน/ที่ตั้งเป็นอย่างไร?</li><li>มีแสงสว่างเพียงพอไหม?</li></ul>
+<h3>Scene Size-Up ตั้งแต่รับ call</h3>
+<h4>ขณะรับ call (Dispatch Information)</h4>
+<ul><li><strong>Location</strong>: ที่ไหน? (address, landmarks)</li><li><strong>Nature</strong>: เกิดอะไรขึ้น? (chest pain, MVA, fall)</li><li><strong> Number</strong>: ผู้ป่วยกี่คน?</li><li><strong>Hazards</strong>: มีอันตรายไหม?</li><li><strong>ETA</strong>: รถพยาบาลอีกนาที?</li></ul>
+<h4>ขณะ en route</h4>
+<ul><li>เตรียม equipment ตาม nature of call</li><li>คิดถึง MOI → คาดการณ์อาการบาดเจ็บ</li><li><strong>Mental rehearsal</strong> — คิดแผนล่วงหน้า</li></ul>
+<h3>Scene Size-Up เมื่อถึง scene</h3>
+<h4>1. มองจากระยะไกล</h4>
+<ul><li>สังเกตสถานการณ์ทั่วไป</li><li>มีอะไรผิดปกติไหม?</li><li>มีคนชี้/กระวนกระวายไหม?</li></ul>
+<h4>2. วางรถ</h4>
+<ul><li>วางรถให้ปลอดภัย</li><li>เปิด emergency lights</li><li>วาง cones ถ้าจำเป็น</li></ul>
+<h4>3. ประเมิน (SNAME)</h4>
+<ul><li><strong>Scene safe?</strong> — ปลอดภัยไหม?</li><li><strong>Number</strong> — กี่คน?</li><li><strong>Resources</strong> — ต้องการเพิ่มไหม?</li><li><strong>MOI/NOI</strong> — เกิดอะไรขึ้น?</li><li><strong>Environment</strong> — สภาพแวดล้อม?</li></ul>
+<h4>4. สวม PPE</h4>
+<ul><li>Gloves (ทุก call)</li><li>เพิ่มตามความจำเป็น (gown, mask, eye protection)</li></ul>
+<h4>5. ข้อมูลเบื้องต้น</h4>
+<ul><li>ถามผู้พยาน: "เกิดอะไรขึ้น?"</li><li>ถามผู้ป่วย: "คุณเจ็บตรงไหน?"</li><li>สังเกต: breathing effort, skin color, position</li></ul>
+<h3>MOI (Mechanism of Injury) — สำคัญมาก!</h3>
+<h4>MVA (Motor Vehicle Accident)</h4>
+<table>
+<tr><th>MOI</th><th>อาการบาดเจ็บที่คาดการณ์</th></tr>
+<tr><td><strong>Head-on</strong></td><td>Chest, head, femur</td></tr>
+<tr><td><strong>Rear-end</strong></td><td>C-spine (whiplash)</td></tr>
+<tr><td><strong>Side impact (T-bone)</strong></td><td>Chest, pelvis, C-spine</td></tr>
+<tr><td><strong>Rollover</strong></td><td>Multiple injuries, ejection</td></tr>
+<tr><td><strong>Ejection</strong></td><td>Severe/multi-system trauma</td></tr>
+</table>
+<h4>Falls</h4>
+<ul><li><strong>Height &gt; 3 เมตร</strong> = significant MOI</li><li><strong>ผู้สูงอายุ</strong>: แม้ต่ำกว่าก็อาจสำคัญ</li><li>สังเกต: ลงกี่เมตร? ลงที่ไหน? (หัว, กระดูกสันหลัง, ขา)</li></ul>
+<h4>Penetrating Trauma</h4>
+<table>
+<tr><th></th><th>Low velocity (มีด)</th><th>High velocity (ปืน)</th></tr>
+<tr><td><strong>Injury path</strong></td><td>ตรง</td><td>กระจาย (cavitation)</td></tr>
+<tr><td><strong>การดูแล</strong></td><td>กดห้ามเลือด</td><td>Load and go → OR</td></tr>
+</table>
+<h4>Blast Injury</h4>
+<ul><li><strong>Primary</strong>: Blast wave → lung, ear, GI</li><li><strong>Secondary</strong>: Shrapnel → penetrating wounds</li><li><strong>Tertiary</strong>: Thrown → blunt trauma</li><li><strong>Quaternary</strong>: Burn, inhalation, crush</li></ul>
+<h3>NOI (Nature of Illness)</h3>
+<p>สำหรับ medical calls:</p>
+<ul><li>สังเกต <strong>general impression</strong>: ดูปกติไหม? หอบ? เหงื่อ?</li><li>สังเกต <strong>activity</strong>: นั่ง? นอน? เดินได้?</li><li>สังเกต <strong>environment</strong>: มีขวดยา? มีอุปกรณ์การแพทย์?</li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> SNAME หมายถึงอะไร?</p>
+<p><strong>A1:</strong> Scene safe, Number of patients, Additional resources, Mechanism of injury, Environmental conditions</p>
+<p><strong>Q2:</strong> Scene size-up ทำเมื่อใด?</p>
+<p><strong>A2:</strong> ตั้งแต่รับ call → en route → ถึง scene → ก่อนเข้าหาผู้ป่วย</p>
+<p><strong>Q3:</strong> MVA head-on คาดการณ์บาดเจ็บอะไร?</p>
+<p><strong>A3:</strong> Chest, head, femur</p>
+<p><strong>Q4:</strong> Fall จากความสูงกี่เมตร = significant MOI?</p>
+<p><strong>A4:</strong> &gt; 3 เมตร (สำหรับผู้ใหญ่)</p>
+<p><strong>Q5:</strong> Blast injury primary mechanism?</p>
+<p><strong>A5</strong>: Blast wave → damage to air-filled organs (lung, ear, GI)</p>
+<h3>ภาษาไทย</h3>
+<p>Scene size-up เป็นการประเมินสถานการณ์ด้วย SNAME ตั้งแต่รับ call จนถึง scene ช่วยคาดการณ์บาดเจ็บจาก MOI/NOI และเตรียม resources ที่จำเป็น</p>
+<h4>Related</h4>
+<ul><li>[[Scene Safety]]</li><li>[[Operations and Safety]]</li><li>[[Primary Assessment - ABCDE]]</li><li>[[Trauma Assessment]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA EMS Operations ↗</a></li>
+        </ul>
+        <p class="src">Source: NHTSA EMT Scope of Practice</p>
+      </div>
+    </aside>
+  </article>
+</Base>
