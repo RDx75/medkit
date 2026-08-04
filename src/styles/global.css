@@ -263,3 +263,42 @@ code, pre, kbd { font-family: var(--mono); }
 .footer a:hover { color: var(--accent); }
 .footer .spacer { margin-left: auto; }
 .disclaimer { font-size: 12px; color: var(--text-faint); margin-top: 4px; }
+
+/* ---------- Reference page (generated from SB) ---------- */
+.ref-page { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 2.5rem; align-items: start; }
+.ref-body { min-width: 0; }
+.ref-body h2 { font-size: 1.6rem; margin: 1.8rem 0 0.8rem; color: var(--text); }
+.ref-body h3 { font-size: 1.25rem; margin: 1.5rem 0 0.6rem; color: var(--accent); }
+.ref-body h4 { font-size: 1.05rem; margin: 1.1rem 0 0.4rem; color: var(--text); }
+.ref-body p { margin: 0.6rem 0; line-height: 1.7; color: var(--text-dim); }
+.ref-body ul { margin: 0.6rem 0; padding-left: 1.4rem; color: var(--text-dim); line-height: 1.7; }
+.ref-body li { margin: 0.3rem 0; }
+.ref-body table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
+.ref-body th, .ref-body td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; }
+.ref-body th { background: var(--bg-elev-2); color: var(--text); font-weight: 600; }
+.ref-body td { color: var(--text-dim); }
+.ref-body blockquote { border-left: 3px solid var(--accent); padding: 0.5rem 1rem; margin: 1rem 0; background: var(--accent-soft); color: var(--text); border-radius: var(--radius-sm); font-style: italic; }
+.ref-body pre.code { background: var(--bg-elev-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem; overflow-x: auto; font-family: var(--mono); font-size: 0.85rem; color: var(--text-dim); }
+.ref-body code { font-family: var(--mono); background: var(--bg-elev-2); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
+.ref-side { position: sticky; top: 1rem; }
+.ref-card { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
+.ref-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--accent); }
+.ref-card .muted { font-size: 0.82rem; color: var(--text-faint); margin-bottom: 0.8rem; }
+.ref-links { list-style: none; padding: 0; margin: 0 0 1rem; }
+.ref-links li { margin: 0.4rem 0; }
+.ref-links a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+.ref-links a:hover { text-decoration: underline; }
+.ref-card .src { font-size: 0.78rem; color: var(--text-faint); border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 0.5rem; }
+@media (max-width: 820px) { .ref-page { grid-template-columns: 1fr; } .ref-side { position: static; } }
+
+/* ---------- Quiz page ---------- */
+.quiz-q { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem; margin: 1rem 0; }
+.quiz-q h3 { margin: 0 0 1rem; color: var(--text); font-size: 1.1rem; }
+.quiz-opt { display: block; width: 100%; text-align: left; padding: 0.7rem 1rem; margin: 0.4rem 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-elev-2); color: var(--text-dim); cursor: pointer; font-size: 0.95rem; transition: all 0.15s; }
+.quiz-opt:hover { border-color: var(--accent); color: var(--text); }
+.quiz-opt.correct { background: rgba(74,222,128,0.15); border-color: var(--ok); color: var(--ok); }
+.quiz-opt.wrong { background: rgba(248,113,113,0.15); border-color: var(--danger); color: var(--danger); }
+.quiz-feedback { margin-top: 0.8rem; font-size: 0.9rem; padding: 0.7rem; border-radius: var(--radius-sm); }
+.quiz-feedback.ok { background: rgba(74,222,128,0.12); color: var(--ok); }
+.quiz-feedback.bad { background: rgba(248,113,113,0.12); color: var(--danger); }
+.quiz-score { font-size: 1.1rem; color: var(--accent); margin: 1rem 0; font-weight: 600; }
