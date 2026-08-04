@@ -1,0 +1,149 @@
+---
+import '../styles/global.css';
+import { categories, tools } from '../data/tools';
+
+interface Props {
+  title: string;
+  description?: string;
+  activeSlug?: string;
+}
+
+const { title, description = 'Free, fast, privacy-first medical calculators and references. Everything runs locally in your browser.', activeSlug } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title} — MedKit</title>
+    <script is:inline>
+      // Apply persisted theme before paint to avoid flash.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <a class="brand" href="/">
+          <span class="logo">⚕️</span>
+          <span>MedKit<span class="sub">&nbsp;medical tools</span></span>
+        </a>
+        <button class="search-btn" id="searchTrigger">
+          <span>Search</span><kbd>⌘K</kbd>
+        </button>
+        <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+      </header>
+
+      <div class="page">
+        <aside class="sidebar">
+          {categories.map((c) => (
+            <div class="side-group">
+              <h4>{c.title}</h4>
+              {tools.filter((t) => t.category === c.id).map((t) => (
+                <a class={`side-link ${activeSlug === t.slug ? 'active' : ''}`} href={`/tools/${t.slug}/`}>
+                  <span class="ico">{t.emoji}</span>{t.title}
+                </a>
+              ))}
+            </div>
+          ))}
+        </aside>
+
+        <main class="main">
+          <slot />
+        </main>
+      </div>
+
+      <footer class="footer">
+        <span>⚕️ MedKit.dev</span>
+        <a href="/about/">About</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <span class="spacer"></span>
+        <span class="disclaimer">For education &amp; reference only — not a substitute for professional medical advice.</span>
+      </footer>
+    </div>
+
+    <!-- ⌘K command palette -->
+    <div class="modal-backdrop" id="searchModal">
+      <div class="modal">
+        <input id="searchInput" type="text" placeholder="Search tools, references…" autocomplete="off" />
+        <div class="modal-results" id="searchResults"></div>
+      </div>
+    </div>
+
+    <script is:inline define:vars={{ tools, categories }}>
+      // ---- Theme toggle ----
+      const themeBtn = document.getElementById('themeToggle');
+      function syncThemeIcon() {
+        const t = document.documentElement.getAttribute('data-theme');
+        themeBtn.textContent = t === 'light' ? '☀️' : '🌙';
+      }
+      syncThemeIcon();
+      themeBtn.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme');
+        const next = cur === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        syncThemeIcon();
+      });
+
+      // ---- Search palette ----
+      const modal = document.getElementById('searchModal');
+      const input = document.getElementById('searchInput');
+      const results = document.getElementById('searchResults');
+      const trigger = document.getElementById('searchTrigger');
+      let cursor = -1;
+
+      const catMap = Object.fromEntries(categories.map((c) => [c.id, c.title]));
+
+      function render(q) {
+        const query = q.trim().toLowerCase();
+        const list = query
+          ? tools.filter((t) => (t.title + ' ' + t.description + ' ' + (catMap[t.category] || '')).toLowerCase().includes(query))
+          : tools;
+        cursor = -1;
+        if (!list.length) {
+          results.innerHTML = '<div class="modal-empty">No tools found.</div>';
+          return;
+        }
+        results.innerHTML = list
+          .map((t, i) => `<a href="/tools/${t.slug}/" data-i="${i}"><span class="ico">${t.emoji}</span><span>${t.title}</span><span class="cat-tag">${(catMap[t.category] || '').toUpperCase()}</span></a>`)
+          .join('');
+      }
+
+      function openModal() {
+        modal.classList.add('open');
+        input.value = '';
+        render('');
+        input.focus();
+      }
+      function closeModal() { modal.classList.remove('open'); }
+
+      trigger.addEventListener('click', openModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      input.addEventListener('input', () => render(input.value));
+      input.addEventListener('keydown', (e) => {
+        const items = [...results.querySelectorAll('a')];
+        if (e.key === 'ArrowDown') { cursor = Math.min(cursor + 1, items.length - 1); }
+        else if (e.key === 'ArrowUp') { cursor = Math.max(cursor - 1, 0); }
+        else if (e.key === 'Enter') { if (items[cursor]) items[cursor].click(); return; }
+        else return;
+        items.forEach((el, i) => el.classList.toggle('cursor', i === cursor));
+        if (items[cursor]) items[cursor].scrollIntoView({ block: 'nearest' });
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openModal(); }
+        else if (e.key === 'Escape') { closeModal(); }
+      });
+    </script>
+  </body>
+</html>
