@@ -1,6 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 
+const base = import.meta.env.BASE_URL;
+
 // Sample EMT questions. Later these can be loaded from the Obsidian vault
 // (EMT-Study-Web pattern) so the quiz stays in sync with your notes.
 const questions = [
@@ -38,7 +40,7 @@ const questions = [
 ---
 
 <Base title="EMT Quiz" activeSlug="quiz">
-  <div class="breadcrumb"><a href="/">MedKit</a> / Study / <span>EMT Quiz</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / Study / <span>EMT Quiz</span></div>
   <h1>EMT Quiz</h1>
   <p class="cat-desc">Practice questions drawn from your EMT study notes. Your answers stay on this device.</p>
 
