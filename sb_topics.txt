@@ -1,0 +1,34 @@
+# Core EMT Topics (30) — selected from SB (Health-EMT / Advanced-EMT)
+# Format: slug | SB source file | category | primary reference (external)
+# category: assessment | airway | trauma | medical | cardiac | peds-obs | ops | pharmacology
+
+- scene-size-up        | Scene Size-Up.md                 | ops        | NHTSA EMT Scope of Practice
+- primary-assessment   | Primary Assessment - ABCDE.md     | assessment | AHA BLS 2025
+- secondary-assessment | Secondary Assessment - SAMPLE.md   | assessment | NHTSA
+- vital-signs          | Vital Signs - Normal Ranges.md     | assessment | AHA / NREMT
+- patient-assessment   | Patient Assessment.md              | assessment | NHTSA
+- cpr-adult            | CPR Guidelines - Adult.md          | cardiac    | AHA BLS 2025
+- cpr-peds             | CPR Guidelines - Pediatric.md      | cardiac    | AHA BLS 2025
+- aed                  | AED Usage.md                        | cardiac    | AHA 2025
+- airway-basics        | Airway Management.md               | airway     | NREMT
+- opa-npa              | Basic Airway Adjuncts — OPA, NPA.md | airway     | NREMT
+- bvm                  | Bag-Valve-Mask Ventilation.md       | airway     | NREMT
+- oxygen-therapy       | Oxygen Therapy.md                  | airway     | NREMT
+- bleeding-shock       | Bleeding Shock.md                  | trauma     | NHTSA
+- stop-the-bleed       | STOP THE BLEED.md                  | trauma     | ACS STOP THE BLEED
+- fractures            | Fractures Dislocations.md           | trauma     | NHTSA
+- head-spine           | Head Spinal Injuries.md            | trauma     | NHTSA
+- chest-trauma         | Chest Trauma.md                    | trauma     | NHTSA
+- burns                | Burns - Assessment Management.md    | trauma     | ABA
+- medical-emergencies  | Medical Emergencies.md             | medical    | NHTSA
+- allergic-anaphylaxis | Allergic Reaction Anaphylaxis.md    | medical    | WAO
+- diabetic             | Diabetic Emergencies.md            | medical    | NHTSA
+- seizures             | Seizures - Assessment Management.md | medical    | ILAE
+- stroke               | Stroke - Management.md             | medical    | AHA/ASA
+- respiratory          | Respiratory Emergencies - Asthma COPD.md | medical | GINA/GOLD
+- poisoning            | Poisoning Overdose.md              | medical    | AHA/ACEP
+- cardiac-acs          | Acute Coronary Syndrome.md         | cardiac    | AHA 2025
+- pharmacology         | Pharmacology for EMT.md            | pharmacology | NHTSA
+- meds-overview        | EMT Medication Overview.md         | pharmacology | NHTSA
+- pediatric            | Pediatric Emergencies.md           | peds-obs   | AAP
+- ob-gyn               | OB-GYN Emergencies.md              | peds-obs   | ACOG
