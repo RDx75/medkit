@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="MAP Calculator" activeSlug="map">
-  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>MAP Calculator</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>MAP Calculator</span></div>
   <h1>MAP Calculator</h1>
   <p class="cat-desc">Mean Arterial Pressure from systolic and diastolic blood pressure.</p>
 
