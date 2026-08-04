@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="MAP Calculator" activeSlug="map">
+  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>MAP Calculator</span></div>
+  <h1>MAP Calculator</h1>
+  <p class="cat-desc">Mean Arterial Pressure from systolic and diastolic blood pressure.</p>
+
+  <div class="tool-ui">
+    <div class="row">
+      <div class="field">
+        <label>Systolic BP (mmHg)</label>
+        <input id="sys" type="number" value="120" min="0" step="1" />
+      </div>
+      <div class="field">
+        <label>Diastolic BP (mmHg)</label>
+        <input id="dia" type="number" value="80" min="0" step="1" />
+      </div>
+    </div>
+    <button class="btn" id="calc">Calculate</button>
+    <div class="result" id="out">Enter values and press Calculate.</div>
+  </div>
+
+  <div class="article">
+    <h2>Free Online MAP Calculator</h2>
+    <p>Mean Arterial Pressure (MAP) is the average pressure in a patient's arteries during one cardiac cycle. It better reflects perfusion of vital organs than a single systolic or diastolic reading.</p>
+    <p><code>MAP = Diastolic + (Systolic − Diastolic) / 3</code></p>
+    <h3>Interpretation</h3>
+    <table>
+      <tr><th>MAP</th><th>Meaning</th></tr>
+      <tr><td>≥ 70 mmHg</td><td>Generally adequate organ perfusion</td></tr>
+      <tr><td>&lt; 65 mmHg</td><td>Consider support to maintain perfusion</td></tr>
+    </table>
+    <h3>FAQ</h3>
+    <details class="faq"><summary>Why weight diastolic more?</summary><div class="body">The heart spends roughly two-thirds of the cycle in diastole, so MAP sits closer to diastolic than to the arithmetic mean.</div></details>
+    <div class="callout">MAP is a guide; assess perfusion with clinical signs (capillary refill, urine output, mental status) too.</div>
+  </div>
+
+  <script is:inline>
+    const out = document.getElementById('out');
+    function run() {
+      const sys = parseFloat(document.getElementById('sys').value);
+      const dia = parseFloat(document.getElementById('dia').value);
+      if (!sys || !dia) { out.textContent = 'Enter both systolic and diastolic.'; return; }
+      const map = dia + (sys - dia) / 3;
+      const cls = map >= 70 ? 'ok' : (map >= 65 ? 'warn' : 'bad');
+      const label = map >= 70 ? 'Adequate' : (map >= 65 ? 'Borderline' : 'Low');
+      out.innerHTML = `<span class="big">${map.toFixed(0)}</span> mmHg <span class="tag tag-${cls}">${label}</span>`;
+    }
+    document.getElementById('calc').addEventListener('click', run);
+    document.getElementById('sys').addEventListener('input', run);
+    document.getElementById('dia').addEventListener('input', run);
+    run();
+  </script>
+</Base>
