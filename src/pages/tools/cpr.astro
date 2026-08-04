@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="CPR / BLS Guide" activeSlug="cpr">
-  <div class="breadcrumb"><a href="/">MedKit</a> / References / <span>CPR / BLS Guide</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / References / <span>CPR / BLS Guide</span></div>
   <h1>CPR / BLS Guide</h1>
   <p class="cat-desc">Adult, child and infant CPR steps, compression:ventilation ratios and depths.</p>
 
