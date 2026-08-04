@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="GCS Calculator" activeSlug="gcs">
-  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>GCS Calculator</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>GCS Calculator</span></div>
   <h1>GCS Calculator</h1>
   <p class="cat-desc">Glasgow Coma Scale — Eye, Verbal, Motor summed to a score of 3–15.</p>
 
