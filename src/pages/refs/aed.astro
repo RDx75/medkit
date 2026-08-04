@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Aed — MedKit" activeSlug="ref-aed">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Aed</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>AED Usage — การใช้เครื่องกระตุ้นหัวใจ</h2>
+<blockquote>"AED ช่วยชีวิตได้ง่ายๆ — เปิดเครื่อง แปะแผ่น กดตามเสียงบอก"</blockquote>
+<h3>หลักการสำคัญ (Key Principles)</h3>
+<ul><li>AED = Automated External Defibrillator</li><li><strong>วิเคราะห์ rhythm อัตโนมัติ</strong> — ไม่ต้องอ่าน ECG เอง</li><li><strong>แนะนำ shock เฉพาะ VF และ pulseless VT</strong> — ปลอดภัย ไม่ shock คนที่ไม่ควร</li><li><strong>ใช้ได้โดยทุกคน</strong> — ไม่จำเป็นต้องเป็นแพทย์</li></ul>
+<h3>ขั้นตอนการใช้ AED (Step-by-Step)</h3>
+<h4>1. เปิดเครื่อง (Power On)</h4>
+<ul><li>กดปุ่ม Power/On</li><li>AED จะเริ่มพูดคำแนะนำ (voice prompt) ทีละขั้นตอน</li></ul>
+<h4>2. เตรียมผู้ป่วย</h4>
+<ul><li><strong>เปิดเสื้อผ้า</strong> ให้เห็นหน้าอกทั้งหมด</li><li><strong>เช็คผิวให้แห้ง</strong> — ถ้าเปียก/เหงื่อ ใช้ผ้าเช็คให้แห้ง</li><li><strong>ถอดยาหนาแผ่น</strong> (transdermal patch) ออก — nitroglycerin patch, nicotine patch</li><li><strong>โกนผม</strong> ถ้าหน้าอกมีผมเยอะ (ใน AED kit มี razor)</li></ul>
+<h4>3. แปะแผ่น Electrode Pads</h4>
+<table>
+<tr><th>แผ่น</th><th>ตำแหน่ง</th><th>สัญลักษณ์</th></tr>
+<tr><td><strong>แผ่นขวา</strong></td><td>ขวาใต้ clavicle (กระดูกไหปลาร้า) ขนานกับ collarbone</td><td>ในกรอบแผ่นจะมีรูป</td></tr>
+<tr><td><strong>แผ่นซ้า่ง</strong></td><td>ซ้า่งลำตัว ระดับ nipple line (เส้นราวนม) กึ่งกลางระหว่าง nipple กับ armpit</td><td>ในกรอบแผ่นจะมีรูป</td></tr>
+</table>
+<ul><li>แปะแน่น — ถิ่นผิวต้องแห้ง</li><li>ถ้า <strong>pad ชนกัน</strong> (ผู้ป่วยตัวเล็ก) → แปะ <strong>anterior-posterior</strong> (หน้าอก + หลัง)</li></ul>
+<h4>4. วิเคราะห์ Rhythm (Analyze)</h4>
+<ul><li>AED บอก <strong>"Analyzing rhythm"</strong></li><li><strong>⚠️ อย่าสัมผัสผู้ป่วย!</strong> — ทุกคนห่างออก</li><li>AED ใช้เวลา 5-15 วินาทีวิเคราะห์</li></ul>
+<h4>5a. ถ้า AED บอก "Shock Advised"</h4>
+<p>1. AED ชาร์จ → บอก <strong>"Charging..."</strong></p>
+<p>2. <strong>ตรวจสอบความปลอดภัย</strong> — ตะโกน <strong>"Clear!"</strong> + มองรอบๆ</p>
+<p>3. <strong>แน่ใจว่าไม่มีคนสัมผัสผู้ป่วย</strong></p>
+<p>4. กดปุ่ม <strong>⚡ SHOCK</strong> (ปุ่มกะพริบ)</p>
+<p>5. <strong>เริ่ม CPR ทันที</strong> 2 นาที (30:2)</p>
+<p>6. 2 นาทีผ่าน → AED จะวิเคราะห์ใหม่ตั้งอัตโนมัติ</p>
+<h4>5b. ถ้า AED บอก "No Shock Advised"</h4>
+<ul><li><strong>เริ่ม/ต่อ CPR</strong> ทันที</li><li>AED จะวิเคราะห์ใหม่ทุก 2 นาที</li></ul>
+<h4>6. ทำซ้ำจน ALS มาถึง</h4>
+<ul><li>วง: <strong>CPR 2 นาที → Analyze → Shock/No Shock → CPR 2 นาที</strong></li><li><strong>อย่าหยุด CPR</strong> นอกจาก AED วิเคราะห์อยู่</li><li><strong>ALS มาถึง</strong> → ส่งผู้ป่วย + MIST report</li></ul>
+<h3>สถานการณ์พิเศษ (Special Situations)</h3>
+<h4>ผู้ป่วยเปียก/อยู่ในน้ำ</h4>
+<ul><li><strong>ดึงออกจากน้ำก่อน</strong></li><li>เช็คหน้าอกให้แห้งก่อนแปะ pads</li><li>น้ำนำไฟฟ้า → current กระจาย → ช็อตไม่ถึงหัวใจ</li></ul>
+<h4>ผมหน้าอย่าเยอะ</h4>
+<ul><li>แปะ pads แล้ว <strong>ดึงออกเร็วๆ</strong> (ผมจะฉีกออกกับ pads)</li><li>โกนผมด้ย razor จาก AED kit</li><li>แปะ pads ใหม่</li></ul>
+<h4>Transdermal Patch (ยาหนาแผ่น)</h4>
+<ul><li><strong>ถอด patch ออก</strong> (เช่น nitroglycerin, nicotine, fentanyl)</li><li>เช็คผิวให้สะอาดก่อนแปะ pads</li><li>ยาอาจกันกระแสไฟฟ้าหรือติดไฟ</li></ul>
+<h4>เครื่องกระตุ้นหัวใจฝังใต้ผิว (Pacemaker/ICD)</h4>
+<ul><li>เช็ค <strong>ก้อน device ใต้ผิว</strong> (มักอยู่ใต้ left clavicle)</li><li>แปะ pad <strong>ห่างจาก device อย่างน้อย 2.5 ซม.</strong></li><li>ถ้า ICD กำลัง fire → รอจนหยุดแล้วค่อยใช้ AED</li></ul>
+<h4>ผู้ป่วยเด็ก (Pediatric)</h4>
+<ul><li><strong>อายุ &lt;8 ปี หรือ น้ำหนัก &lt;25 กก.</strong> → ใช้ <strong>pediatric pads</strong> (energy ลดลง)</li><li>ถ้าไม่มี pediatric pads → ใช้ adult pads ได้</li><li>แปะ <strong>anterior-posterior</strong> ถ้า pads ชนกัน</li></ul>
+<h4>ผู้ป่วยตั้งครรภ์</h4>
+<ul><li>ใช้ AED ปกติ — <strong>ไม่ต้องกลัว</strong> ต่อทารก</li><li>ถอด breast pad ออกถ้ามี</li></ul>
+<h4>อากาศมี O2 เยอะ</h4>
+<ul><li>ถอด O2 mask/cannula ออก <strong>ห่างจากหน้าอก</strong> ก่อนช็อต</li><li>Spark จาก AED อาจจุด O2 ติดไฟ</li></ul>
+<h3>ตารางสรุป AED</h3>
+<table>
+<tr><th>สถานการณ์</th><th>ทำอย่างไร</th></tr>
+<tr><td>VF / Pulseless VT</td><td>✅ AED แนะนำ shock</td></tr>
+<tr><td>Asystole</td><td>❌ AED ไม่แนะนำ shock → CPR</td></tr>
+<tr><td>PEA</td><td>❌ AED ไม่แนะนำ shock → CPR</td></tr>
+<tr><td>NSR / Sinus rhythm</td><td>❌ AED ไม่แนะนำ shock</td></tr>
+<tr><td>ผู้ป่วยเปียก</td><td>เช็คแห้งก่อนแปะ</td></tr>
+<tr><td>ผมเยอะ</td><td>โกนก่อนแปะ</td></tr>
+<tr><td>Pacemaker</td><td>แปะห่าง 2.5 ซม.</td></tr>
+<tr><td>Pediatric</td><td>ใช้ pediatric pads ถ้ามี</td></tr>
+<tr><td>Pregnancy</td><td>ใช้ปกติ</td></tr>
+</table>
+<h3>Maintenance &amp; Safety</h3>
+<h4>เช็ค AED ประจำ</h4>
+<ul><li><strong>Battery:</strong> เช็ค indicator ทุกเดือน — เปลี่ยนถ้าต่ำ</li><li><strong>Pads:</strong> เช็ค expiry date — เปลี่ยนถ้าหมดอายุ</li><li><strong>สภาพ:</strong> ไม่มีรอยแตก, สายไม่ขาด</li></ul>
+<h4>หลังใช้ AED</h4>
+<ul><li><strong>ดึงข้อมูล</strong> — AED บันทึก rhythm + shock ทั้งหมด → ส่งให้ ER</li><li><strong>เปลี่ยน pads</strong> — pads ใช้แล้วทิ้ง ไม่ reuse</li><li><strong>เช็ค battery</strong> — เปลี่ยนถ้าต่ำหลังใช้</li></ul>
+<h3>Common Mistakes</h3>
+<table>
+<tr><th>❌ ผิด</th><th>✅ ถูก</th></tr>
+<tr><td>หยุด CPR นานขณะรอ AED</td><td>CPR ต่อจน AED พร้อม</td></tr>
+<tr><td>แปะ pads บนยาหนาแผ่น</td><td>ถอด patch ออกก่อน</td></tr>
+<tr><td>สัมผัสผู้ป่วยขณะช็อต</td><td>"Clear!" + มองรอบๆ</td></tr>
+<tr><td>แปะ pads ชนกัน</td><td>ปรับตำแหน่ง หรือ anterior-posterior</td></tr>
+<tr><td>ใช้ในน้ำ</td><td>ดึงออก + เช็คแห้งก่อน</td></tr>
+<tr><td>กลัว AED จะ shock คนปกติ</td><td>AED วิเคราะห์อัตโนมัติ — ไม่ shock ถ้าไม่ใช่ VF/VT</td></tr>
+</table>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> AED แนะนำ shock สำหรับ rhythm ใด?</p>
+<p><strong>A1:</strong> <strong>VF (Ventricular Fibrillation) และ pulseless VT</strong> เท่านั้น</p>
+<p><strong>Q2:</strong> ขณะ AED วิเคราะห์ rhythm ควรทำอะไร?</p>
+<p><strong>A2:</strong> <strong>หยุดสัมผัสผู้ป่วย</strong> — ทุกคนห่างออก จน AED บอกผล</p>
+<p><strong>Q3:</strong> ผู้ป่วยมี pacemaker ใต้ left clavicle แปะ pad อย่างไร?</p>
+<p><strong>A3:</strong> <strong>ห่างจาก device อย่างน้อย 2.5 ซม.</strong> — ป้องกัน current ไม่ผ่านหัวใจ</p>
+<h3>ภาษาไทย: AED สำหรับ EMT</h3>
+<p><strong>สำหรับ EMT ทุกระดับ:</strong></p>
+<ul><li>AED ใช้ง่าย — เปิดเครื่องแล้วทำตามเสียงบอก</li><li><strong>อย่ากลัว</strong> — AED จะไม่ shock คนที่ไม่ควร shock</li><li><strong>CPR + AED = โอกาสรอดสูงสุด</strong></li><li>ทุกนาทีที่ delay defibrillation = โอกาสรอดลด 7-10%</li></ul>
+<p><strong>"Shock early, shock fast — AED saves lives"</strong></p>
+<h3>Related</h3>
+<ul><li>[[Defibrillation]]</li><li>[[CPR Guidelines - Adult]]</li><li>[[Cardiac Arrest Algorithm]]</li><li>[[Cardiac Rhythms - Abnormal]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://cpr.heart.org/" target="_blank" rel="noopener">AHA CPR & ECC ↗</a></li>
+      <li><a href="https://doi.org/10.1161/CIR.0000000000001183" target="_blank" rel="noopener">AHA 2025 Guidelines ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA 2025</p>
+      </div>
+    </aside>
+  </article>
+</Base>
