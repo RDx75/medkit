@@ -1,0 +1,140 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Vital Signs — MedKit" activeSlug="ref-vital-signs">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Vital Signs</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Vital Signs — Normal Ranges</h2>
+<blockquote>"รู้ค่าปกติ = รู้ว่าผิดปกติ — Vital signs พื้นฐานที่ EMT ต้องจำ"</blockquote>
+<h3>บทนำ</h3>
+<p>Vital signs คือสัญญาณชีพพื้นฐานที่บอกสภาพของผู้ป่วย EMT ต้องรู้ค่าปกติของแต่ละกลุ่มอายุ เพื่อสามารถระบุว่าผู้ป่วยผิดปกติอย่างไร</p>
+<h3>Normal Vital Signs by Age</h3>
+<h4>Heart Rate (HR)</h4>
+<table>
+<tr><th>กลุ่มอายุ</th><th>ค่าปกติ (bpm)</th></tr>
+<tr><td><strong>Neonate</strong> (0-1 เดือน)</td><td>100-160</td></tr>
+<tr><td><strong>Infant</strong> (1-12 เดือน)</td><td>90-150</td></tr>
+<tr><td><strong>Toddler</strong> (1-3 ปี)</td><td>80-130</td></tr>
+<tr><td><strong>Preschool</strong> (3-6 ปี)</td><td>70-120</td></tr>
+<tr><td><strong>School age</strong> (6-12 ปี)</td><td>60-110</td></tr>
+<tr><td><strong>Adolescent</strong> (12-18 ปี)</td><td>60-100</td></tr>
+<tr><td><strong>Adult</strong> (18+ ปี)</td><td>60-100</td></tr>
+</table>
+<h4>Respiratory Rate (RR)</h4>
+<table>
+<tr><th>กลุ่มอายุ</th><th>ค่าปกติ (/min)</th></tr>
+<tr><td><strong>Neonate</strong> (0-1 เดือน)</td><td>30-60</td></tr>
+<tr><td><strong>Infant</strong> (1-12 เดือน)</td><td>25-50</td></tr>
+<tr><td><strong>Toddler</strong> (1-3 ปี)</td><td>20-35</td></tr>
+<tr><td><strong>Preschool</strong> (3-6 ปี)</td><td>20-30</td></tr>
+<tr><td><strong>School age</strong> (6-12 ปี)</td><td>15-25</td></tr>
+<tr><td><strong>Adolescent</strong> (12-18 ปี)</td><td>12-20</td></tr>
+<tr><td><strong>Adult</strong> (18+ ปี)</td><td>12-20</td></tr>
+</table>
+<h4>Blood Pressure (BP — Systolic)</h4>
+<table>
+<tr><th>กลุ่มอายุ</th><th>ค่าปกติ (mmHg)</th></tr>
+<tr><td><strong>Neonate</strong> (0-1 เดือน)</td><td>60-90</td></tr>
+<tr><td><strong>Infant</strong> (1-12 เดือน)</td><td>70-100</td></tr>
+<tr><td><strong>Toddler</strong> (1-3 ปี)</td><td>80-110</td></tr>
+<tr><td><strong>Preschool</strong> (3-6 ปี)</td><td>85-115</td></tr>
+<tr><td><strong>School age</strong> (6-12 ปี)</td><td>90-120</td></tr>
+<tr><td><strong>Adolescent</strong> (12-18 ปี)</td><td>100-130</td></tr>
+<tr><td><strong>Adult</strong> (18+ ปี)</td><td>90-140</td></tr>
+</table>
+<h4>SpO2</h4>
+<table>
+<tr><th>กลุ่ม</th><th>ค่าปกติ</th></tr>
+<tr><td><strong>ทุกกลุ่มอายุ</strong></td><td>95-100%</td></tr>
+<tr><td><strong>COPD patient</strong></td><td>88-92% (target)</td></tr>
+<tr><td><strong>Newborn</strong> (แรกเกิด)</td><td>&gt; 90% (gradually increases)</td></tr>
+</table>
+<h4>Temperature</h4>
+<table>
+<tr><th>กลุ่ม</th><th>ค่าปกติ (°C)</th></tr>
+<tr><td><strong>ทุกกลุ่มอายุ</strong></td><td>36.0-37.5°C (96.8-99.5°F)</td></tr>
+<tr><td><strong>Fever</strong></td><td>&gt; 38.0°C (100.4°F)</td></tr>
+<tr><td><strong>Hypothermia</strong></td><td>&lt; 35.0°C (95.0°F)</td></tr>
+</table>
+<h4>Blood Glucose</h4>
+<table>
+<tr><th>กลุ่ม</th><th>ค่าปกติ (mg/dL)</th></tr>
+<tr><td><strong>Adult</strong></td><td>70-100 (fasting)</td></tr>
+<tr><td><strong>Newborn</strong></td><td>40-60</td></tr>
+<tr><td><strong>Hypoglycemia</strong></td><td>&lt; 60-80</td></tr>
+<tr><td><strong>Hyperglycemia</strong></td><td>&gt; 126 (fasting)</td></tr>
+</table>
+<h4>GCS (Glasgow Coma Scale)</h4>
+<table>
+<tr><th>Component</th><th>Response</th><th>Score</th></tr>
+<tr><td><strong>Eye opening</strong></td><td>Spontaneous</td><td>4</td></tr>
+<tr><td></td><td>To voice</td><td>3</td></tr>
+<tr><td></td><td>To pain</td><td>2</td></tr>
+<tr><td></td><td>None</td><td>1</td></tr>
+<tr><td><strong>Verbal</strong></td><td>Oriented</td><td>5</td></tr>
+<tr><td></td><td>Confused</td><td>4</td></tr>
+<tr><td></td><td>Inappropriate words</td><td>3</td></tr>
+<tr><td></td><td>Incomprehensible sounds</td><td>2</td></tr>
+<tr><td></td><td>None</td><td>1</td></tr>
+<tr><td><strong>Motor</strong></td><td>Obeys commands</td><td>6</td></tr>
+<tr><td></td><td>Localizes pain</td><td>5</td></tr>
+<tr><td></td><td>Withdraws from pain</td><td>4</td></tr>
+<tr><td></td><td>Flexion (decorticate)</td><td>3</td></tr>
+<tr><td></td><td>Extension (decerebrate)</td><td>2</td></tr>
+<tr><td></td><td>None</td><td>1</td></tr>
+</table>
+<blockquote>GCS 3-15: 15 = fully alert, 3 = coma/death</blockquote>
+<h3>AVPU Scale</h3>
+<p>สำหรับ rapid assessment:</p>
+<ul><li><strong>A</strong> — Alert (รู้สติ, ตื่นดี)</li><li><strong>V</strong> — Voice (ตอบสนองเมื่อเรียก)</li><li><strong>P</strong> — Pain (ตอบสนองเมื่อทำให้เจ็บ)</li><li><strong>U</strong> — Unresponsive (ไม่ตอบสนอง)</li></ul>
+<h3>การวัด Vital Signs</h3>
+<h4>Pulse</h4>
+<ul><li><strong>Adult</strong>: Radial (ข้อมือ), Carotid (คอ)</li><li><strong>Infant</strong>: Brachial (ต้นแขน)</li><li>นับ 30 วินาที × 2 หรือ 15 วินาที × 4</li></ul>
+<h4>Blood Pressure</h4>
+<ul><li><strong>Auscultatory</strong>: ฟังเสียง Korotkoff</li><li><strong>Palpatory</strong>: จับ pulse (ได้แค่ systolic)</li><li>ขนาด cuff: ครึ่งหนึ่งขนาก upper arm</li></ul>
+<h4>Respiratory Rate</h4>
+<ul><li>นับ 30 วินาที × 2</li><li><strong>อย่าบอกผู้ป่วย</strong> — จะจำใจหายใจ</li></ul>
+<h4>Pulse Oximetry</h4>
+<ul><li>ติดที่นิ้ว/หู</li><li>ถ้า cold/shock → อาจอ่านค่าไม่ได้</li><li>ถ้า nail polish → อาจแม่นยำลดลง</li></ul>
+<h3>Red Flags (สัญญาณอันตราย)</h3>
+<table>
+<tr><th>Vital Sign</th><th>Red Flag</th></tr>
+<tr><td><strong>HR</strong></td><td>&gt; 120 (tachycardia) หรือ &lt; 50 (bradycardia)</td></tr>
+<tr><td><strong>RR</strong></td><td>&gt; 30 หรือ &lt; 8</td></tr>
+<tr><td><strong>SBP</strong></td><td>&lt; 90 (shock)</td></tr>
+<tr><td><strong>SpO2</strong></td><td>&lt; 94%</td></tr>
+<tr><td><strong>GCS</strong></td><td>&lt; 13 (significant brain injury)</td></tr>
+<tr><td><strong>Glucose</strong></td><td>&lt; 60 (hypoglycemia)</td></tr>
+</table>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> HR ปกติของ adult?</p>
+<p><strong>A1:</strong> 60-100 bpm</p>
+<p><strong>Q2:</strong> RR ปกติของ infant?</p>
+<p><strong>A2:</strong> 25-50 /min</p>
+<p><strong>Q3:</strong> SBP &lt; เท่าไหร่ = shock?</p>
+<p><strong>A3:</strong> &lt; 90 mmHg</p>
+<p><strong>Q4:</strong> GCS 15 หมายถึงอะไร?</p>
+<p><strong>A4:</strong> Fully alert — Eyes 4 + Verbal 5 + Motor 6 = 15</p>
+<p><strong>Q5:</strong> SpO2 target ใน COPD patient?</p>
+<p><strong>A5:</strong> 88-92%</p>
+<h3>ภาษาไทย</h3>
+<p>ค่าสัญญาณชีพปกติแตกต่างตามอายุ: HR เด็กเร็วกว่าผู้ใหญ่, BP เด็กต่ำกว่า, RR เด็กเร็วกว่า EMT ต้องจำค่าปกติของแต่ละกลุ่มอายุ เพื่อระบุว่าผู้ป่วยผิดปกติ</p>
+<h4>Related</h4>
+<ul><li>[[Vital Signs Reference]]</li><li>[[Patient Assessment]]</li><li>[[Primary Assessment - ABCDE]]</li><li>[[Pediatric Emergencies]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA EMT Scope of Practice ↗</a></li>
+      <li><a href="https://www.nremt.org/" target="_blank" rel="noopener">NREMT ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA / NREMT</p>
+      </div>
+    </aside>
+  </article>
+</Base>
