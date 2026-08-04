@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="BSA Calculator" activeSlug="bsa">
-  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>BSA Calculator</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>BSA Calculator</span></div>
   <h1>BSA Calculator</h1>
   <p class="cat-desc">Body Surface Area via the Mosteller formula (m²).</p>
 
