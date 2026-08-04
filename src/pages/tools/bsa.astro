@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="BSA Calculator" activeSlug="bsa">
+  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>BSA Calculator</span></div>
+  <h1>BSA Calculator</h1>
+  <p class="cat-desc">Body Surface Area via the Mosteller formula (m²).</p>
+
+  <div class="tool-ui">
+    <div class="row">
+      <div class="field">
+        <label>Height (cm)</label>
+        <input id="ht" type="number" value="170" min="0" step="0.1" />
+      </div>
+      <div class="field">
+        <label>Weight (kg)</label>
+        <input id="wt" type="number" value="70" min="0" step="0.1" />
+      </div>
+    </div>
+    <button class="btn" id="calc">Calculate</button>
+    <div class="result" id="out">Enter values and press Calculate.</div>
+  </div>
+
+  <div class="article">
+    <h2>Free Online BSA Calculator</h2>
+    <p>Body Surface Area (BSA) estimates the total skin surface area of the body. It is commonly used to calculate drug doses (especially chemotherapeutics) and fluid requirements. The Mosteller formula is the most widely used bedside estimate:</p>
+    <p><code>BSA (m²) = √[ (height(cm) × weight(kg)) / 3600 ]</code></p>
+    <h3>Typical Values</h3>
+    <table>
+      <tr><th>Group</th><th>Approx. BSA</th></tr>
+      <tr><td>Adult (average)</td><td>1.7 m²</td></tr>
+      <tr><td>Child (10 yr)</td><td>1.1 m²</td></tr>
+      <tr><td>Neonate</td><td>0.25 m²</td></tr>
+    </table>
+    <h3>Frequently Asked Questions</h3>
+    <details class="faq"><summary>Why use BSA for dosing?</summary><div class="body">Many pharmacokinetic studies normalise clearance to BSA, so weight-based drugs (e.g. many oncology agents) are dosed per m² to reduce interpatient variability.</div></details>
+    <div class="callout danger">Always confirm the institution's dosing protocol and maximum dose before administering BSA-based medication.</div>
+  </div>
+
+  <script is:inline>
+    const out = document.getElementById('out');
+    function run() {
+      const ht = parseFloat(document.getElementById('ht').value);
+      const wt = parseFloat(document.getElementById('wt').value);
+      if (!ht || !wt) { out.textContent = 'Please enter both height and weight.'; return; }
+      const bsa = Math.sqrt((ht * wt) / 3600);
+      out.innerHTML = `<span class="big">${bsa.toFixed(2)}</span> m²`;
+    }
+    document.getElementById('calc').addEventListener('click', run);
+    document.getElementById('ht').addEventListener('input', run);
+    document.getElementById('wt').addEventListener('input', run);
+    run();
+  </script>
+</Base>
