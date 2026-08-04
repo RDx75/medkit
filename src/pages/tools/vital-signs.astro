@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="Vital Signs Ranges" activeSlug="vital-signs">
-  <div class="breadcrumb"><a href="/">MedKit</a> / References / <span>Vital Signs Ranges</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / References / <span>Vital Signs Ranges</span></div>
   <h1>Vital Signs Ranges</h1>
   <p class="cat-desc">Normal ranges for heart rate, blood pressure, respiratory rate, SpO₂ and temperature by age.</p>
 
