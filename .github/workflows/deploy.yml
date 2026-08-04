@@ -25,12 +25,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Prepare medkit/ subfolder + .nojekyll
-        run: |
-          mkdir -p dist/medkit
-          cp -r dist/* dist/medkit/ 2>/dev/null || true
-          rm -rf dist/medkit/medkit
-          touch dist/medkit/.nojekyll
+      - name: Add .nojekyll (disable Jekyll for _astro folder)
+        run: touch dist/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
