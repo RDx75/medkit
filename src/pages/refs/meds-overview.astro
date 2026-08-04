@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Meds Overview — MedKit" activeSlug="ref-meds-overview">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Meds Overview</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>EMT Medication Overview</h2>
+<blockquote>"รู้ยา = ช่วยชีวิตได้ — ยาที่ EMT ใช้แต่ละตัวมีข้อบ่งใช้ ข้อห้าม และขนาดยาที่ต้องจำ"</blockquote>
+<h3>ยาที่ EMT สามารถให้ได้ (EMT Scope)</h3>
+<p>ในขอบเขตของ EMT-Basic สามารถให้ยาได้เฉพาะรายการต่อไปนี้ (ตาม protocol ของแต่ละพื้นที่อาจแตกต่าง):</p>
+<table>
+<tr><th>ยา</th><th>ข้อบ่งใช้</th><th>ขนาดยา</th><th>เส้นทาง</th></tr>
+<tr><td><strong>Oxygen</strong></td><td>Hypoxia, SpO2 &lt; 94%, respiratory distress</td><td>2-15 L/min</td><td>Nasal cannula / NRB mask</td></tr>
+<tr><td><strong>Aspirin (ASA)</strong></td><td>ACS / สงสัย MI</td><td>325 mg (4 tablets 81mg)</td><td>เคี้ยวก่อนกลืน</td></tr>
+<tr><td><strong>Nitroglycerin</strong></td><td>Chest pain จาก Angina / CHF</td><td>0.4 mg</td><td>ใต้ลิ้น (SL)</td></tr>
+<tr><td><strong>Epinephrine</strong></td><td>Anaphylaxis / Cardiac Arrest</td><td>0.3-0.5 mg (1:1000)</td><td>ฉีดกล้ามเนื้อ (IM)</td></tr>
+<tr><td><strong>Albuterol (Salbutamol)</strong></td><td>Bronchospasm / Asthma</td><td>2.5-5 mg</td><td>Nebulizer</td></tr>
+<tr><td><strong>Naloxone (Narcan)</strong></td><td>Opioid overdose</td><td>2-4 mg</td><td>จมูก (IN) / IM</td></tr>
+<tr><td><strong>Oral Glucose</strong></td><td>Hypoglycemia (รู้สติได้)</td><td>15-25 g</td><td>ปาก (PO)</td></tr>
+<tr><td><strong>Activated Charcoal</strong></td><td>Poisoning (ทานยาเกินขนาด)</td><td>1 g/kg</td><td>ปาก (PO)</td></tr>
+</table>
+<h3>5 Rights of Medication Administration</h3>
+<p>หลักการ 5 สิ่งที่ถูกต้อง ก่อนให้ยาทุกครั้ง:</p>
+<p>1. ✅ <strong>Right Patient</strong> — ผู้ป่วยคนถูกต้อง (ยืนยันชื่อ, DOB)</p>
+<p>2. ✅ <strong>Right Drug</strong> — ยาชื่อถูกต้อง (อ่านฉลากก่อนใช้ทุกครั้ง)</p>
+<p>3. ✅ <strong>Right Dose</strong> — ขนาดยาถูกต้อง (คำนวณให้ถ้วน)</p>
+<p>4. ✅ <strong>Right Route</strong> — เส้นทางถูกต้อง (PO, SL, IM, IN, neb)</p>
+<p>5. ✅ <strong>Right Time</strong> — เวลาถูกต้อง (ตรวจว่ายาที่เคยให้ไปแล้ว)</p>
+<h3>เส้นทางการให้ยา (Routes) ที่ EMT ใช้</h3>
+<ul><li><strong>PO (Per Os)</strong> — ทางปาก เช่น Aspirin เคี้ยว, Oral Glucose</li><li><strong>SL (Sublingual)</strong> — ใต้ลิ้น เช่น Nitroglycerin</li><li><strong>IM (Intramuscular)</strong> — ฉีดเข้ากล้ามเนื้อ เช่น Epinephrine</li><li><strong>IN (Intranasal)</strong> — ฉีดเข้าจมูก เช่น Naloxone</li><li><strong>Nebulizer</strong> — สูดฝอยละออง เช่น Albuterol</li><li><strong>Topical</strong> — ทาบนผิวหนัง</li></ul>
+<h3>ตรวจสอบก่อนให้ยาทุกครั้ง</h3>
+<p>1. ประวัติการแพ้ยา — "คุณแพ้ยาอะไรไหมครับ?"</p>
+<p>2. ยาที่กินอยู่ — "คุณกินยาอะไรอยู่บ้างครับ?"</p>
+<p>3. สภาพผู้ป่วยปัจจุบัน — BP, HR, SpO2, รู้สติ</p>
+<p>4. ข้อห้ามใช้ของยานั้นๆ</p>
+<p>5. เคยให้ยานี้วันนี้แล้วหรือยัง (repeat dosing จำกัดจำนวน)</p>
+<h3>💡 Tips</h3>
+<ul><li>ถ้าผู้ป่วยกินยาตัวเองอยู่แล้ว เช่น Nitroglycerin ที่พกติดตัว → EMT ช่วยให้ repeat dose ได้ (ถ้า SBP ยัง &gt; 90)</li><li>Aspirin ถ้าผู้ป่วยกิน ASA 81mg อยู่ทุกวัน → ให้ 325 mg เพิ่ม (chewable) ได้</li><li>ถ้าไม่แน่ใจ → ถึงศูย์ก่อนจะให้ยา Online Medical Control</li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> ก่อนให้ยา EMT ต้องตรวจสอบอะไรบ้าง?</p>
+<p><strong>A1:</strong> 5 Rights — Right patient, drug, dose, route, time + ประวัติการแพ้ยา</p>
+<p><strong>Q2:</strong> Nitroglycerin ห้ามใช้เมื่อ SBP ต่ำกว่า?</p>
+<p><strong>A2:</strong> 90 mmHg</p>
+<p><strong>Q3:</strong> Naloxone ให้ผ่านเส้นทางไหน?</p>
+<p><strong>A3:</strong> Intranasal (IN) หรือ IM</p>
+<h3>ภาษาไทย</h3>
+<p>EMT Medication Overview เป็นพื้นฐานสำคัญ — ต้องรู้ยาที่ตัวเองสามารถให้ได้ ข้อบ่งใช้ ข้อห้าม และขนาดยา เพื่อความปลอดภัยของผู้ป่วยและผู้ดูแล</p>
+<h4>Related</h4>
+<ul><li>[[Pharmacology for EMT]]</li><li>[[Medication Administration]]</li><li>[[Medications — EMT Scope]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA Pharmacology ↗</a></li>
+      <li><a href="https://www.nremt.org/" target="_blank" rel="noopener">NREMT ↗</a></li>
+        </ul>
+        <p class="src">Source: NHTSA</p>
+      </div>
+    </aside>
+  </article>
+</Base>
