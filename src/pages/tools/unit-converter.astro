@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="Unit Converter" activeSlug="unit-converter">
-  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>Unit Converter</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>Unit Converter</span></div>
   <h1>Unit Converter</h1>
   <p class="cat-desc">Temperature, weight, volume and length conversions for clinical use.</p>
 
