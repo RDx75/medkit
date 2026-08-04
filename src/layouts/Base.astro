@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import { categories, tools } from '../data/tools';
 
+const base = import.meta.env.BASE_URL; // '/' locally, '/medkit/' on GitHub Pages
+
 interface Props {
   title: string;
   description?: string;
@@ -17,7 +19,7 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     <title>{title} — MedKit</title>
     <script is:inline>
       // Apply persisted theme before paint to avoid flash.
@@ -32,7 +34,7 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
   <body>
     <div class="app">
       <header class="topbar">
-        <a class="brand" href="/">
+        <a class="brand" href={base}>
           <span class="logo">⚕️</span>
           <span>MedKit<span class="sub">&nbsp;medical tools</span></span>
         </a>
@@ -48,7 +50,7 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
             <div class="side-group">
               <h4>{c.title}</h4>
               {tools.filter((t) => t.category === c.id).map((t) => (
-                <a class={`side-link ${activeSlug === t.slug ? 'active' : ''}`} href={`/tools/${t.slug}/`}>
+                <a class={`side-link ${activeSlug === t.slug ? 'active' : ''}`} href={`${base}tools/${t.slug}/`}>
                   <span class="ico">{t.emoji}</span>{t.title}
                 </a>
               ))}
@@ -63,9 +65,9 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
 
       <footer class="footer">
         <span>⚕️ MedKit.dev</span>
-        <a href="/about/">About</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
+        <a href={`${base}about/`}>About</a>
+        <a href={`${base}privacy/`}>Privacy</a>
+        <a href={`${base}terms/`}>Terms</a>
         <span class="spacer"></span>
         <span class="disclaimer">For education &amp; reference only — not a substitute for professional medical advice.</span>
       </footer>
@@ -79,7 +81,7 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
       </div>
     </div>
 
-    <script is:inline define:vars={{ tools, categories }}>
+    <script is:inline define:vars={{ tools, categories, base }}>
       // ---- Theme toggle ----
       const themeBtn = document.getElementById('themeToggle');
       function syncThemeIcon() {
@@ -115,7 +117,7 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
           return;
         }
         results.innerHTML = list
-          .map((t, i) => `<a href="/tools/${t.slug}/" data-i="${i}"><span class="ico">${t.emoji}</span><span>${t.title}</span><span class="cat-tag">${(catMap[t.category] || '').toUpperCase()}</span></a>`)
+          .map((t, i) => `<a href="${base}tools/${t.slug}/" data-i="${i}"><span class="ico">${t.emoji}</span><span>${t.title}</span><span class="cat-tag">${(catMap[t.category] || '').toUpperCase()}</span></a>`)
           .join('');
       }
 
