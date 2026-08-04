@@ -1,0 +1,191 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Poisoning — MedKit" activeSlug="ref-poisoning">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Poisoning</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Poisoning &amp; Overdose — การเป็นพิษ</h2>
+<blockquote>"ทุกสารสามารถเป็นพิษได้ — ขึ้นอยู่กับขนาด (The dose makes the poison)"</blockquote>
+<h3>ภาพรวบ</h3>
+<p>Poisoning = exposure to substance that causes harm</p>
+<p>Overdose = intentional or unintentional excess dose</p>
+<h4>Routes of Exposure</h4>
+<table>
+<tr><th>Route</th><th>Examples</th></tr>
+<tr><td><strong>Ingestion</strong> (กิน)</td><td>Pills, plants, household chemicals</td></tr>
+<tr><td><strong>Inhalation</strong> (ดม)</td><td>CO, chlorine, ammonia, pesticides</td></tr>
+<tr><td><strong>Injection</strong> (ฉีด)</td><td>IV drugs, insect stings</td></tr>
+<tr><td><strong>Absorption</strong> (ซึมผ่านผิว)</td><td>Pesticides, industrial chemicals</td></tr>
+<tr><td><strong>Ocular</strong> (ตา)</td><td>Chemical splashes</td></tr>
+</table>
+<h3>General Approach to Poisoning</h3>
+<h4>1. Scene Safety</h4>
+<ul><li><strong>Protect yourself</strong> — PPE, avoid secondary exposure</li><li><strong>Hazmat</strong> if industrial/chemical spill</li><li><strong>Decontamination</strong> before treatment if skin/eye exposure</li></ul>
+<h4>2. Primary Assessment (ABCs)</h4>
+<ul><li><strong>Airway</strong> — Aspiration risk (vomiting), chemical burns</li><li><strong>Breathing</strong> — Respiratory depression (opioids, benzodiazepines), bronchospasm (irritant gases)</li><li><strong>Circulation</strong> — Tachycardia (sympathomimetics), bradycardia (β-blockers, CCBs), hypotension</li></ul>
+<h4>3. History (If Possible)</h4>
+<table>
+<tr><th>Question</th><th>Why</th></tr>
+<tr><td><strong>What?</strong></td><td>Identify substance</td></tr>
+<tr><td><strong>How much?</strong></td><td>Dose determines severity</td></tr>
+<tr><td><strong>When?</strong></td><td>Time since exposure determines treatment</td></tr>
+<tr><td><strong>Route?</strong></td><td>Ingestion vs inhalation vs injection</td></tr>
+<tr><td><strong>Why?</strong></td><td>Accidental vs intentional (suicide attempt)</td></tr>
+<tr><td><strong>Other substances?</strong></td><td>Polypharmacy overdose</td></tr>
+<tr><td><strong>PMH?</strong></td><td>Liver/renal disease affects metabolism</td></tr>
+</table>
+<h4>4. Decontamination</h4>
+<table>
+<tr><th>Route</th><th>Decontamination</th></tr>
+<tr><td><strong>Skin</strong></td><td>Remove clothing, wash with soap + water 15-20 min</td></tr>
+<tr><td><strong>Eyes</strong></td><td>Irrigate with NS/water 15-20 min</td></tr>
+<tr><td><strong>Ingestion</strong></td><td>Activated charcoal (if within 1 hour, alert patient)</td></tr>
+<tr><td><strong>Inhalation</strong></td><td>Remove from source, 100% O2</td></tr>
+</table>
+<h3>Toxidromes (กลุ่มอาการพิษ) ⭐</h3>
+<h4>Opioid Toxidrome</h4>
+<table>
+<tr><th>Sign</th><th>Mechanism</th></tr>
+<tr><td><strong>Pinpoint pupils (miosis)</strong></td><td>μ-receptor stimulation</td></tr>
+<tr><td><strong>Respiratory depression</strong></td><td>Brainstem depression</td></tr>
+<tr><td><strong>Decreased consciousness</strong></td><td>CNS depression</td></tr>
+<tr><td><strong>Hypothermia</strong></td><td>CNS depression</td></tr>
+<tr><td><strong>Bradycardia</strong></td><td>Vagal stimulation</td></tr>
+<tr><td><strong>Antidote:</strong></td><td><strong>Naloxone 0.4-2mg IV/IN/IM</strong></td></tr>
+</table>
+<h4>Sympathomimetic Toxidrome</h4>
+<table>
+<tr><th>Sign</th><th>Mechanism</th></tr>
+<tr><td><strong>Tachycardia</strong></td><td>Sympathetic stimulation</td></tr>
+<tr><td><strong>Hypertension</strong></td><td>Vasoconstriction</td></tr>
+<tr><td><strong>Mydriasis (dilated pupils)</strong></td><td>α-receptor stimulation</td></tr>
+<tr><td><strong>Agitation/delirium</strong></td><td>CNS stimulation</td></tr>
+<tr><td><strong>Hyperthermia</strong></td><td>Increased metabolism</td></tr>
+<tr><td><strong>Diaphoresis</strong></td><td>Sympathetic</td></tr>
+<tr><td><strong>Examples:</strong></td><td>Cocaine, Amphetamines, MDMA, Ephedrine</td></tr>
+<tr><td><strong>Treatment:</strong></td><td>Benzodiazepines (sedation), cooling</td></tr>
+</table>
+<h4>Anticholinergic Toxidrome</h4>
+<table>
+<tr><th>Sign</th><th>Mnemonic</th></tr>
+<tr><td><strong>Dry as a bone</strong></td><td>Dry skin, dry mucous membranes</td></tr>
+<tr><td><strong>Red as a beet</strong></td><td>Flushed skin</td></tr>
+<tr><td><strong>Blind as a bat</strong></td><td>Mydriasis, blurred vision</td></tr>
+<tr><td><strong>Mad as a hatter</strong></td><td>Delirium, hallucinations</td></tr>
+<tr><td><strong>Hot as a hare</strong></td><td>Hyperthermia</td></tr>
+<tr><td><strong>Full as a flask</strong></td><td>Urinary retention, ileus</td></tr>
+<tr><td><strong>Examples:</strong></td><td>Diphenhydramine, Atropine, Scopolamine, Jimsonweed, Amanita muscaria</td></tr>
+<tr><td><strong>Antidote:</strong></td><td><strong>Physostigmine</strong> (hospital, caution in TCA overdose)</td></tr>
+</table>
+<h4>Cholinergic Toxidrome</h4>
+<table>
+<tr><th>Sign</th><th>Mnemonic (SLUDGE + BBB)</th></tr>
+<tr><td><strong>S</strong>alivation</td><td>Excessive saliva</td></tr>
+<tr><td><strong>L</strong>acrimation</td><td>Tearing</td></tr>
+<tr><td><strong>U</strong>rination</td><td>Incontinence</td></tr>
+<tr><td><strong>D</strong>efecation</td><td>Diarrhea</td></tr>
+<tr><td><strong>G</strong>I cramping</td><td>Abdominal pain</td></tr>
+<tr><td><strong>E</strong>mesis</td><td>Vomiting</td></tr>
+<tr><td><strong>B</strong>ronchospasm</td><td>Wheezing</td></tr>
+<tr><td><strong>B</strong>ronchorrhea</td><td>Secretions</td></tr>
+<tr><td><strong>B</strong>radycardia</td><td>Vagal</td></tr>
+<tr><td><strong>Miosis</strong></td><td>Pinpoint pupils</td></tr>
+<tr><td><strong>Fasciculations</strong></td><td>Muscle twitching</td></tr>
+<tr><td><strong>Examples:</strong></td><td>Organophosphates, Carbamates, Nerve agents (Sarin, VX)</td></tr>
+<tr><td><strong>Antidote:</strong></td><td><strong>Atropine</strong> (titrate to clear lungs) + <strong>Pralidoxime (2-PAM)</strong></td></tr>
+</table>
+<h4>Sedative-Hypnotic Toxidrome</h4>
+<table>
+<tr><th>Sign</th><th>Mechanism</th></tr>
+<tr><td><strong>CNS depression</strong></td><td>GABA potentiation</td></tr>
+<tr><td><strong>Respiratory depression</strong></td><td>Brainstem depression</td></tr>
+<tr><td><strong>Hypotension</strong></td><td>Vasodilation</td></tr>
+<tr><td><strong>Hypothermia</strong></td><td>CNS depression</td></tr>
+<tr><td><strong>Examples:</strong></td><td>Benzodiazepines, Barbiturates, Alcohol, Z-drugs</td></tr>
+<tr><td><strong>Antidote:</strong></td><td><strong>Flumazenil</strong> (benzodiazepines only — hospital, risk of seizures)</td></tr>
+</table>
+<h3>Common Overdoses</h3>
+<h4>Acetaminophen (Paracetamol) ⭐</h4>
+<ul><li><strong>Most common overdose</strong> in many countries</li><li><strong>Toxic dose:</strong> &gt;150 mg/kg or &gt;7.5g in adults</li><li><strong>Mechanism:</strong> Depletes glutathione → NAPQI accumulates → liver necrosis</li><li><strong>Timeline:</strong></li><li>0-24h: Nausea, vomiting, asymptomatic</li><li>24-72h: RUQ pain, elevated LFTs</li><li>72-96h: Liver failure (jaundice, coagulopathy, encephalopathy)</li><li>4-14 days: Recovery or death</li><li><strong>Antidote:</strong> <strong>N-Acetylcysteine (NAC)</strong> — most effective within 8 hours</li><li><strong>Rumack-Matthew nomogram</strong> — determines toxicity based on level + time</li></ul>
+<h4>Aspirin (Salicylate)</h4>
+<ul><li><strong>Toxic dose:</strong> &gt;150 mg/kg</li><li><strong>Mechanism:</strong> Uncoupling oxidative phosphorylation → metabolic acidosis + respiratory alkalosis</li><li><strong>Signs:</strong> Tinnitus, tachypnea, metabolic acidosis, hyperthermia</li><li><strong>Treatment:</strong> Activated charcoal, sodium bicarbonate (alkalinize urine), hemodialysis (severe)</li></ul>
+<h4>Tricyclic Antidepressants (TCA)</h4>
+<ul><li><strong>Very dangerous</strong> — narrow therapeutic index</li><li><strong>Mechanism:</strong> Sodium channel blockade → wide QRS, arrhythmias</li><li><strong>Toxidrome:</strong> Anticholinergic + sodium channel blockade</li><li><strong>ECG:</strong> Wide QRS (&gt;100ms), R wave in aVR &gt;3mm, terminal R wave in aVR</li><li><strong>Treatment:</strong> Sodium bicarbonate (1-2 mEq/kg IV) for wide QRS, benzodiazepines for seizures</li></ul>
+<h4>Calcium Channel Blockers (CCB)</h4>
+<ul><li><strong>Signs:</strong> Bradycardia, hypotension, heart block, hyperglycemia</li><li><strong>Treatment:</strong> Calcium chloride 1g IV, glucagon 5mg IV, high-dose insulin + glucose, vasopressors</li></ul>
+<h4>Beta-Blockers</h4>
+<ul><li><strong>Signs:</strong> Bradycardia, hypotension, heart block, hypoglycemia, bronchospasm</li><li><strong>Treatment:</strong> Glucagon 5mg IV (bypasses β-receptor), atropine, high-dose insulin + glucose</li></ul>
+<h4>Digoxin</h4>
+<ul><li><strong>Signs:</strong> Nausea, visual changes (yellow/green halos), arrhythmias (any type), hyperkalemia</li><li><strong>Treatment:</strong> Digoxin-specific antibodies (DigiFab) for life-threatening arrhythmias</li></ul>
+<h3>Antidotes Summary</h3>
+<table>
+<tr><th>Poison</th><th>Antidote</th><th>Dose</th></tr>
+<tr><td>Opioid</td><td><strong>Naloxone</strong></td><td>0.4-2mg IV/IN/IM</td></tr>
+<tr><td>Benzodiazepine</td><td><strong>Flumazenil</strong></td><td>0.2mg IV (hospital)</td></tr>
+<tr><td>Acetaminophen</td><td><strong>NAC</strong></td><td>150mg/kg IV over 15 min</td></tr>
+<tr><td>Organophosphate</td><td><strong>Atropine + 2-PAM</strong></td><td>Atropine 2-6mg IV, titrate</td></tr>
+<tr><td>TCA</td><td><strong>Sodium bicarbonate</strong></td><td>1-2 mEq/kg IV</td></tr>
+<tr><td>CCB</td><td><strong>Calcium chloride</strong></td><td>1g IV</td></tr>
+<tr><td>β-blocker</td><td><strong>Glucagon</strong></td><td>5mg IV</td></tr>
+<tr><td>Digoxin</td><td><strong>DigiFab</strong></td><td>Based on level/ingestion</td></tr>
+<tr><td>Cyanide</td><td><strong>Hydroxocobalamin</strong></td><td>70mg/kg IV</td></tr>
+<tr><td>CO</td><td><strong>100% O2</strong></td><td>Hyperbaric if severe</td></tr>
+<tr><td>Methanol/Ethylene glycol</td><td><strong>Fomepizole</strong> or Ethanol</td><td>15mg/kg IV</td></tr>
+<tr><td>Iron</td><td><strong>Deferoxamine</strong></td><td>15mg/kg/hr IV</td></tr>
+<tr><td>Lead</td><td><strong>EDTA, BAL, Succimer</strong></td><td>Hospital</td></tr>
+<tr><td>Heparin</td><td><strong>Protamine</strong></td><td>1mg per 100U heparin</td></tr>
+<tr><td>Warfarin</td><td><strong>Vitamin K + FPO</strong></td><td>10mg IV</td></tr>
+</table>
+<h3>Activated Charcoal</h3>
+<h4>Indication</h4>
+<ul><li><strong>Within 1 hour</strong> of ingestion (most effective)</li><li><strong>Alert patient</strong> with patent airway</li><li><strong>Dose:</strong> 1g/kg PO (adults typically 50-100g)</li></ul>
+<h4>Contraindications</h4>
+<ul><li><strong>Altered mental status</strong> (without ETT) — aspiration risk</li><li><strong>Caustic ingestion</strong> (acid/alkali) — doesn't bind, risk of vomiting</li><li><strong>Hydrocarbon ingestion</strong> — aspiration risk</li><li><strong>Metals</strong> (iron, lithium, lead) — doesn't bind</li><li><strong>GI obstruction/perforation</strong></li></ul>
+<h3>When to Induce Vomiting</h3>
+<h4>❌ DO NOT induce vomiting for:</h4>
+<ul><li>Caustic substances (acid/alkali) — re-exposure damages esophagus</li><li>Hydrocarbons — aspiration risk</li><li>Sharp objects</li><li>Altered mental status</li><li>Seizures</li></ul>
+<h4>⚠️ Ipecac is NO LONGER recommended</h4>
+<ul><li>Delays activated charcoal</li><li>No proven benefit</li><li>AHA/APCC no longer recommend</li></ul>
+<h3>CO Poisoning (Carbon Monoxide)</h3>
+<h4>Sources</h4>
+<ul><li>Car exhaust, generators, fires, heaters, charcoal grills</li></ul>
+<h4>Signs &amp; Symptoms</h4>
+<table>
+<tr><th>COHb Level</th><th>Symptoms</th></tr>
+<tr><td>&lt;10%</td><td>None (smokers may have 5-10%)</td></tr>
+<tr><td>10-20%</td><td>Headache, mild dyspnea</td></tr>
+<tr><td>20-30%</td><td>Throbbing headache, impaired judgment</td></tr>
+<tr><td>30-40%</td><td>Confusion, syncope, visual changes</td></tr>
+<tr><td>40-60%</td><td>Coma, seizures</td></tr>
+<tr><td>&gt;60%</td><td>Death</td></tr>
+</table>
+<h4>⚠️ Important</h4>
+<ul><li><strong>Pulse oximetry is FALSELY NORMAL</strong> — can't distinguish COHb from O2Hb</li><li><strong>Cherry-red skin</strong> — rare, late sign</li><li><strong>Treatment:</strong> 100% O2 (reduces CO half-life from 5h → 90 min)</li><li><strong>Hyperbaric O2:</strong> COHb &gt;25%, pregnant, neurological symptoms, cardiac involvement</li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> Opioid overdose triad คืออะไร?</p>
+<p><strong>A1:</strong> <strong>Pinpoint pupils + Respiratory depression + Coma</strong> → Naloxone</p>
+<p><strong>Q2:</strong> Activated charcoal ให้เมื่อไหร่?</p>
+<p><strong>A2:</strong> <strong>Within 1 hour</strong> of ingestion, alert patient, patent airway</p>
+<p><strong>Q3:</strong> CO poisoning — pulse oximetry จะแสดงอะไร?</p>
+<p><strong>A3:</strong> <strong>Falsely normal</strong> — can't distinguish COHb from O2Hb → need COHb level</p>
+<h3>ภาษาไทย: Poisoning สำหรับ EMT</h3>
+<ul><li><strong>ABCs first</strong> — decontaminate if needed</li><li><strong>Identify toxidrome</strong> — Opioid? Sympathomimetic? Anticholinergic? Cholinergic?</li><li><strong>Activated charcoal</strong> within 1 hour if alert</li><li><strong>Naloxone</strong> for opioid overdose</li><li><strong>Don't induce vomiting</strong> for caustics/hydrocarbons</li><li><strong>CO = 100% O2</strong> — pulse oximetry lies!</li></ul>
+<h3>Related</h3>
+<ul><li>[[Naloxone - Overdose Reversal]]</li><li>[[Activated Charcoal - Poisoning]]</li><li>[[Allergic Reaction Anaphylaxis]]</li><li>[[Diabetic Emergencies]]</li><li>[[Patient Assessment Algorithm]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA Medical ↗</a></li>
+      <li><a href="https://wikem.org/" target="_blank" rel="noopener">WikEM ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA/ACEP</p>
+      </div>
+    </aside>
+  </article>
+</Base>
