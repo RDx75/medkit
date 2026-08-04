@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Pediatric — MedKit" activeSlug="ref-pediatric">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Pediatric</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Pediatric Emergencies — ภาวะฉุกเฉินในเด็ก</h2>
+<blockquote>"เด็กไม่ใช่ผู้ใหญ่ตัวเล็ก — มี physiology ต่างกัน"</blockquote>
+<h3>ภาพรวบ</h3>
+<p>Pediatric emergencies ที่ EMT พบบ่อย:</p>
+<ul><li>Febrile seizures</li><li>Respiratory distress (croup, bronchiolitis, asthma)</li><li>Cardiac arrest (rare, usually respiratory failure → arrest)</li><li>Trauma</li><li>Dehydration (vomiting, diarrhea)</li><li>Ingestion/poisoning</li></ul>
+<h3>Pediatric Assessment Triangle (PAT)</h3>
+<h4>3 Components (ดูก่อน touch)</h4>
+<table>
+<tr><th>Component</th><th>Assess</th><th>Abnormal</th></tr>
+<tr><td><strong>Appearance (TICLS)</strong></td><td>Tone, Interactiveness, Consolability, Look/gaze, Speech/cry</td><td>Lethargic, weak cry, no eye contact</td></tr>
+<tr><td><strong>Work of Breathing</strong></td><td>Rate, effort, sounds</td><td>Retractions, nasal flaring, grunting, stridor, wheezing</td></tr>
+<tr><td><strong>Circulation to Skin</strong></td><td>Color, mottling, capillary refill</td><td>Pale, mottled, cyanotic, CRT &gt;2 sec</td></tr>
+</table>
+<h4>PAT ใช้เมื่อไหร่</h4>
+<ul><li><strong>Initial assessment</strong> — ดูเด็ก 1-2 วินาที → รู้ว่า critically ill หรือไม่</li><li><strong>ไม่ต้อง touch</strong> — ดู + ฟัง พอ</li><li><strong>ใช้ได้ทุก age</strong></li></ul>
+<h3>Pediatric Vital Signs (แต่ละช่วงอายุ)</h3>
+<table>
+<tr><th>Age</th><th>HR (awake)</th><th>RR</th><th>SBP (approx)</th></tr>
+<tr><td><strong>Newborn (0-28d)</strong></td><td>100-180</td><td>30-60</td><td>60-90</td></tr>
+<tr><td><strong>Infant (1-12mo)</strong></td><td>100-160</td><td>30-50</td><td>70-100</td></tr>
+<tr><td><strong>Toddler (1-3y)</strong></td><td>90-150</td><td>20-40</td><td>80-110</td></tr>
+<tr><td><strong>Preschool (3-6y)</strong></td><td>80-140</td><td>20-30</td><td>90-110</td></tr>
+<tr><td><strong>School (6-12y)</strong></td><td>70-120</td><td>15-25</td><td>100-120</td></tr>
+<tr><td><strong>Adolescent (12+y)</strong></td><td>60-100</td><td>12-20</td><td>110-130</td></tr>
+</table>
+<h4>⚠️ Bradycardia ในเด็ก = RED FLAG</h4>
+<ul><li>Bradycardia (&lt;60) ใน infant ด้วย HR &lt;60 ที่ poor perfusion = <strong>Start CPR!</strong></li><li>ในเด็ก, bradycardia มักจาก hypoxia (ไม่ใช่ cardiac) → O2 first!</li></ul>
+<h3>Respiratory Emergencies in Children</h3>
+<h4>Croup (Laryngotracheobronchitis)</h4>
+<ul><li><strong>Age:</strong> 6 months - 3 years</li><li><strong>Cause:</strong> Viral (parainfluenza)</li><li><strong>Signs:</strong> Barking cough, stridor, hoarse voice, low-grade fever, worse at night</li><li><strong>Westley Cough Score:</strong> 0-17 (higher = more severe)</li><li><strong>Treatment:</strong></li><li><strong>Mist (cool mist)</strong> at home</li><li><strong>Nebulized epinephrine</strong> (racemic or L-epinephrine) — for moderate-severe</li><li><strong>Dexamethasone 0.6mg/kg PO/IM/IV</strong> — anti-inflammatory, works within hours</li><li>O2</li></ul>
+<h4>Epiglottitis</h4>
+<ul><li><strong>Age:</strong> 2-6 years (now rare due to Hib vaccine)</li><li><strong>Cause:</strong> <em>Haemophilus influenzae</em> type B (historically), now other bacteria</li><li><strong>Signs:</strong></li><li><strong>Toxic appearance</strong> (high fever, drooling, sitting forward)</li><li><strong>Drooling</strong> — cannot swallow saliva</li><li><strong>Stridor</strong> — quiet, minimal cough (unlike croup)</li><li><strong>Tripod position</strong> — sitting, hands on knees, neck extended</li><li><strong>⚠️ DO NOT</strong> look in throat (may trigger complete obstruction!)</li><li><strong>Treatment:</strong></li><li><strong>Do NOT agitate</strong> — keep child calm, upright</li><li><strong>Do NOT examine throat</strong></li><li><strong>Do NOT force supine</strong></li><li>Transport to OR for controlled intubation</li></ul>
+<h4>Bronchiolitis</h4>
+<ul><li><strong>Age:</strong> &lt;2 years (peak 2-6 months)</li><li><strong>Cause:</strong> RSV (most common)</li><li><strong>Signs:</strong> Wheezing, crackles, respiratory distress, poor feeding</li><li><strong>Treatment:</strong> O2, suction, CPAP if severe, ribavirin (rarely used)</li></ul>
+<h4>Cystic Fibrosis (CF)</h4>
+<ul><li><strong>Genetic disease</strong> → thick mucus → recurrent lung infections</li><li><strong>Signs:</strong> Chronic cough, failure to thrive, recurrent pneumonia</li><li><strong>Treatment:</strong> Chest physiotherapy, antibiotics, bronchodilators</li></ul>
+<h3>Febrile Seizures (ชักจากไข้)</h3>
+<ul><li><strong>Age:</strong> 6 months - 5 years</li><li><strong>Cause:</strong> Rapid rise in temperature (not the height of fever)</li><li><strong>Type:</strong></li><li><strong>Simple:</strong> Generalized, &lt;15 minutes, no recurrence in 24h — <strong>benign</strong></li><li><strong>Complex:</strong> Focal, &gt;15 minutes, recurrence in 24h — need workup</li><li><strong>Treatment:</strong></li><li><strong>Protect from injury</strong></li><li><strong>Side position</strong> (prevent aspiration)</li><li><strong>Antipyretics</strong> (paracetamol/ibuprofen) — AFTER seizure stops</li><li><strong>Diazepam rectal/IN/IV</strong> if &gt;5 minutes</li><li><strong>Important:</strong> Rule out meningitis! (LP if indicated)</li></ul>
+<h3>Pediatric Cardiac Arrest</h3>
+<h4>⚠️ Different from Adult!</h4>
+<ul><li><strong>Most common cause:</strong> Respiratory failure → hypoxia → bradycardia → arrest</li><li><strong>Not primary cardiac</strong> (unlike adults)</li><li><strong>Ventricular fibrillation is rare</strong> (&lt;10% of pediatric arrests)</li></ul>
+<h4>Pediatric BLS</h4>
+<table>
+<tr><th>Component</th><th>Infant (&lt;1 year)</th><th>Child (1-puberty)</th></tr>
+<tr><td><strong>Compressions</strong></td><td>2 fingers (single rescuer) or 2-thumb (2 rescuers)</td><td>1-2 hands</td></tr>
+<tr><td><strong>Depth</strong></td><td>4 cm (1.5 inches)</td><td>5 cm (2 inches)</td></tr>
+<tr><td><strong>Rate</strong></td><td>100-120/min</td><td>100-120/min</td></tr>
+<tr><td><strong>Ratio</strong></td><td>30:2 (1 rescuer), 15:2 (2 rescuers)</td><td>30:2 (1 rescuer), 15:2 (2 rescuers)</td></tr>
+<tr><td><strong>Rhythm check</strong></td><td>Same</td><td>Same</td></tr>
+</table>
+<h4>Pediatric Drug Doses</h4>
+<table>
+<tr><th>Drug</th><th>Dose</th></tr>
+<tr><td><strong>Epinephrine</strong></td><td>0.01mg/kg IV/IO (0.1mL/kg of 1:10,000)</td></tr>
+<tr><td><strong>Amiodarone</strong></td><td>5mg/kg IV/IO</td></tr>
+<tr><td><strong>Adenosine</strong></td><td>0.1mg/kg (max 6mg), then 0.2mg/kg (max 12mg)</td></tr>
+<tr><td><strong>Dextrose</strong></td><td>0.5g/kg (D25: 2mL/kg, D10: 5mL/kg)</td></tr>
+<tr><td><strong>Midazolam</strong></td><td>0.1mg/kg IV/IM/IN</td></tr>
+</table>
+<h3>Broselow Tape</h3>
+<h4>What is it?</h4>
+<ul><li><strong>Length-based tape</strong> — วัดความยาวเด็ก (supine, heel to head)</li><li><strong>Color zones</strong> → tells you:</li><li><strong>Weight estimate</strong></li><li><strong>Equipment sizes</strong> (ETT, IV, BVM)</li><li><strong>Drug doses</strong> (epi, amiodarone, adenosine, etc.)</li><li><strong>Defibrillation energy</strong></li></ul>
+<h4>How to Use</h4>
+<p>1. Lay child supine</p>
+<p>2. Place tape at head</p>
+<p>3. Note color at heel</p>
+<p>4. Use color zone for drug doses + equipment sizes</p>
+<h3>Common Pediatric Ingestions</h3>
+<h4>Dangerous Ingestions (even small amounts)</h4>
+<table>
+<tr><th>Substance</th><th>Dangerous Dose</th><th>Treatment</th></tr>
+<tr><td><strong>Acetaminophen</strong></td><td>&gt;150 mg/kg</td><td>NAC</td></tr>
+<tr><td><strong>Iron</strong></td><td>&gt;20 mg/kg</td><td>Deferoxamine</td></tr>
+<tr><td><strong>Tricyclics</strong></td><td>&gt;10 mg/kg</td><td>Sodium bicarbonate</td></tr>
+<tr><td><strong>Digoxin</strong></td><td>Variable</td><td>DigiFab</td></tr>
+<tr><td><strong>Theophylline</strong></td><td>&gt;1 mg/mL</td><td>Activated charcoal, hemodialysis</td></tr>
+<tr><td><strong>Camphor</strong></td><td>Even small amount</td><td>Seizures</td></tr>
+<tr><td><strong>Hydrocarbons</strong></td><td>Even small amount</td><td>Aspiration risk</td></tr>
+<tr><td><strong>Button battery</strong></td><td>Emergency!</td><td>Endoscopic removal</td></tr>
+</table>
+<h4>Button Battery Ingestion ⚠️</h4>
+<ul><li><strong>Caustic + electrical injury</strong> to esophagus</li><li><strong>Can perforate within 2 hours</strong></li><li><strong>Emergency endoscopy</strong> needed</li><li><strong>Honey</strong> (if &lt;12 hours, not allergic) — may reduce injury</li></ul>
+<h3>Non-Accidental Trauma (Child Abuse)</h3>
+<h4>Red Flags</h4>
+<ul><li><strong>Inconsistent story</strong> — history doesn't match injury</li><li><strong>Delayed presentation</strong></li><li><strong>Injury pattern:</strong></li><li>Bruising in non-ambulatory infant (&lt;6 months)</li><li>Patterned injuries (belt, hand, cord)</li><li>Burns (cigarette, stocking-glove, immersion)</li><li>Fractures in infant (spiral femur, rib fractures, metaphyseal corner fractures)</li><li><strong>Multiple injuries in different healing stages</strong></li><li><strong>Retinal hemorrhages</strong> (shaken baby syndrome)</li></ul>
+<h4>EMT Responsibility</h4>
+<ul><li><strong>Document carefully</strong></li><li><strong>Report suspicion</strong> to appropriate authorities</li><li><strong>Do NOT confront caregivers</strong></li><li><strong>Focus on patient care</strong></li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> Pediatric cardiac arrest — most common cause?</p>
+<p><strong>A1:</strong> <strong>Respiratory failure → hypoxia → bradycardia → arrest</strong> (not primary cardiac)</p>
+<p><strong>Q2:</strong> Febrile seizure — simple vs complex?</p>
+<p><strong>A2:</strong> <strong>Simple = generalized, &lt;15 min, no recurrence</strong>; Complex = focal, &gt;15 min, or recurrence</p>
+<p><strong>Q3:</strong> Epiglottitis — ห้ามทำอะไร?</p>
+<p><strong>A3:</strong> <strong>ห้าม look in throat</strong> — may trigger complete obstruction!</p>
+<h3>ภาษาไทย: Pediatric Emergencies สำหรับ EMT</h3>
+<ul><li><strong>PAT (Appearance, Breathing, Circulation)</strong> — ดูก่อน touch</li><li><strong>Bradycardia + poor perfusion = CPR</strong> ใน infant</li><li><strong>Broselow tape</strong> — สำคัญมากสำหรับ drug doses + equipment</li><li><strong>Febrile seizure = benign</strong> — protect, antipyretics after</li><li><strong>Epiglottitis = don't look in throat!</strong></li></ul>
+<h3>Related</h3>
+<ul><li>[[CPR Guidelines - Pediatric]]</li><li>[[Airway Anatomy]]</li><li>[[Respiratory Emergencies - Asthma COPD]]</li><li>[[Poisoning Overdose]]</li><li>[[Naloxone - Overdose Reversal]]</li><li>[[Seizures - Assessment Management]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.aap.org/" target="_blank" rel="noopener">AAP ↗</a></li>
+      <li><a href="https://www.acog.org/" target="_blank" rel="noopener">ACOG ↗</a></li>
+        </ul>
+        <p class="src">Source: AAP</p>
+      </div>
+    </aside>
+  </article>
+</Base>
