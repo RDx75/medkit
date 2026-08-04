@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Diabetic — MedKit" activeSlug="ref-diabetic">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Diabetic</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Diabetic Emergencies</h2>
+<blockquote>"Hypoglycemia ฉุกเฉินทันที — สมองต้องการ glucose ตลอดเวลา"</blockquote>
+<h3>ภาพรวบ</h3>
+<p>Diabetic emergencies ที่ EMT พบบ่อย:</p>
+<p>1. <strong>Hypoglycemia</strong> (น้ำตาลต่ำ) — <strong>ฉุกเฉินทันที</strong> ต้องรักษาเร็ว</p>
+<p>2. <strong>DKA (Diabetic Ketoacidosis)</strong> — Type 1, น้ำตาลสูง + acidosis</p>
+<p>3. <strong>HHS (Hyperosmolar Hyperglycemic State)</strong> — Type 2, น้ำตาลสูงมาก + dehydration</p>
+<h3>Glucose Physiology</h3>
+<pre class="code"><code>Normal blood glucose: 70-110 mg/dL (fasting)
+Brain uses: ~120g glucose/day (20% of total body consumption)
+Brain cannot store glucose → needs continuous supply</code></pre>
+<h3>Hypoglycemia (น้ำตาลในเลือดต่ำ) ⭐</h3>
+<h4>Causes</h4>
+<ul><li><strong>Too much insulin</strong> (overdose, missed meal)</li><li><strong>Too little food</strong> (skipped meals)</li><li><strong>Increased exercise</strong> (burns glucose faster)</li><li><strong>Alcohol</strong> (blocks gluconeogenesis)</li><li><strong>Oral hypoglycemics</strong> (sulfonylureas — long-acting)</li></ul>
+<h4>Signs &amp; Symptoms</h4>
+<table>
+<tr><th>Category</th><th>Symptoms</th></tr>
+<tr><td><strong>Adrenergic</strong> (early)</td><td>Diaphoresis, tachycardia, tremor, anxiety, hunger, pallor</td></tr>
+<tr><td><strong>Neuroglycopenic</strong> (late)</td><td>Confusion, seizures, stroke-like symptoms, coma</td></tr>
+</table>
+<h4>⚠️ Important</h4>
+<ul><li><strong>Elderly + β-blockers</strong> may NOT show tachycardia/tremor (masked)</li><li><strong>Alcoholics</strong> → hypoglycemia + masking symptoms</li><li><strong>Sulfonylurea overdose</strong> → recurrent hypoglycemia (drug lasts hours)</li><li><strong>Stroke mimic</strong> — always check glucose in any altered mental status!</li></ul>
+<h4>Prehospital Treatment</h4>
+<h5>Alert Patient (can swallow)</h5>
+<p>1. <strong>Oral glucose</strong> 15-20g (3-4 glucose tablets, ½ cup juice, regular soda, honey)</p>
+<p>2. Wait 15 minutes → recheck glucose</p>
+<p>3. If still &lt;70 → repeat oral glucose</p>
+<p>4. If improving → give complex carb + protein (sandwich)</p>
+<h5>Unconscious Patient (cannot swallow)</h5>
+<p>1. <strong>D50 (Dextrose 50%) 25g IV</strong> (50 mL of 50% solution)</p>
+<p>2. If no IV access → <strong>Glucagon 1mg IM/IN</strong></p>
+<ul><li>Glucagon takes 10-15 minutes to work</li><li>Less effective in alcoholics (no glycogen stores)</li><li>Less effective in sulfonylurea overdose</li></ul>
+<p>3. Recheck glucose after treatment</p>
+<p>4. <strong>Thiamine 100mg IV</strong> before glucose in alcoholics/malnourished (prevents Wernicke's)</p>
+<h4>Glucagon Mechanism</h4>
+<ul><li>Stimulates liver glycogenolysis → releases glucose</li><li>Requires liver glycogen stores (depleted in alcoholics, starvation)</li><li><strong>Nasal glucagon (Baqsimi) 3mg</strong> — easy to use, no injection</li></ul>
+<h3>Hyperglycemia</h3>
+<h4>DKA (Diabetic Ketoacidosis) — Type 1</h4>
+<ul><li><strong>Pathophysiology:</strong> No insulin → body burns fat → ketones → metabolic acidosis</li><li><strong>Onset:</strong> Hours to days</li><li><strong>Signs:</strong></li><li>Polyuria, polydipsia, polyphagia</li><li>Nausea, vomiting, abdominal pain</li><li><strong>Kussmaul breathing</strong> (deep, rapid — compensatory for acidosis)</li><li><strong>Fruity breath</strong> (acetone)</li><li>Dehydration, tachycardia, hypotension</li><li>Altered mental status → coma</li><li><strong>Glucose:</strong>通常 300-800 mg/dL</li><li><strong>Treatment:</strong> IV fluid bolus, insulin (hospital), electrolyte replacement</li></ul>
+<h4>HHS (Hyperosmolar Hyperglycemic State) — Type 2</h4>
+<ul><li><strong>Pathophysiology:</strong> Some insulin present (prevents ketosis) → extreme hyperglycemia → osmotic diuresis → severe dehydration</li><li><strong>Onset:</strong> Days to weeks</li><li><strong>Signs:</strong></li><li>Extreme dehydration</li><li><strong>Glucose often &gt;600 mg/dL</strong> (sometimes &gt;1,000)</li><li>Altered mental status, seizures</li><li><strong>NO Kussmaul breathing</strong> (no acidosis)</li><li>NO fruity breath</li><li><strong>Mortality higher than DKA</strong> (10-20%)</li><li><strong>Treatment:</strong> Aggressive IV fluid (2-3L in first 2 hours), insulin (hospital)</li></ul>
+<h3>Prehospital Glucose Monitoring</h3>
+<h4>Checking Blood Glucose</h4>
+<ul><li><strong>Glucometer</strong> — fingerstick</li><li><strong>Normal:</strong> 70-110 mg/dL (fasting), &lt;140 mg/dL (post-prandial)</li><li><strong>Hypoglycemia:</strong> &lt;70 mg/dL (symptomatic), &lt;54 mg/dL (clinically significant)</li><li><strong>Hyperglycemia:</strong> &gt;126 mg/dL (fasting), &gt;200 mg/dL (random)</li></ul>
+<h4>⚠️ Glucometer Pitfalls</h4>
+<ul><li><strong>Poor perfusion/shock</strong> → falsely low reading</li><li><strong>Severe anemia</strong> → inaccurate</li><li><strong>Maltose-containing IV fluids</strong> → falsely high (some glucometers)</li><li><strong>Always treat the patient, not the number!</strong></li></ul>
+<h3>Diabetes Medications</h3>
+<table>
+<tr><th>Class</th><th>Examples</th><th>Hypoglycemia Risk</th></tr>
+<tr><td><strong>Insulin</strong></td><td>Regular, NPH, Lispro, Glargine, Glulisine</td><td>⭐⭐⭐ High</td></tr>
+<tr><td><strong>Sulfonylureas</strong></td><td>Glipizide, Glyburide, Glimepiride</td><td>⭐⭐⭐ High (long-acting)</td></tr>
+<tr><td><strong>Meglitinides</strong></td><td>Repaglinide, Nateglinide</td><td>⭐⭐ Moderate</td></tr>
+<tr><td><strong>Biguanides</strong></td><td>Metformin</td><td>⭐ Low (but lactic acidosis risk)</td></tr>
+<tr><td><strong>DPP-4 inhibitors</strong></td><td>Sitagliptin</td><td>⭐ Low</td></tr>
+<tr><td><strong>GLP-1 agonists</strong></td><td>Liraglutide, Semaglutide</td><td>⭐ Low</td></tr>
+<tr><td><strong>SGLT2 inhibitors</strong></td><td>Empagliflozin, Dapagliflozin</td><td>⭐ Low (but DKA risk)</td></tr>
+<tr><td><strong>TZDs</strong></td><td>Pioglitazone</td><td>⭐ Low</td></tr>
+</table>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> Hypoglycemia ในผู้ป่วยที่ได้ sulfonylurea มีอะไรพิเศษ?</p>
+<p><strong>A1:</strong> <strong>Recurrent hypoglycemia</strong> — drug ออกฤทธิ์นาน ต้อง monitor ต่อเนื่อง + glucose infusion</p>
+<p><strong>Q2:</strong> DKA vs HHS — อันไหนมี Kussmaul breathing?</p>
+<p><strong>A2:</strong> <strong>DKA</strong> — มี acidosis → Kussmaul breathing; HHS ไม่มี acidosis → ไม่มี Kussmaul</p>
+<p><strong>Q3:</strong> Alcoholic + hypoglycemia — Glucagon อาจไม่ได้ผลเพราะอะไร?</p>
+<p><strong>A3:</strong> <strong>No liver glycogen stores</strong> — alcohol depletes glycogen → glucagon can't release glucose</p>
+<h3>ภาษาไทย: Diabetic Emergencies สำหรับ EMT</h3>
+<ul><li><strong>Hypoglycemia = ฉุกเฉินทันที</strong> — oral glucose if alert, D50 IV or Glucagon IM if unconscious</li><li><strong>Always check glucose</strong> ใน every altered mental status patient</li><li><strong>DKA = Kussmaul + fruity breath</strong> (Type 1)</li><li><strong>HHS = extreme glucose + no acidosis</strong> (Type 2, elderly)</li><li><strong>Treat the patient, not the number</strong></li></ul>
+<h3>Related</h3>
+<ul><li>[[Oral Glucose - Hypoglycemia]]</li><li>[[Naloxone - Overdose Reversal]]</li><li>[[Seizures - Assessment Management]]</li><li>[[Patient Assessment Algorithm]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA Medical ↗</a></li>
+      <li><a href="https://wikem.org/" target="_blank" rel="noopener">WikEM ↗</a></li>
+        </ul>
+        <p class="src">Source: NHTSA</p>
+      </div>
+    </aside>
+  </article>
+</Base>
