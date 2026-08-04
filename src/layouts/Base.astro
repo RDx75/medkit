@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import { categories, tools } from '../data/tools';
 
-const base = import.meta.env.BASE_URL; // '/' locally, '/medkit/' on GitHub Pages
+const base = import.meta.env.BASE_URL || '/';
 
 interface Props {
   title: string;
