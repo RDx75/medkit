@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Bvm — MedKit" activeSlug="ref-bvm">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Bvm</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Bag-Valve-Mask Ventilation</h2>
+<blockquote>"BVM = ช่วยหายใจด้วยมือ — ทักษะที่ EMT ต้องเชี่ยวชาญที่สุด"</blockquote>
+<h3>บทนำ</h3>
+<p>Bag-Valve-Mask (BVM) เป็นอุปกรณ์ช่วยหายใจด้วยมือ ใช้เมื่อผู้ป่วยไม่หายใจหรือหายใจไม่เพียงพอ เป็นทักษะที่ EMT ต้องฝึกจนชำนาญ เพราะเป็นวิธีช่วยหายใจที่สำคัญที่สุดในสนาม</p>
+<h3>อุปกรณ์ BVM</h3>
+<table>
+<tr><th>ส่วน</th><th>รายละเอียด</th></tr>
+<tr><td><strong>Bag</strong> (ถุงบีบ)</td><td>Self-inflating, 1500 mL (adult), 500 mL (child), 240 mL (infant)</td></tr>
+<tr><td><strong>Mask</strong> (หน้ากาก)</td><td>ขนาด 3-5 (adult), 1-3 (child/infant)</td></tr>
+<tr><td><strong>Valve</strong></td><td>ป้องกัน air กลับ</td></tr>
+<tr><td><strong>Reservoir</strong></td><td>ต่อ O2 tank → FiO2 ~100%</td></tr>
+<tr><td><strong>PEEP valve</strong> (ถ้ามี)</td><td>เพิ่ม PEEP ใน ARDS/CHF</td></tr>
+</table>
+<h3>เทคนิค BVM</h3>
+<h4>1. เลือก mask ขนาดที่เหมาะสม</h4>
+<ul><li>ครอบจาก <strong>nose bridge</strong> → <strong>chin</strong></li><li>ไม่ให้มี air leak</li></ul>
+<h4>2. E-C Clamp Technique</h4>
+<ul><li><strong>E</strong> (นิ้วกลาง + นิ้วชี้ + นิ้วหัวแม่มือ): จับ mask → กดลงบนหน้า</li><li><strong>C</strong> (นิ้วก้อย + นิ้วนาง): ยก jaw → ดึง mask ลง</li><li><strong>ห้าม</strong> กดที่ soft tissue ใต้คาง → จะ occlusion airway!</li></ul>
+<h4>3. บีบ bag</h4>
+<ul><li><strong>Adult</strong>: บีบ 1/3 ของ bag (~500-600 mL)</li><li><strong>บีบช้าๆ</strong> — 1 วินาทีต่อ breath</li><li><strong>Rate</strong>: 10-12 /min (1 breath ทุก 5-6 วินาที)</li><li><strong>ถ้ามี pulse</strong>: 1 breath ทุก 5-6 วินาที</li><li><strong>ถ้าไม่มี pulse (CPR)</strong>: 30:2 หรือ 15:2 (2 rescuers)</li></ul>
+<h4>4. สังเกตผล</h4>
+<ul><li><strong>Chest rise</strong> — ปอดขยายตัว</li><li><strong>SpO2</strong> — ควร &gt; 94%</li><li><strong>Breath sounds</strong> — ฟัง 2 ข้าง</li></ul>
+<h3>Two-Person BVM (ดีกว่า!)</h3>
+<ul><li><strong>คนที่ 1</strong>: E-C clamp → seal mask (ทั้ง 2 มือ)</li><li><strong>คนที่ 2</strong>: บีบ bag</li><li><strong>ดีกว่า 1 คน</strong> — seal ดีกว่า, ป้องกัน leak</li></ul>
+<h3>Oxygen Flow</h3>
+<table>
+<tr><th>สถานการณ์</th><th>Flow rate</th></tr>
+<tr><td><strong>BVM + reservoir</strong></td><td>15 L/min → FiO2 ~100%</td></tr>
+<tr><td><strong>BVM ไม่มี reservoir</strong></td><td>15 L/min → FiO2 ~40-60%</td></tr>
+</table>
+<h3>Common Problems</h3>
+<table>
+<tr><th>ปัญหา</th><th>สาเหตุ</th><th>แก้ไข</th></tr>
+<tr><td><strong>No chest rise</strong></td><td>Air leak, poor seal, obstruction</td><td>ปรับ mask, OPA/NPA, suction</td></tr>
+<tr><td><strong>Gastric distension</strong></td><td>ฉีดมากเกิน, airway obstruction</td><td>ลด volume, OPA, NPA</td></tr>
+<tr><td><strong>Hypoventilation</strong></td><td>บีบไม่พอ, rate ต่ำ</td><td>เพิ่ม rate + volume</td></tr>
+<tr><td><strong>Hyperventilation</strong></td><td>บีบเร็วเกิน</td><td>ช้าลง — 1 breath / 5-6 sec</td></tr>
+</table>
+<h3>Gastric Distension (ท้องอืด)</h3>
+<ul><li>เกิดจาก air เข้ากระเพาะ</li><li>อาจทำให้ <strong>vomiting → aspiration</strong></li><li><strong>ป้องกัน</strong>: บีบช้าๆ, ไม่เกิน volume, OPA/NPA</li><li><strong>แก้ไข</strong>: ถ้า severe → NG tube (hospital)</li></ul>
+<h3>OPA/NPA กับ BVM</h3>
+<ul><li><strong>OPA</strong> (Oropharyngeal Airway): ใส่ในปาก → ป้องกัน tongue obstruction</li><li>ใช้กับ <strong>unconscious</strong> patient เท่านั้น!</li><li>ขนาด: corner of mouth → angle of jaw</li><li><strong>NPA</strong> (Nasopharyngeal Airway): ใส่ในจมูก</li><li>ใช้กับ <strong>conscious</strong> หรือ <strong>unconscious</strong> ได้</li><li>ขนาด: tip of nose → ear lobe</li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> BVM 1 คนใช้เทคนิคอะไร?</p>
+<p><strong>A1:</strong> E-C clamp — E (จับ mask) + C (ยก jaw)</p>
+<p><strong>Q2:</strong> BVM rate ถ้ามี pulse?</p>
+<p><strong>A2:</strong> 10-12 /min (1 breath ทุก 5-6 วินาที)</p>
+<p><strong>Q3:</strong> Two-person BVM ดีกว่าอย่างไร?</p>
+<p><strong>A3:</strong> คนที่ 1 seal mask ด้วยทั้ง 2 มือ → seal ดีกว่า, ป้องกัน leak</p>
+<p><strong>Q4:</strong> OPA ใช้กับใคร?</p>
+<p><strong>A4:</strong> Unconscious patient เท่านั้น (ไม่มี gag reflex)</p>
+<p><strong>Q5:</strong> Gastric distension เกิดจากอะไร?</p>
+<p><strong>A5:</strong> Air เข้ากระเพาะ — ป้องกันด้วยบีบช้าๆ, ไม่เกิน volume</p>
+<h3>ภาษาไทย</h3>
+<p>BVM เป็นอุปกรณ์ช่วยหายใจด้วยมือ ใช้ E-C clamp technique, rate 10-12/min (ถ้ามี pulse), two-person technique ดีกว่า, ต้องดู chest rise + SpO2</p>
+<h4>Related</h4>
+<ul><li>[[Airway Management]]</li><li>[[Basic Airway Adjuncts - OPA NPA]]</li><li>[[Skill - Airway Management]]</li><li>[[Primary Assessment - ABCDE]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nremt.org/" target="_blank" rel="noopener">NREMT Airway ↗</a></li>
+      <li><a href="https://cpr.heart.org/" target="_blank" rel="noopener">AHA BLS ↗</a></li>
+        </ul>
+        <p class="src">Source: NREMT</p>
+      </div>
+    </aside>
+  </article>
+</Base>
