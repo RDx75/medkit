@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="Drug Dose by Weight" activeSlug="drug-dose">
-  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>Drug Dose by Weight</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>Drug Dose by Weight</span></div>
   <h1>Drug Dose by Weight</h1>
   <p class="cat-desc">Weight-based dosing (mg/kg) with a maximum-dose guard.</p>
 
