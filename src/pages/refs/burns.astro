@@ -1,0 +1,118 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Burns — MedKit" activeSlug="ref-burns">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Burns</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Burns — การประเมินและจัดการไฟไหม้</h2>
+<blockquote>"Burn รุนแรง = ส่ง Burn Center — อย่าดูถูกแผลไฟไหม้"</blockquote>
+<h3>ภาพรวม (Overview)</h3>
+<p>Burn คือการบาดเจ็บของเนื้อเยื่อจากความร้อน, สารเคมี, ไฟฟ้า, หรือรังสี</p>
+<p>ใน EMS, สิ่งสำคัญคือ:</p>
+<p>1. <strong>หยุดกระบวนการ burn</strong> (cooling)</p>
+<p>2. <strong>ประเมินความรุนแรง</strong> (depth + TBSA)</p>
+<p>3. <strong>หาสาเหตุ</strong> (thermal/chemical/electrical/inhalation)</p>
+<p>4. <strong>ส่งได้ส่ง Burn Center</strong> ตาม criteria</p>
+<h3>ชนิดของ Burns</h3>
+<h4>1. Thermal Burns (ไฟ/น้ำร้อน/ไอน้ำ)</h4>
+<ul><li><strong>Flame:</strong> ไฟติดเสื้อผ้า, ระเบิด</li><li><strong>Scald:</strong> น้ำร้อน, น้ำมันร้อน (common in children)</li><li><strong>Contact:</strong> สัมผัสสิ่งร้อน (เตา, ท่อไอน้ำ)</li></ul>
+<h4>2. Chemical Burns (สารเคมี)</h4>
+<ul><li><strong>Acid (กรด):</strong> Coagulation necrosis — self-limiting (acid ทำลาย tissue แล้วหยุด)</li><li><strong>Base (ด่าง):</strong> Liquefactive necrosis — <strong>แย่กว่า</strong> (ด่างละลาย tissue ต่อเนื่อง)</li><li><strong>สิ่งสำคัญ:</strong> ล้างด้วยน้ำมากๆ ต่อเนื่อง 20-30 นาที</li><li><strong>ห้าม neutralize</strong> — ปฏิกิริยา acid-base อาจสร้างความร้อน!</li><li><strong>ยกเว้น:</strong> Dry lime (ฝุ่นปูน) — แรกโกนออกก่อน แล้วค่อยล้างด้วยน้ำ (ถ้าใช้น้ำก่อนจะสร้าง Ca(OH)2 → ร้อน)</li></ul>
+<h4>3. Electrical Burns (ไฟฟ้า)</h4>
+<ul><li><strong>AC (alternating current)</strong> — แรงดันบ้าน 220V — <strong>อันตรายกว่า DC</strong> (ทำให้ muscle tetany → จับสายต่อ → burn รุนแรง)</li><li><strong>High voltage (&gt;1,000V):</strong> อาจ cardiac arrest, deep tissue injury</li><li><strong>Entry + Exit wounds</strong> — ดูเบาๆ ข้างนอก แต่ข้างในอาจทำลายรุนแรง</li></ul>
+<h4>4. Inhalation Injury (การสูดควัน/สารเคมี)</h4>
+<ul><li><strong>สาเหตุ:</strong> สูดควันร้อน, สารเคมี, CO</li><li><strong>Warning signs:</strong></li><li>Burns ที่ใบหน้า/จมูก/คอ</li><li>ผมจมูก/คิ้มไหม้</li><li>Hoarse voice/stridor</li><li>Sputum สีดำ (carbonaceous sputum)</li><li>อยู่ใน enclosed space</li><li><strong>อันตราย:</strong> Airway edema → obstruction ภายใน 1-24 ชม. → ต้อง early intubation!</li></ul>
+<h3>ความลึกของ Burn (Depth)</h3>
+<h4>Superficial (1st Degree)</h4>
+<ul><li><strong>ผิวหนังแดง, ปวด, ไม่มี blister</strong></li><li>เช่น ไฟไหม้แดด</li><li>หายภายใน 3-5 วัน</li><li><strong>ไม่นับใน TBSA calculation</strong></li></ul>
+<h4>Superficial Partial-Thickness (2nd Degree — Superficial)</h4>
+<ul><li><strong>Blister, แดง, ปวดมาก, เปียก</strong></li><li>หายภายใน 7-14 วัน</li></ul>
+<h4>Deep Partial-Thickness (2nd Degree — Deep)</h4>
+<ul><li><strong>Blister (หลุดแล้ว), ขาว-แดง, ปวดน้อยกว่า</strong></li><li>หายภายใน 14-21 วัน</li><li>อาจต้อง skin graft</li></ul>
+<h4>Full-Thickness (3rd Degree)</h4>
+<ul><li><strong>สีขาด/ดำ/ขาว, แห้ง, แข็ง (leathery), ไม่ปวด</strong> (nerve endings ทำลายแล้ว)</li><li><strong>จะหายเองไม่ได้</strong> — ต้อง skin graft</li><li>Hair ถอดออกง่าย</li></ul>
+<h4>4th Degree</h4>
+<ul><li>ถึง <strong>กล้ามเนื้อ/กระดูก</strong></li><li>ถอนขา/ถอนแขน อาจจำเป็น</li></ul>
+<h3>Rule of Nines (การปริมาณพื้นที่ %TBSA)</h3>
+<pre class="code"><code>Adult Rule of Nines:
+                    Head &amp; Neck: 9%
+                    Each Arm: 9% (×2 = 18%)
+Anterior Torso: 18%     Posterior Torso: 18%
+                    Each Leg: 18% (×2 = 36%)
+                    Perineum: 1%
+                    Total: 100%</code></pre>
+<h4>Lund-Browder Chart (แม่นยำกว่า — ใช้ใน children + adults)</h4>
+<ul><li>ปรับ percentage ตามอายุ (เด็กมีหัวใหญ่กว่า → head = 18% ใน infant)</li></ul>
+<h4>Palm Method (สำหรับ small/scattered burns)</h4>
+<ul><li><strong>Palm ของผู้ป่วย (รวมนิ้ว) = 1% TBSA</strong></li><li>ใช้สำหรับ burn กระจัดกระจาย</li></ul>
+<h3>American Burn Association — Burn Center Referral Criteria</h3>
+<p><strong>ส่ง Burn Center ถ้า:</strong></p>
+<p>1. Partial-thickness burn <strong>&gt;10% TBSA</strong></p>
+<p>2. Full-thickness burn (3rd degree) <strong>ทุกขนาด</strong></p>
+<p>3. Burn ที่ <strong>หน้า, มือ, เท้า, อวัยวะเพศ, joints</strong></p>
+<p>4. <strong>Inhalation injury</strong></p>
+<p>5. <strong>Electrical burn</strong> (รวม lightning)</p>
+<p>6. <strong>Chemical burn</strong></p>
+<p>7. Burn ร่วมกับ <strong>trauma</strong> อื่น (ที่ trauma severity &gt; burn severity)</p>
+<p>8. Burn ใน <strong>patients with pre-existing medical conditions</strong> ที่อาจทำให้แย่ลง</p>
+<p>9. <strong>Children</strong> ใน hospital ที่ไม่มี pediatric capability</p>
+<h3>การรักษา Burn (Prehospital)</h3>
+<h4>1. Stop the Burning Process</h4>
+<ul><li><strong>Thermal:</strong> ดับไฟ, เปียกน้ำเย็น 15-30 นาที</li><li><strong>Chemical:</strong> ล้างน้ำมากๆ 20-30 นาที, ถอดเสื้อผ้าที่ปนเปื้อน</li><li><strong>Electrical:</strong> ตัดไฟฟ้าก่อน → เข้าช่วย</li></ul>
+<h4>2. Cooling</h4>
+<ul><li><strong>น้ำเย็น (15-25°C)</strong> เปียก 15-30 นาที</li><li><strong>ห้ามน้ำแข็ง!</strong> — จะทำให้ vasoconstriction → แผลแย่ลง + hypothermia</li><li>ถ้า burn &gt;20% TBSA → ห้าม cooling นานเกินไป (hypothermia risk)</li></ul>
+<h4>3. Cover</h4>
+<ul><li><strong>Sterile dry dressing</strong> หรือ clean sheet</li><li><strong>ห้ามใช้</strong> butter, toothpaste, egg white, cream ใดๆ!</li><li><strong>ห้ามเจาะ blister</strong></li></ul>
+<h4>4. Fluid Resuscitation (สำหรับ &gt;20% TBSA)</h4>
+<h5>Parkland Formula</h5>
+<pre class="code"><code>Total fluid (mL) = 4 mL × body weight (kg) × %TBSA
+
+แบ่ง:
+- ครึ่งหนึ่ง (1/2) ให้ใน 8 ชม. แรก (นับจากเวลา burn ไม่ใช่เวลามา ถึง พยาบาล)
+- ครึ่งหลัง (1/2) ให้ใน 16 ชม. ถัดไป
+
+ใช้ Lactated Ringer's (LR)</code></pre>
+<p><strong>ตัวอย่าง:</strong> ผู้ป่วย 70 kg, burn 40% TBSA</p>
+<ul><li>Total = 4 × 70 × 40 = 11,200 mL</li><li>ชม. 1-8: 5,600 mL (700 mL/hr)</li><li>ชม. 9-24: 5,600 mL (350 mL/hr)</li></ul>
+<h4>5. Monitor</h4>
+<ul><li><strong>Urine output:</strong> เป้าหมาย 0.5-1 mL/kg/hr (adult), 1-2 mL/kg/hr (เด็ก)</li><li>SpO2 — เช็ค inhalation injury</li><li>Airway patency — stridor = early intubation!</li></ul>
+<h3>Inhalation Injury — สำคัญเป็นพิเศษ</h3>
+<h4>Types</h4>
+<p>1. <strong>Supraglottic (upper airway):</strong> ควันร้อน → edema → obstruction</p>
+<p>2. <strong>Infraglottic (lower airway):</strong> สารเคมีในควัน → chemical tracheobronchitis</p>
+<p>3. <strong>Systemic:</strong> CO poisoning, cyanide poisoning (จาก burning of plastics/wool)</p>
+<h4>CO Poisoning</h4>
+<ul><li>CO binds hemoglobin 200× &gt; O2 → pulse oximetry <strong>หลอก!</strong> (แสดง SpO2 สูงแต่จริงขาด O2)</li><li><strong>Treatment:</strong> 100% O2 (reduces CO half-life จาก 5 ชม. → 30-90 นาที)</li><li><strong>Hyperbaric O2</strong> สำหรับ severe cases (COHb &gt;25%, pregnant, neurologic symptoms)</li></ul>
+<h4>Cyanide Poisonide</h4>
+<ul><li>จาก burning ของ synthetic materials (wool, silk, polyurethane)</li><li>อาการ: Altered mental status, lactic acidosis, แต่ SpO2 normal</li><li>Treatment: <strong>Hydroxocobalamin (Cyanokit)</strong> 70mg/kg IV</li></ul>
+<h3>Electrical Burn — Special Considerations</h3>
+<ul><li><strong>Cardiac monitoring ทุก patient</strong> ที่ high-voltage injury (เสี่ยง arrhythmia 24-48 ชม.)</li><li><strong>Compartment syndrome</strong> — internal burn → muscle necrosis → edema → compartment pressure ↑ → ต้อง fasciotomy</li><li><strong>Myoglobinuria</strong> — muscle breakdown → myoglobin → renal failure → ต้อง aggressive fluid + alkalinize urine</li><li><strong>Spinal injury</strong> — violent muscle contraction → fracture/dislocation</li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> Chemical burn จากสารด่าง (base) และกรด (acid) อันไหนแย่กว่า?</p>
+<p><strong>A1:</strong> <strong>Base (ด่าง)</strong> — liquefactive necrosis ละลาย tissue ต่อเนื่อง, acid เป็น coagulation necrosis self-limiting</p>
+<p><strong>Q2:</strong> Burn Center referral criteria สำหรับ partial-thickness burn?</p>
+<p><strong>A2:</strong> <strong>&gt;10% TBSA</strong> หรือ burn ที่หน้า/มือ/เท้า/อวัยวะเพศ/joints</p>
+<p><strong>Q3:</strong> CO poisoning SpO2 จะแสดงค่าอย่างไร?</p>
+<p><strong>A3:</strong> <strong>SpO2 ปกติ/สูง</strong> — pulse oximetry ไม่แยก COHb ได้ → ต้องเช็ค COHb level</p>
+<h3>ภาษาไทย: Burn สำหรับ EMT</h3>
+<p>สิ่งที่ EMT ต้องรู้:</p>
+<ul><li><strong>หยุด burn, ล้างน้ำเย็น, ห้ามใช้น้ำแข็ง</strong></li><li><strong>3rd degree = ขาด/ดำ + ไม่ปวด</strong> → ต้อง skin graft</li><li><strong>Inhalation injury = ส่ง Burn Center</strong> — ด่วนที่สุด (airway อาจปิด)</li><li><strong>Chemical = ล้างน้ำรอบ 20-30 นาที</strong> ห้าม neutralize</li><li><strong>Electrical = cardiac monitor + check urine (myoglobinuria)</strong></li></ul>
+<h3>Related</h3>
+<ul><li>[[Burn Assessment]]</li><li>[[Trauma Assessment]]</li><li>[[Bleeding Shock]]</li><li>[[Chest Trauma]]</li><li>[[Airway Management]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA Trauma ↗</a></li>
+      <li><a href="https://www.stopthebleed.org/" target="_blank" rel="noopener">ACS STOP THE BLEED ↗</a></li>
+        </ul>
+        <p class="src">Source: ABA</p>
+      </div>
+    </aside>
+  </article>
+</Base>
