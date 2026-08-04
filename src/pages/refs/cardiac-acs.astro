@@ -1,0 +1,87 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Cardiac Acs — MedKit" activeSlug="ref-cardiac-acs">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Cardiac Acs</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Acute Coronary Syndrome (ACS)</h2>
+<blockquote>"ACS = หัวใจขาดเลือดเฉียบพลัน — เร็ว = ชีวิต ช้า = ตาย"</blockquote>
+<h3>บทนำ</h3>
+<p>Acute Coronary Syndrome (ACS) คือภาวะที่หลอดเลือดหัวใจ (coronary arteries) ถูกอุดตัน ทำให้หัวใจขาดเลือดเฉียบพลัน เป็นภาวะฉุกเฉินที่ต้องรักษาเร็วที่สุด</p>
+<h3>ประเภท ACS</h3>
+<h4>1. STEMI (ST-Elevation MI)</h4>
+<ul><li><strong>Coronary artery อุดตันสมบูรณ์</strong></li><li>ECG: <strong>ST elevation</strong> ใน 2+ contiguous leads</li><li>ต้อง <strong>reperfusion</strong> เร็วที่สุด (PCI หรือ thrombolytics)</li><li><strong>"Time is muscle"</strong> — ยิ่งช้า = กล้ามเนื้อหัวใจตายมาก</li></ul>
+<h4>2. NSTEMI (Non-ST-Elevation MI)</h4>
+<ul><li><strong>Coronary artery อุดตันบางส่วน</strong></li><li>ECG: <strong>ST depression</strong> หรือ <strong>T wave inversion</strong> หรือ <strong>normal</strong></li><li><strong>Troponin elevated</strong> (cardiac enzyme)</li><li>ต้อง admit + monitor</li></ul>
+<h4>3. Unstable Angina</h4>
+<ul><li><strong>Coronary artery อุดตันบางส่วน</strong> แต่ยังไม่ถึง MI</li><li>อาการเหมือน MI แต่ <strong>Troponin normal</strong></li><li>เสี่ยงเป็น MI สูง</li></ul>
+<h3>อาการ</h3>
+<h4>Classic Symptoms</h4>
+<ul><li><strong>Chest pain</strong>: แน่น, หนัก, ร้อน, เฉือน — กลางหน้าอก</li><li><strong>Radiation</strong>: ลากไปแขนซ้าย, คอ, ขากรไกร, หลัง</li><li><strong>Associated</strong>: SOB, diaphoresis, nausea, dizziness, anxiety</li></ul>
+<h4>Atypical (พบบ่อยในหญิง, เด็ก, ผู้สูงอายุ, diabetic)</h4>
+<ul><li>แค่ SOB</li><li>แค่ fatigue</li><li>แค่ nausea/vomiting</li><li>แค่ epigastric pain (ดูเหมือนปวดท้อง)</li><li><strong>Silent MI</strong> — ไม่มีอาการเลย (diabetic, elderly)</li></ul>
+<h3>ECG Findings</h3>
+<table>
+<tr><th>โรค</th><th>ECG</th></tr>
+<tr><td><strong>STEMI</strong></td><td>ST elevation ≥ 1 mm (2+ leads)</td></tr>
+<tr><td><strong>NSTEMI</strong></td><td>ST depression, T inversion, หรือ normal</td></tr>
+<tr><td><strong>Unstable angina</strong></td><td>อาจ normal หรือ transient changes</td></tr>
+</table>
+<h3>Coronary Artery Territories</h3>
+<table>
+<tr><th>Leads</th><th>Artery</th><th>Wall</th></tr>
+<tr><td><strong>V1-V4</strong></td><td>LAD</td><td>Anterior</td></tr>
+<tr><td><strong>II, III, aVF</strong></td><td>RCA</td><td>Inferior</td></tr>
+<tr><td><strong>I, aVL, V5-V6</strong></td><td>LCx</td><td>Lateral</td></tr>
+</table>
+<h3>EMT Management</h3>
+<h4>Immediate</h4>
+<p>1. <strong>Scene safety + BSI</strong></p>
+<p>2. <strong>Primary assessment</strong> (ABCDE)</p>
+<p>3. <strong>O2</strong> (ถ้า SpO2 &lt; 94%)</p>
+<p>4. <strong>Aspirin 325 mg chewable</strong> (ถ้าไม่มี contraindication)</p>
+<p>5. <strong>Nitroglycerin 0.4 mg SL</strong> (ถ้า SBP &gt; 90, ไม่ใช้ยา ED)</p>
+<p>6. <strong>12-lead ECG</strong> → ถ้า STEMI → <strong>STEMI alert!</strong></p>
+<p>7. <strong>IV access</strong> (ถ้า scope อนุญาต)</p>
+<p>8. <strong>Rapid transport</strong> to PCI-capable hospital</p>
+<h4>Contraindications</h4>
+<ul><li><strong>Aspirin</strong>: allergy, active bleeding</li><li><strong>Nitroglycerin</strong>: SBP &lt; 90, ยา ED (Viagra/Cialis) ใน 24-48 ชม., RV MI</li></ul>
+<h3>STEMI Alert</h3>
+<p>เมื่อพบ STEMI:</p>
+<p>1. <strong>โทร STEMI alert</strong> → ER + cath lab</p>
+<p>2. <strong>ส่ง 12-lead ECG</strong> (ถ้ามี capability)</p>
+<p>3. <strong>Aspirin</strong> (ถ้ายังไม่ได้ให้)</p>
+<p>4. <strong>Nitroglycerin</strong> (ถ้า SBP &gt; 90)</p>
+<p>5. <strong>Rapid transport</strong> — <strong>door-to-balloon &lt; 90 นาที</strong></p>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> STEMI คืออะไร?</p>
+<p><strong>A1:</strong> Coronary artery อุดตันสมบูรณ์ → ST elevation ใน ECG</p>
+<p><strong>Q2:</strong> NSTEMI คืออะไร?</p>
+<p><strong>A2:</strong> Coronary artery อุดตันบางส่วน → ST depression/T inversion, Troponin elevated</p>
+<p><strong>Q3:</strong> Atypical MI พบบ่อยในใคร?</p>
+<p><strong>A3:</strong> หญิง, เด็ก, ผู้สูงอายุ, diabetic</p>
+<p><strong>Q4:</strong> STEMI alert ต้อง door-to-balloon ภายในกี่นาที?</p>
+<p><strong>A4:</strong> &lt; 90 นาที</p>
+<p><strong>Q5:</strong> Nitroglycerin ห้ามใช้เมื่อ SBP ต่ำกว่า?</p>
+<p><strong>A5:</strong> 90 mmHg</p>
+<h3>ภาษาไทย</h3>
+<p>ACS แบ่งเป็น STEMI (ST elevation, อุดตันสมบูรณ์), NSTEMI (ST depression, troponin ↑), Unstable angina (troponin normal) — Aspirin + Nitro + STEMI alert + rapid transport</p>
+<h4>Related</h4>
+<ul><li>[[Cardiology Essentials]]</li><li>[[Aspirin - Cardiac]]</li><li>[[Nitroglycerin - Chest Pain]]</li><li>[[ECG Basics - 12-Lead]]</li><li>[[Heart Failure]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://cpr.heart.org/" target="_blank" rel="noopener">AHA CPR & ECC ↗</a></li>
+      <li><a href="https://doi.org/10.1161/CIR.0000000000001183" target="_blank" rel="noopener">AHA 2025 Guidelines ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA 2025</p>
+      </div>
+    </aside>
+  </article>
+</Base>
