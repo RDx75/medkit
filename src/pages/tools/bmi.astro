@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title="BMI Calculator" activeSlug="bmi">
+  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>BMI Calculator</span></div>
+  <h1>BMI Calculator</h1>
+  <p class="cat-desc">Body Mass Index from weight and height, with WHO classification.</p>
+
+  <div class="tool-ui">
+    <div class="row">
+      <div class="field">
+        <label>Weight (kg)</label>
+        <input id="wt" type="number" value="70" min="0" step="0.1" />
+      </div>
+      <div class="field">
+        <label>Height (cm)</label>
+        <input id="ht" type="number" value="170" min="0" step="0.1" />
+      </div>
+    </div>
+    <button class="btn" id="calc">Calculate</button>
+    <div class="result" id="out">Enter values and press Calculate.</div>
+  </div>
+
+  <div class="article">
+    <h2>Free Online BMI Calculator</h2>
+    <p>Body Mass Index (BMI) is a screening measure that relates weight to height. It is calculated as weight (kg) divided by height (m) squared. While useful for population-level screening, BMI does not directly measure body fat or distribution and should be interpreted alongside clinical context.</p>
+    <h3>How to Use</h3>
+    <p>Enter weight in kilograms and height in centimetres, then press Calculate. The result shows your BMI and the WHO category.</p>
+    <h3>WHO Classification</h3>
+    <table>
+      <tr><th>BMI (kg/m²)</th><th>Category</th></tr>
+      <tr><td>&lt; 18.5</td><td>Underweight</td></tr>
+      <tr><td>18.5 – 24.9</td><td>Normal</td></tr>
+      <tr><td>25.0 – 29.9</td><td>Overweight</td></tr>
+      <tr><td>≥ 30.0</td><td>Obese</td></tr>
+    </table>
+    <h3>Frequently Asked Questions</h3>
+    <details class="faq"><summary>Is BMI accurate for athletes?</summary><div class="body">No. High muscle mass inflates BMI, so a muscular person may be classified as overweight despite low body fat. Use with other measures.</div></details>
+    <details class="faq"><summary>Does BMI differ by age or sex?</summary><div class="body">The standard WHO cut-offs are the same for adults of all sexes. Children use age- and sex-specific centile charts instead.</div></details>
+    <div class="callout danger">BMI is a screening tool only and is not a diagnostic measure of health or body composition.</div>
+  </div>
+
+  <script is:inline>
+    const out = document.getElementById('out');
+    function classify(bmi) {
+      if (bmi < 18.5) return ['Underweight', 'warn'];
+      if (bmi < 25) return ['Normal', 'ok'];
+      if (bmi < 30) return ['Overweight', 'warn'];
+      return ['Obese', 'bad'];
+    }
+    function run() {
+      const wt = parseFloat(document.getElementById('wt').value);
+      const ht = parseFloat(document.getElementById('ht').value) / 100;
+      if (!wt || !ht) { out.textContent = 'Please enter both weight and height.'; return; }
+      const bmi = wt / (ht * ht);
+      const [label, cls] = classify(bmi);
+      out.innerHTML = `<span class="big">${bmi.toFixed(1)}</span> kg/m² <span class="tag tag-${cls}">${label}</span>`;
+    }
+    document.getElementById('calc').addEventListener('click', run);
+    document.getElementById('wt').addEventListener('input', run);
+    document.getElementById('ht').addEventListener('input', run);
+    run();
+  </script>
+</Base>
