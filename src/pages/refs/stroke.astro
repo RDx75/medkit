@@ -1,0 +1,133 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Stroke — MedKit" activeSlug="ref-stroke">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Stroke</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Stroke — โรคหลอดเลือดสมอง</h2>
+<blockquote>"Time is Brain — ทุกนาทีที่สาย = สมองตาย 1.9 เซลล์"</blockquote>
+<h3>ภาพรวบ</h3>
+<p>Stroke = sudden neurological deficit from cerebrovascular cause</p>
+<ul><li><strong>Ischemic stroke (85%)</strong> — blood clot blocks artery → brain ischemia</li><li><strong>Hemorrhagic stroke (15%)</strong> — blood vessel ruptures → brain hemorrhage</li></ul>
+<h4>Time is Brain</h4>
+<pre class="code"><code>ทุกนาทีที่ delay = สมองตาย ~1.9 ล้าน neurons
+ทุก 15 นาทีที่ delay = mortality เพิ่ม 4%</code></pre>
+<h3>Types of Stroke</h3>
+<h4>Ischemic Stroke</h4>
+<table>
+<tr><th>Type</th><th>Mechanism</th><th>Source</th></tr>
+<tr><td><strong>Thrombotic</strong></td><td>Local clot formation</td><td>Atherosclerotic plaque (large vessels)</td></tr>
+<tr><td><strong>Embolic</strong></td><td>Clot travels from elsewhere</td><td><strong>AFib</strong> (heart valves, LV thrombus), carotid atheroma</td></tr>
+<tr><td><strong>Lacunar</strong></td><td>Small vessel disease</td><td>Hypertension, diabetes</td></tr>
+<tr><td><strong>Cryptogenic</strong></td><td>Unknown cause</td><td>30% of ischemic strokes</td></tr>
+</table>
+<h4>Hemorrhagic Stroke</h4>
+<table>
+<tr><th>Type</th><th>Mechanism</th><th>Location</th></tr>
+<tr><td><strong>Intracerebral (ICH)</strong></td><td>Hypertension → vessel rupture</td><td>Basal ganglia, thalamus, cerebellum, pons</td></tr>
+<tr><td><strong>Subarachnoid (SAH)</strong></td><td>Aneurysm rupture (berry aneurysm)</td><td>Subarachnoid space, Circle of Willis</td></tr>
+</table>
+<h3>Stroke Recognition — FAST ⭐</h3>
+<pre class="code"><code>F — Face drooping (หน้าเบี้ยว)
+A — Arm weakness (แขนอ่อนแรง)
+S — Speech difficulty (พูดไม่ชัด)
+T — Time to call (โทรขอความช่วยเหลือทันที)</code></pre>
+<h4>Extended Assessment</h4>
+<table>
+<tr><th>Sign</th><th>Indicates</th></tr>
+<tr><td><strong>Face droop</strong></td><td>CN VII palsy (central = forehead spared)</td></tr>
+<tr><td><strong>Arm drift</strong></td><td>Motor weakness</td></tr>
+<tr><td><strong>Speech difficulty</strong></td><td>Aphasia (broca's = expressive, wernicke's = receptive)</td></tr>
+<tr><td><strong>Vision loss</strong></td><td>Occipital lobe, retinal artery occlusion</td></tr>
+<tr><td><strong>Severe headache</strong></td><td>Hemorrhagic stroke (thunderclap)</td></tr>
+<tr><td><strong>Nausea/vomiting</strong></td><td>↑ICP, hemorrhagic stroke</td></tr>
+<tr><td><strong>Seizures</strong></td><td>Cortical involvement</td></tr>
+</table>
+<h3>Prehospital Stroke Scales</h3>
+<h4>Cincinnati Prehospital Stroke Scale (CPSS)</h4>
+<ul><li>Facial droop</li><li>Arm drift</li><li>Speech</li><li><strong>Any 1 abnormal = 58% probability of stroke</strong></li></ul>
+<h4>Los Angeles Motor Scale (LAMS)</h4>
+<ul><li>Facial smile</li><li>Grip (both hands)</li><li>Arm strength (both arms)</li><li><strong>Score 0-5</strong> — higher = more likely large vessel occlusion</li></ul>
+<h4>RACE (Rapid Arterial oCclusion Evaluation)</h4>
+<ul><li>Facial palsy</li><li>Arm motor</li><li>Leg motor</li><li>Head/gaze deviation</li><li>Agnosia/aphasia</li><li><strong>Score ≥5 = likely LVO</strong> — candidates for thrombectomy</li></ul>
+<h3>Prehospital Treatment</h3>
+<h4>Immediate</h4>
+<p>1. <strong>ABC's</strong> — Protect airway (aspiration risk)</p>
+<p>2. <strong>O2</strong> — Only if SpO2 &lt;94% (don't over-oxygenate)</p>
+<p>3. <strong>IV access</strong> — 18G, do NOT delay transport for IV</p>
+<p>4. <strong>Check glucose</strong> — Rule out hypoglycemia (stroke mimic!)</p>
+<p>5. <strong>NPO</strong> — Aspiration risk (swallowing difficulty)</p>
+<p>6. <strong>Monitor</strong> — Cardiac monitor (AFib? arrhythmia?)</p>
+<p>7. <strong>Rapid transport</strong> to <strong>Stroke Center</strong> (not just any hospital)</p>
+<h4>Key Information for Hospital</h4>
+<table>
+<tr><th>Information</th><th>Why</th></tr>
+<tr><td><strong>Time last known well</strong></td><td>Determines eligibility for thrombolysis/thrombectomy</td></tr>
+<tr><td><strong>Symptoms + progression</strong></td><td>Helps determine stroke type</td></tr>
+<tr><td><strong>Medications</strong></td><td>Anticoagulation? (contraindication for tPA)</td></tr>
+<tr><td><strong>PMH</strong></td><td>Previous stroke? Surgery? Cancer?</td></tr>
+<tr><td><strong>Glucose</strong></td><td>Rule out hypoglycemia</td></tr>
+</table>
+<h4>⚠️ Do NOT</h4>
+<ul><li><strong>Don't lower BP aggressively</strong> (unless extreme, SBP &gt;220 or DBP &gt;120, or giving tPA — then target &lt;185/110)</li><li><strong>Don't give aspirin</strong> in prehospital (can't rule out hemorrhage)</li><li><strong>Don't delay transport</strong> for anything non-essential</li><li><strong>Don't let family drive</strong> — needs ambulance + pre-notification</li></ul>
+<h3>Stroke Mimics</h3>
+<table>
+<tr><th>Condition</th><th>Differentiating Feature</th></tr>
+<tr><td><strong>Hypoglycemia</strong></td><td>Rapid response to glucose</td></tr>
+<tr><td><strong>Seizure</strong></td><td>Post-ictal state, witnessed seizure</td></tr>
+<tr><td><strong>Bell's palsy</strong></td><td>Only face, no arm weakness, forehead affected</td></tr>
+<tr><td><strong>Migraine</strong></td><td>Gradual onset, positive visual symptoms, history</td></tr>
+<tr><td><strong>Conversion disorder</strong></td><td>Non-anatomical distribution, inconsistency</td></tr>
+<tr><td><strong>Brain tumor</strong></td><td>Gradual onset, progressive</td></tr>
+<tr><td><strong>Hyponatremia</strong></td><td>Lab abnormality</td></tr>
+</table>
+<h3>Stroke Centers</h3>
+<table>
+<tr><th>Level</th><th>Capabilities</th><th>Treatment</th></tr>
+<tr><td><strong>Acute Stroke Ready Hospital</strong></td><td>CT, tPA</td><td>Thrombolysis</td></tr>
+<tr><td><strong>Primary Stroke Center</strong></td><td>CT, tPA, stroke unit</td><td>Thrombolysis + monitoring</td></tr>
+<tr><td><strong>Comprehensive Stroke Center</strong></td><td>All + neurointerventional</td><td>Thrombolysis + <strong>Thrombectomy</strong></td></tr>
+</table>
+<h4>Bypass Protocols</h4>
+<ul><li><strong>If LVO suspected (LAMS ≥5 or RACE ≥5)</strong> → Bypass primary stroke center → Go to <strong>Comprehensive Stroke Center</strong> (thrombectomy capable)</li><li><strong>Time window for thrombectomy:</strong> Up to <strong>24 hours</strong> in selected patients (DAWN/DEFUSE-3 criteria)</li></ul>
+<h3>Treatment Timeline</h3>
+<h4>Ischemic Stroke</h4>
+<table>
+<tr><th>Time Window</th><th>Treatment</th></tr>
+<tr><td><strong>0-4.5 hours</strong></td><td><strong>IV tPA (Alteplase)</strong> — golden standard</td></tr>
+<tr><td><strong>0-6 hours</strong></td><td><strong>Mechanical thrombectomy</strong> (large vessel occlusion)</td></tr>
+<tr><td><strong>6-24 hours</strong></td><td>Thrombectomy in selected patients (CT perfusion mismatch)</td></tr>
+<tr><td><strong>&gt;24 hours</strong></td><td>Supportive care, antiplatelets, rehabilitation</td></tr>
+</table>
+<h4>Hemorrhagic Stroke</h4>
+<ul><li><strong>BP control</strong> (target SBP &lt;140 for ICH)</li><li><strong>Reverse anticoagulation</strong> (if on warfarin/DOACs)</li><li><strong>Neurosurgery</strong> (hematoma evacuation, aneurysm clipping/coiling)</li><li><strong>ICP management</strong></li></ul>
+<h3>TIA (Transient Ischemic Attack)</h3>
+<ul><li><strong>Transient neurological deficit</strong> — resolves within 24 hours (usually &lt;1 hour)</li><li><strong>No permanent infarction</strong> on imaging</li><li><strong>BUT: High risk of full stroke!</strong> — 10-20% within 90 days (highest in first 48 hours)</li><li><strong>ABCD² score:</strong> Age, BP, Clinical features, Duration, Diabetes → risk stratification</li><li><strong>Treatment:</strong> Urgent evaluation, antiplatelets, carotid imaging, risk factor management</li></ul>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> FAST หมายถึงอะไร?</p>
+<p><strong>A1:</strong> <strong>Face drooping + Arm weakness + Speech difficulty + Time to call</strong></p>
+<p><strong>Q2:</strong> Time window สำหรับ IV tPA?</p>
+<p><strong>A3:</strong> <strong>0-4.5 hours</strong> from symptom onset (last known well)</p>
+<p><strong>Q3:</strong> Large vessel occlusion suspected ส่งไหน?</p>
+<p><strong>A3:</strong> <strong>Comprehensive Stroke Center</strong> (thrombectomy capable) — bypass primary stroke center</p>
+<h3>ภาษาไทย: Stroke สำหรับ EMT</h3>
+<ul><li><strong>FAST assessment</strong> — Face, Arm, Speech, Time</li><li><strong>Check glucose</strong> — rule out hypoglycemia</li><li><strong>Rapid transport</strong> to stroke center</li><li><strong>Time last known well</strong> — สำคัญที่สุดสำหรับ treatment decision</li><li><strong>Don't delay</strong> — IV, BP treatment secondary to transport</li></ul>
+<h3>Related</h3>
+<ul><li>[[Seizures - Assessment Management]]</li><li>[[Diabetic Emergencies]]</li><li>[[Patient Assessment Algorithm]]</li><li>[[Head Spinal Injuries]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nhtsa.gov/ems" target="_blank" rel="noopener">NHTSA Medical ↗</a></li>
+      <li><a href="https://wikem.org/" target="_blank" rel="noopener">WikEM ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA/ASA</p>
+      </div>
+    </aside>
+  </article>
+</Base>
