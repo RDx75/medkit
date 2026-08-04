@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { categories, tools } from '../data/tools';
+import { translations, langNames } from '../data/i18n';
 
 const base = import.meta.env.BASE_URL || '/';
 
@@ -39,8 +40,9 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
           <span>MedKit<span class="sub">&nbsp;medical tools</span></span>
         </a>
         <button class="search-btn" id="searchTrigger">
-          <span>Search</span><kbd>⌘K</kbd>
+          <span data-i18n="search.label">Search</span><kbd>⌘K</kbd>
         </button>
+        <button class="icon-btn" id="langToggle" title="ภาษา / Language">🇹🇭</button>
         <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">🌙</button>
       </header>
 
@@ -50,7 +52,7 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
             <div class="side-group">
               <h4>{c.title}</h4>
               {tools.filter((t) => t.category === c.id).map((t) => (
-                <a class={`side-link ${activeSlug === t.slug ? 'active' : ''}`} href={`${base}tools/${t.slug}/`}>
+                <a class={`side-link ${activeSlug === t.slug ? 'active' : ''}`} href={`${base}${t.slug}/`}>
                   <span class="ico">{t.emoji}</span>{t.title}
                 </a>
               ))}
@@ -64,12 +66,12 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
       </div>
 
       <footer class="footer">
-        <span>⚕️ MedKit.dev</span>
-        <a href={`${base}about/`}>About</a>
-        <a href={`${base}privacy/`}>Privacy</a>
-        <a href={`${base}terms/`}>Terms</a>
+        <span data-i18n="footer.brand">⚕️ MedKit.dev</span>
+        <a href={`${base}about/`} data-i18n="footer.about">About</a>
+        <a href={`${base}privacy/`} data-i18n="footer.privacy">Privacy</a>
+        <a href={`${base}terms/`} data-i18n="footer.terms">Terms</a>
         <span class="spacer"></span>
-        <span class="disclaimer">For education &amp; reference only — not a substitute for professional medical advice.</span>
+        <span class="disclaimer" data-i18n="footer.disclaimer">For education &amp; reference only — not a substitute for professional medical advice.</span>
       </footer>
     </div>
 
@@ -81,7 +83,26 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
       </div>
     </div>
 
-    <script is:inline define:vars={{ tools, categories, base }}>
+    <script is:inline define:vars={{ tools, categories, base, translations }}>
+      // ---- i18n ----
+      const I18N = translations;
+      window.__t = (k) => (I18N[window.__lang] && I18N[window.__lang][k]) || (I18N.en[k]) || k;
+      function applyI18n() {
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const k = el.getAttribute('data-i18n');
+          const v = window.__t(k);
+          if (v) el.textContent = v;
+        });
+        const sp = document.getElementById('searchInput');
+        if (sp) sp.placeholder = window.__t('search.placeholder');
+        const lbtn = document.getElementById('langToggle');
+        if (lbtn) lbtn.textContent = window.__lang === 'th' ? '🇬🇧' : '🇹🇭';
+      }
+      (function () {
+        try { window.__lang = localStorage.getItem('lang') || 'en'; } catch (e) { window.__lang = 'en'; }
+        applyI18n();
+      })();
+
       // ---- Theme toggle ----
       const themeBtn = document.getElementById('themeToggle');
       function syncThemeIcon() {
@@ -95,6 +116,14 @@ const { title, description = 'Free, fast, privacy-first medical calculators and 
         document.documentElement.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch (e) {}
         syncThemeIcon();
+      });
+
+      // ---- Language toggle ----
+      const langBtn = document.getElementById('langToggle');
+      langBtn.addEventListener('click', () => {
+        window.__lang = window.__lang === 'th' ? 'en' : 'th';
+        try { localStorage.setItem('lang', window.__lang); } catch (e) {}
+        applyI18n();
       });
 
       // ---- Search palette ----
