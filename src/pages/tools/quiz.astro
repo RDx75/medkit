@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Sample EMT questions. Later these can be loaded from the Obsidian vault
+// (EMT-Study-Web pattern) so the quiz stays in sync with your notes.
+const questions = [
+  {
+    q: 'What is the compression:ventilation ratio for a single rescuer doing adult CPR?',
+    options: ['15:2', '30:2', '5:1', 'Continuous / no breaths'],
+    answer: 1,
+    explain: '30:2 for a lone rescuer; 15:2 with two rescuers.',
+  },
+  {
+    q: 'Normal adult respiratory rate is approximately:',
+    options: ['6–10 /min', '12–20 /min', '25–35 /min', '40–50 /min'],
+    answer: 1,
+    explain: '12–20 breaths/min is the normal adult range.',
+  },
+  {
+    q: 'A GCS of 7 indicates:',
+    options: ['Mild', 'Moderate', 'Severe', 'Normal'],
+    answer: 2,
+    explain: 'GCS ≤ 8 is severe and typically warrants airway protection.',
+  },
+  {
+    q: 'Recommended adult compression depth in CPR is:',
+    options: ['2–3 cm', '5–6 cm', '8–10 cm', '1–2 cm'],
+    answer: 1,
+    explain: 'At least 5 cm and not more than 6 cm in adults.',
+  },
+  {
+    q: 'An APGAR score of 9 at 5 minutes is:',
+    options: ['Low', 'Moderate', 'Normal', 'Critical'],
+    answer: 2,
+    explain: '7–10 is generally normal; 9 indicates a well-transitioning newborn.',
+  },
+];
+---
+
+<Base title="EMT Quiz" activeSlug="quiz">
+  <div class="breadcrumb"><a href="/">MedKit</a> / Study / <span>EMT Quiz</span></div>
+  <h1>EMT Quiz</h1>
+  <p class="cat-desc">Practice questions drawn from your EMT study notes. Your answers stay on this device.</p>
+
+  <div class="tool-ui">
+    <div id="quiz"></div>
+    <div id="score" class="result" style="display:none"></div>
+    <button class="btn" id="restart" style="display:none">Restart quiz</button>
+  </div>
+
+  <div class="article">
+    <h2>About this quiz</h2>
+    <p>These questions are a starter set covering core BLS and assessment topics. The plan is to sync them with your Obsidian EMT vault so every lab worksheet and lecture note becomes a reviewable question.</p>
+    <div class="callout">Quiz progress is not uploaded. This is for self-testing only — always confirm answers against your course material and instructor.</div>
+  </div>
+
+  <script is:inline define:vars={{ questions }}>
+    const quizEl = document.getElementById('quiz');
+    const scoreEl = document.getElementById('score');
+    const restartBtn = document.getElementById('restart');
+    let current = 0, correct = 0, answered = false;
+
+    function render() {
+      if (current >= questions.length) {
+        quizEl.innerHTML = '';
+        scoreEl.style.display = 'block';
+        scoreEl.innerHTML = `<span class="big">${correct}/${questions.length}</span> correct`;
+        restartBtn.style.display = 'inline-block';
+        return;
+      }
+      const item = questions[current];
+      answered = false;
+      quizEl.innerHTML = `
+        <p style="font-weight:600;margin-bottom:12px">${current + 1}. ${item.q}</p>
+        <div class="opts" id="opts">
+          ${item.options.map((o, i) => `<button class="opt" data-i="${i}">${o}</button>`).join('')}
+        </div>
+        <div id="fb" class="callout" style="display:none;margin-top:14px"></div>`;
+      document.getElementById('opts').addEventListener('click', onAnswer);
+    }
+    function onAnswer(e) {
+      if (answered) return;
+      const btn = e.target.closest('.opt');
+      if (!btn) return;
+      answered = true;
+      const i = parseInt(btn.dataset.i, 10);
+      const item = questions[current];
+      const opts = [...document.querySelectorAll('#opts .opt')];
+      opts.forEach((b) => b.classList.add('disabled'));
+      if (i === item.answer) { btn.classList.add('active'); correct++; }
+      else { btn.style.borderColor = 'var(--danger)'; opts[item.answer].classList.add('active'); }
+      const fb = document.getElementById('fb');
+      fb.style.display = 'block';
+      fb.className = 'callout ' + (i === item.answer ? '' : 'danger');
+      fb.innerHTML = (i === item.answer ? '✅ Correct. ' : '❌ Incorrect. ') + item.explain;
+      setTimeout(() => { current++; render(); }, 1600);
+    }
+    restartBtn.addEventListener('click', () => { current = 0; correct = 0; scoreEl.style.display = 'none'; restartBtn.style.display = 'none'; render(); });
+    render();
+  </script>
+</Base>
