@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="BMI Calculator" activeSlug="bmi">
-  <div class="breadcrumb"><a href="/">MedKit</a> / Calculators / <span>BMI Calculator</span></div>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>BMI Calculator</span></div>
   <h1>BMI Calculator</h1>
   <p class="cat-desc">Body Mass Index from weight and height, with WHO classification.</p>
 
