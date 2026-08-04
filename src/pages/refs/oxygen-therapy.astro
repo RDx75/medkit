@@ -1,0 +1,87 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Oxygen Therapy — MedKit" activeSlug="ref-oxygen-therapy">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Oxygen Therapy</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Oxygen Therapy</h2>
+<blockquote>"O2 ช่วยชีวิต — แต่ให้ถูกวิธี ถูกขนาด ถูกอุปกรณ์"</blockquote>
+<h3>ข้อมูลยา</h3>
+<table>
+<tr><th>รายการ</th><th>รายละเอียด</th></tr>
+<tr><td><strong>ชื่อสามัญ</strong></td><td>Oxygen (O2)</td></tr>
+<tr><td><strong>ประเภท</strong></td><td>Medical gas</td></tr>
+<tr><td><strong>กลไก (MOA)</strong></td><td>เพิ่ม PaO2 และ SpO2 → เพิ่ม O2 delivery สู่เนื้อเยื่อ</td></tr>
+<tr><td><strong>ความเข้มข้น</strong></td><td>21% (ambient air) → 100% (pure O2)</td></tr>
+<tr><td><strong>เส้นทาง</strong></td><td>Inhalation ผ่านอุปกร์ต่างๆ</td></tr>
+</table>
+<h3>อุปกรณ์ให้ Oxygen</h3>
+<h4>1. Nasal Cannula (NC)</h4>
+<ul><li><strong>Flow rate</strong>: 1-6 L/min</li><li><strong>FiO2</strong>: 24-44%</li><li><strong>ใช้สำหรับ</strong>: ผู้ป่วยที่ต้องการ O2 เล็กน้อยถึงปานกลาง</li><li><strong>ข้อดี</strong>: สบาย, พูดได้, กินได้</li><li><strong>ข้อเสีย</strong>: ไม่สามารถให้ O2 ความเข้มข้นสูงได้</li></ul>
+<h4>2. Non-Rebreather Mask (NRB)</h4>
+<ul><li><strong>Flow rate</strong>: 10-15 L/min (ต้อง ≥ 10 เพื่อ inflate reservoir bag)</li><li><strong>FiO2</strong>: 60-95%</li><li><strong>ใช้สำหรับ</strong>: ผู้ป่วยที่ต้องการ O2 สูง — cardiac arrest, shock, stroke, trauma, SpO2 &lt; 94%</li><li><strong>ข้อดี</strong>: ให้ O2 ความเข้มข้นสูง</li><li><strong>ข้อเสีย</strong>: ไม่สบาย, กินไม่ได้, ต้องดูแลว่า bag ไม่ยุบ</li></ul>
+<h4>3. Bag-Valve-Mask (BVM)</h4>
+<ul><li><strong>Flow rate</strong>: 15 L/min + reservoir</li><li><strong>FiO2</strong>: ~100% (ถ้ามี reservoir)</li><li><strong>ใช้สำหรับ</strong>: ผู้ป่วยที่หายใจไม่เพียงพอหรือไม่หายใจ</li><li><strong>ข้อดี</strong>: สามารถช่วยหายใจได้เต็มที่</li><li><strong>ข้อเสีย</strong>: ต้องมีทักษะ, เหนื่อย, ต้องมีคน 2 คน (mask seal + squeeze bag)</li></ul>
+<h4>4. Simple Face Mask</h4>
+<ul><li><strong>Flow rate</strong>: 5-8 L/min</li><li><strong>FiO2</strong>: 40-60%</li><li><strong>ใช้สำหรับ</strong>: ระหว่าง NC กับ NRB</li><li><strong>ไม่ค่อยใช้ใน EMS</strong> เท่าไหร่</li></ul>
+<h3>ข้อบ่งใช้ (Indications)</h3>
+<ul><li><strong>SpO2 &lt; 94%</strong> — ตาม BLS guideline</li><li><strong>Respiratory distress</strong> — หายใจลำบาก</li><li><strong>Cardiac arrest</strong> — 100% O2 via BVM</li><li><strong>Shock / Hypotension</strong> — เพิ่ม O2 delivery</li><li><strong>Chest pain / ACS</strong> — ถ้า SpO2 &lt; 94%</li><li><strong>Stroke</strong> — ถ้า SpO2 &lt; 94%</li><li><strong>Trauma</strong> — ผู้ป่วยบาดเจ็บ</li><li><strong>COPD exacerbation</strong> — ระวัง! ให้ต่ำๆ (2-4 L/min NC หรือ 24-28% Venturi)</li></ul>
+<h3>ข้อห้ามใช้ / ระวัง</h3>
+<h4>COPD Patients — สำคัญมาก!</h4>
+<ul><li>ผู้ป่วย COPD บางคนมี <strong>hypoxic drive</strong> — หายใจเพราะ O2 ต่ำ ไม่ใช่ CO2 สูง</li><li>ให้ O2 สูงเกินไป → อาจทำให้หยุดหายใจ!</li><li><strong>วิธีจัดการ</strong>: ให้ O2 ต่ำๆ (2-4 L/min NC หรือ 24-28% Venturi mask) → target SpO2 <strong>88-92%</strong></li><li>ติดตาม SpO2 และ respiratory rate ตลอด</li></ul>
+<h4>อื่นๆ</h4>
+<ul><li>ไม่มี absolute contraindication สำหรับ O2</li><li>ผู้ป่วยที่ SpO2 ปกติ (&gt; 94%) และไม่มี respiratory distress → ไม่จำเป็นต้องให้ O2</li></ul>
+<h3>ขั้นตอนการให้ Oxygen</h3>
+<p>1. ตรวจ SpO2 (pulse oximetry)</p>
+<p>2. เลือกอุปกรณ์ตามความเข้มข้นที่ต้องการ</p>
+<p>3. ต่ออุปกรณ์เข้ากับ O2 tank + regulator</p>
+<p>4. เปิดก๊อก ปรับ flow rate</p>
+<p>5. สวมอุปกรณ์ให้ผู้ป่วย</p>
+<p>6. ติดตาม SpO2 และ clinical response</p>
+<p>7. ปรับ flow rate / เปลี่ยนอุปกรณ์ตามต้องการ</p>
+<h3>Oxygen Tank Safety</h3>
+<ul><li>ห้ามวางใกล้ไฟ / ควัน</li><li>ห้ามหยิบ tank โดยจับ valve</li><li>ตรวจ pressure gauge ก่อนใช้ (ต้อง &gt; 200 psi สำหรับใช้งาน)</li><li>วางให้นิ่ง ห้ามล้ม</li><li>ใช้ wrench ในการติด regulator</li></ul>
+<h3>คำนวณ Tank Duration</h3>
+<p><strong>Duration (นาที) = (Tank pressure × Tank factor) / Flow rate</strong></p>
+<table>
+<tr><th>Tank size</th><th>Tank factor</th></tr>
+<tr><td>D</td><td>0.16</td></tr>
+<tr><td>E</td><td>0.28</td></tr>
+<tr><td>M</td><td>1.56</td></tr>
+<tr><td>G</td><td>2.41</td></tr>
+<tr><td>H/K</td><td>3.14</td></tr>
+</table>
+<p><strong>ตัวอย่าง</strong>: E tank ที่ 2000 psi, flow 10 L/min</p>
+<p>= (2000 × 0.28) / 10 = <strong>56 นาที</strong></p>
+<h3>Quiz</h3>
+<p><strong>Q1:</strong> Nasal cannula ให้ O2 ที่ flow rate เท่าไหร่?</p>
+<p><strong>A1:</strong> 1-6 L/min (FiO2 24-44%)</p>
+<p><strong>Q2:</strong> NRB mask ต้องใช้ flow rate อย่างน้อยเท่าไหร่?</p>
+<p><strong>A2:</strong> 10-15 L/min (เพื่อให้ reservoir bag ไม่ยุบ)</p>
+<p><strong>Q3:</strong> COPD patient ควรให้ O2 อย่างไร?</p>
+<p><strong>A3:</strong> ต่ำๆ (2-4 L/min NC หรือ 24-28% Venturi) → target SpO2 88-92% (เพราะ hypoxic drive)</p>
+<p><strong>Q4:</strong> SpO2 เป้าหมายสำหรับผู้ป่วยทั่วไป?</p>
+<p><strong>A4:</strong> ≥ 94%</p>
+<p><strong>Q5:</strong> BVM ให้ FiO2 เท่าไหร่?</p>
+<p><strong>A5:</strong> ~100% (ถ้ามี reservoir bag และ O2 flow 15 L/min)</p>
+<h3>ภาษาไทย</h3>
+<p>ออกซิเจน (O2) เป็นยาที่ให้ผ่านการสูดหายใจ อุปกรณ์หลักใน EMS คือ nasal cannula (1-6 L/min) และ NRB mask (10-15 L/min) ตรวจ SpO2 ก่อนและหลังให้ O2 เป้าหมาย SpO2 ≥ 94% (ยกเว้น COPD → 88-92%)</p>
+<h4>Related</h4>
+<ul><li>[[EMT Medication Overview]]</li><li>[[Airway Management]]</li><li>[[Respiratory Emergencies - Asthma COPD]]</li><li>[[Skill - Oxygen Administration]]</li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://www.nremt.org/" target="_blank" rel="noopener">NREMT Airway ↗</a></li>
+      <li><a href="https://cpr.heart.org/" target="_blank" rel="noopener">AHA BLS ↗</a></li>
+        </ul>
+        <p class="src">Source: NREMT</p>
+      </div>
+    </aside>
+  </article>
+</Base>
