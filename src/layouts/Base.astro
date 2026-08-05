@@ -42,7 +42,7 @@ const allSearch = [...toolSearch, ...refSearch];
     <title>{title} — MedKit</title>
 
     <!-- Pre-paint: theme + lang + accent + font (no flash) -->
-    <script is:inline define:vars={{ translations, allSearch, base }}>
+    <script is:inline define:vars={{ translations }}>
       // ===== i18n (MUST be in head — before any tool script runs) =====
       const I18N = translations;
       window.__lang = 'en';
