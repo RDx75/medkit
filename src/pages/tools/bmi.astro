@@ -1,67 +1,68 @@
 ---
 import Base from '../../layouts/Base.astro';
-
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL || '/';
 ---
 
 <Base title="BMI Calculator" activeSlug="bmi">
-  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>BMI Calculator</span></div>
-  <h1>BMI Calculator</h1>
-  <p class="cat-desc">Body Mass Index from weight and height, with WHO classification.</p>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span data-i18n="cat.calculators.title">Calculators</span> / <span data-i18n="tools.bmi.title">BMI Calculator</span></div>
+  <h1 data-i18n="bmi.h1">BMI Calculator</h1>
+  <p class="cat-desc" data-i18n="bmi.desc">Body Mass Index from weight and height, with WHO classification.</p>
 
   <div class="tool-ui">
     <div class="row">
       <div class="field">
-        <label>Weight (kg)</label>
+        <label data-i18n="bmi.wt">Weight (kg)</label>
         <input id="wt" type="number" value="70" min="0" step="0.1" />
       </div>
       <div class="field">
-        <label>Height (cm)</label>
+        <label data-i18n="bmi.ht">Height (cm)</label>
         <input id="ht" type="number" value="170" min="0" step="0.1" />
       </div>
     </div>
-    <button class="btn" id="calc">Calculate</button>
-    <div class="result" id="out">Enter values and press Calculate.</div>
+    <button class="btn" id="calc" data-i18n="bmi.calc">Calculate</button>
+    <div class="result" id="out" data-i18n="bmi.enter">Enter values and press Calculate.</div>
   </div>
 
   <div class="article">
-    <h2>Free Online BMI Calculator</h2>
-    <p>Body Mass Index (BMI) is a screening measure that relates weight to height. It is calculated as weight (kg) divided by height (m) squared. While useful for population-level screening, BMI does not directly measure body fat or distribution and should be interpreted alongside clinical context.</p>
-    <h3>How to Use</h3>
-    <p>Enter weight in kilograms and height in centimetres, then press Calculate. The result shows your BMI and the WHO category.</p>
-    <h3>WHO Classification</h3>
+    <h2 data-i18n="bmi.h2">Free Online BMI Calculator</h2>
+    <p data-i18n="bmi.intro">Body Mass Index (BMI) is a screening measure that relates weight to height. It is calculated as weight (kg) divided by height (m) squared. While useful for population-level screening, BMI does not directly measure body fat or distribution and should be interpreted alongside clinical context.</p>
+    <h3 data-i18n="bmi.h3_use">How to Use</h3>
+    <p data-i18n="bmi.use">Enter weight in kilograms and height in centimetres, then press Calculate. The result shows your BMI and the WHO category.</p>
+    <h3 data-i18n="bmi.h3_who">WHO Classification</h3>
     <table>
-      <tr><th>BMI (kg/m²)</th><th>Category</th></tr>
-      <tr><td>&lt; 18.5</td><td>Underweight</td></tr>
-      <tr><td>18.5 – 24.9</td><td>Normal</td></tr>
-      <tr><td>25.0 – 29.9</td><td>Overweight</td></tr>
-      <tr><td>≥ 30.0</td><td>Obese</td></tr>
+      <tr><th>BMI (kg/m²)</th><th data-i18n="bmi.h3_who">Category</th></tr>
+      <tr><td>&lt; 18.5</td><td data-i18n="bmi.under">Underweight</td></tr>
+      <tr><td>18.5 – 24.9</td><td data-i18n="bmi.normal">Normal</td></tr>
+      <tr><td>25.0 – 29.9</td><td data-i18n="bmi.over">Overweight</td></tr>
+      <tr><td>≥ 30.0</td><td data-i18n="bmi.obese">Obese</td></tr>
     </table>
-    <h3>Frequently Asked Questions</h3>
-    <details class="faq"><summary>Is BMI accurate for athletes?</summary><div class="body">No. High muscle mass inflates BMI, so a muscular person may be classified as overweight despite low body fat. Use with other measures.</div></details>
-    <details class="faq"><summary>Does BMI differ by age or sex?</summary><div class="body">The standard WHO cut-offs are the same for adults of all sexes. Children use age- and sex-specific centile charts instead.</div></details>
-    <div class="callout danger">BMI is a screening tool only and is not a diagnostic measure of health or body composition.</div>
+    <h3 data-i18n="bmi.h3_faq">Frequently Asked Questions</h3>
+    <details class="faq"><summary data-i18n="bmi.faq1q">Is BMI accurate for athletes?</summary><div class="body" data-i18n="bmi.faq1a">No. High muscle mass inflates BMI, so a muscular person may be classified as overweight despite low body fat. Use with other measures.</div></details>
+    <details class="faq"><summary data-i18n="bmi.faq2q">Does BMI differ by age or sex?</summary><div class="body" data-i18n="bmi.faq2a">The standard WHO cut-offs are the same for adults of all sexes. Children use age- and sex-specific centile charts instead.</div></details>
+    <div class="callout danger" data-i18n="bmi.warn">BMI is a screening tool only and is not a diagnostic measure of health or body composition.</div>
   </div>
 
   <script is:inline>
     const out = document.getElementById('out');
+    const t = (k) => window.__t(k);
     function classify(bmi) {
-      if (bmi < 18.5) return ['Underweight', 'warn'];
-      if (bmi < 25) return ['Normal', 'ok'];
-      if (bmi < 30) return ['Overweight', 'warn'];
-      return ['Obese', 'bad'];
+      if (bmi < 18.5) return [t('bmi.under'), 'warn'];
+      if (bmi < 25) return [t('bmi.normal'), 'ok'];
+      if (bmi < 30) return [t('bmi.over'), 'warn'];
+      return [t('bmi.obese'), 'bad'];
     }
     function run() {
       const wt = parseFloat(document.getElementById('wt').value);
       const ht = parseFloat(document.getElementById('ht').value) / 100;
-      if (!wt || !ht) { out.textContent = 'Please enter both weight and height.'; return; }
+      if (!wt || !ht) { out.textContent = t('bmi.enter_both'); return; }
       const bmi = wt / (ht * ht);
       const [label, cls] = classify(bmi);
-      out.innerHTML = `<span class="big">${bmi.toFixed(1)}</span> kg/m² <span class="tag tag-${cls}">${label}</span>`;
+      out.innerHTML = `<span class="big">${bmi.toFixed(1)}</span> ${t('bmi.result')} <span class="tag tag-${cls}">${label}</span>`;
     }
     document.getElementById('calc').addEventListener('click', run);
     document.getElementById('wt').addEventListener('input', run);
     document.getElementById('ht').addEventListener('input', run);
+    document.addEventListener('i18n:changed', run);
     run();
   </script>
 </Base>

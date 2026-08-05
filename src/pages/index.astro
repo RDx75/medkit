@@ -2,26 +2,26 @@
 import Base from '../layouts/Base.astro';
 import { categories, toolsByCategory } from '../data/tools';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL || '/';
 ---
 
 <Base title="MedKit" description="40+ free, fast, privacy-first medical calculators and references. Everything runs locally in your browser.">
   <section class="hero">
-    <span class="pill">⚕️ Free · Private · Runs in your browser</span>
-    <h1>All the Medical Tools.<br />Built for Clinicians &amp; Students.</h1>
-    <p>Calculators, references and study aids — BMI, GCS, APGAR, drug dosing, CPR protocols and more. Nothing is uploaded; every tool runs 100% on your device.</p>
+    <span class="pill" data-i18n="hero.pill">⚕️ Free · Private · Runs in your browser</span>
+    <h1><span data-i18n="hero.title1">All the Medical Tools.</span><br /><span data-i18n="hero.title2">Built for Clinicians &amp; Students.</span></h1>
+    <p data-i18n="hero.subtitle">Calculators, references and study aids — BMI, GCS, APGAR, drug dosing, CPR protocols and more. Nothing is uploaded; every tool runs 100% on your device.</p>
   </section>
 
   {categories.map((c) => (
     <section class="cat" id={c.id}>
       <div class="cat-head">
         <span class="emoji">{c.emoji}</span>
-        <h2>{c.title}</h2>
+        <h2 data-i18n={`cat.${c.id}.title`}>{c.title}</h2>
       </div>
-      <p class="cat-desc">{c.description}</p>
+      <p class="cat-desc" data-i18n={`cat.${c.id}.desc`}>{c.description}</p>
       <div class="grid">
         {toolsByCategory(c.id).map((t) => (
-          <a class="card" href={`${base}tools/${t.slug}/`}>
+          <a class="card" href={`${base}${t.path}/`}>
             <span class="ico">{t.emoji}</span>
             <h3>{t.title}</h3>
             <p>{t.description}</p>

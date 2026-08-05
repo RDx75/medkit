@@ -302,3 +302,50 @@ code, pre, kbd { font-family: var(--mono); }
 .quiz-feedback.ok { background: rgba(74,222,128,0.12); color: var(--ok); }
 .quiz-feedback.bad { background: rgba(248,113,113,0.12); color: var(--danger); }
 .quiz-score { font-size: 1.1rem; color: var(--accent); margin: 1rem 0; font-weight: 600; }
+
+/* ---------- Accent color themes ---------- */
+:root[data-accent="sky"]    { --accent:#38bdf8; --accent-strong:#0ea5e9; --accent-soft:rgba(56,189,248,0.12); }
+:root[data-accent="green"]   { --accent:#4ade80; --accent-strong:#22c55e; --accent-soft:rgba(74,222,128,0.12); }
+:root[data-accent="violet"]  { --accent:#a78bfa; --accent-strong:#8b5cf6; --accent-soft:rgba(167,139,250,0.12); }
+:root[data-accent="amber"]   { --accent:#fbbf24; --accent-strong:#f59e0b; --accent-soft:rgba(251,191,36,0.12); }
+:root[data-accent="rose"]    { --accent:#f87171; --accent-strong:#ef4444; --accent-soft:rgba(248,113,113,0.12); }
+:root[data-theme="light"][data-accent="sky"]    { --accent:#0284c7; --accent-strong:#0369a1; --accent-soft:rgba(2,132,199,0.10); }
+:root[data-theme="light"][data-accent="green"]  { --accent:#16a34a; --accent-strong:#15803d; --accent-soft:rgba(22,163,74,0.10); }
+:root[data-theme="light"][data-accent="violet"] { --accent:#8b5cf6; --accent-strong:#7c3aed; --accent-soft:rgba(139,92,246,0.10); }
+:root[data-theme="light"][data-accent="amber"]  { --accent:#d97706; --accent-strong:#b45309; --accent-soft:rgba(217,119,6,0.10); }
+:root[data-theme="light"][data-accent="rose"]   { --accent:#dc2626; --accent-strong:#b91c1c; --accent-soft:rgba(220,38,38,0.10); }
+
+/* ---------- Font family ---------- */
+:root[data-font="serif"] { --sans: Georgia, "Times New Roman", serif; }
+:root[data-font="mono"]  { --sans: var(--mono); }
+
+/* ---------- Font size scale ---------- */
+:root[data-fontscale="sm"] { font-size: 13px; }
+:root[data-fontscale="md"] { font-size: 15px; }
+:root[data-fontscale="lg"] { font-size: 17px; }
+:root[data-fontscale="xl"] { font-size: 19px; }
+
+/* ---------- Header controls (A− A+ 🎨 🔤 🇹🇭 🌙) ---------- */
+.header-controls { display:flex; gap:0.25rem; align-items:center; }
+
+/* ---------- Sidebar groups (collapsible) ---------- */
+.side-sub { margin:0.1rem 0 0.3rem; padding:0; border:none; }
+.side-sub > summary { cursor:pointer; padding:0.35rem 0.5rem; font-size:0.85rem; font-weight:600; color:var(--text-dim); list-style:none; display:flex; align-items:center; gap:0.4rem; border-radius:var(--radius-sm); transition:background 0.15s; }
+.side-sub > summary::-webkit-details-marker { display:none; }
+.side-sub > summary:hover { background:var(--bg-elev-2); color:var(--text); }
+.side-sub .sub-emoji { font-size:0.9rem; }
+.side-sub[open] > summary { color:var(--accent); }
+.side-sub .side-link { padding-left:1.6rem; font-size:0.88rem; }
+
+/* ---------- Search modal tabs + results ---------- */
+.modal-tabs { display:flex; gap:0.4rem; padding:0.5rem 1rem; border-bottom:1px solid var(--border); }
+.modal-tabs .tab { background:none; border:none; color:var(--text-dim); font-size:0.85rem; padding:0.3rem 0.7rem; border-radius:var(--radius-sm); cursor:pointer; transition:all 0.15s; }
+.modal-tabs .tab:hover { color:var(--text); background:var(--bg-elev-2); }
+.modal-tabs .tab.active { color:var(--accent); background:var(--accent-soft); font-weight:600; }
+.modal-results a { display:flex; align-items:center; gap:0.6rem; padding:0.65rem 1rem; border-bottom:1px solid var(--border); transition:background 0.1s; }
+.modal-results a:hover, .modal-results a.cursor { background:var(--bg-elev-2); }
+.modal-results .ico { font-size:1.1rem; flex-shrink:0; }
+.modal-results .title { font-size:0.92rem; color:var(--text); }
+.modal-results .snippet { display:block; font-size:0.78rem; color:var(--text-faint); margin-top:0.15rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.modal-results .cat-tag { flex-shrink:0; font-size:0.65rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-faint); background:var(--bg-elev-2); padding:0.15rem 0.4rem; border-radius:4px; }
+.modal-empty { padding:1.5rem 1rem; text-align:center; color:var(--text-faint); font-size:0.9rem; }

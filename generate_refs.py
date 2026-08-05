@@ -12,6 +12,7 @@ import os, re, json
 SB = "O:/Obsidian/03 - Knowledge Base/Health-EMT"
 OUT = "O:/Obsidian/02 - Projects/medkit/src/pages/refs"
 TOPICS = "O:/Obsidian/02 - Projects/medkit/sb_topics.txt"
+PUBLIC = "O:/Obsidian/02 - Projects/medkit/public"
 
 # External study links per category (for "Learn more" footer)
 EXT_LINKS = {
@@ -58,6 +59,18 @@ def read_md(path):
     if txt.startswith("---"):
         txt = txt.split("---", 2)[-1]
     return txt.strip()
+
+def md_to_text(md):
+    """Strip markdown to plain text for search indexing."""
+    t = md
+    t = re.sub(r"```[\s\S]*?```", " ", t)  # code blocks
+    t = re.sub(r"\|", "  ", t)  # table pipes
+    t = re.sub(r"^[#>*\-]\s+", "", t, flags=re.MULTILINE)  # headings, quotes, bullets
+    t = re.sub(r"\*{1,2}(.+?)\*{1,2}", r"\1", t)  # bold/italic
+    t = re.sub(r"`(.+?)`", r"\1", t)  # inline code
+    t = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", t)  # links
+    t = re.sub(r"\s+", " ", t).strip()
+    return t[:3000]
 
 def md_to_html(md):
     """Minimal markdown -> HTML (headings, tables, lists, bold, code, blockquote)."""
@@ -147,7 +160,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="{slug.replace('-',' ').title()} — MedKit" activeSlug="ref-{slug}">
+<Base title="{slug.replace('-',' ').title()} — MedKit" activeSlug="{slug}">
   <div class="breadcrumb"><a href={{base}}>MedKit</a> / <span>References</span> / <span>{slug.replace('-',' ').title()}</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -179,10 +192,25 @@ def main():
     for slug, src, cat, ref in topics:
         r = gen_page(slug, src, cat, ref)
         if r: slugs.append((r, cat))
-    # write registry snippet
-    with open(os.path.join(OUT, "_generated.json"), "w", encoding="utf-8") as f:
-        json.dump(slugs, f, ensure_ascii=False, indent=2)
-    print(f"Done. {len(slugs)} pages written to {OUT}")
+    # write search index for full-text search (public/ -> dist root)
+    os.makedirs(PUBLIC, exist_ok=True)
+    index = []
+    for slug, cat in slugs:
+        src_name = next((p[1] for p in topics if p[0] == slug), "")
+        src_path = os.path.join(SB, src_name)
+        if src_name and os.path.exists(src_path):
+            md = read_md(src_path)
+            text = md_to_text(md)
+            index.append({
+                "path": f"refs/{slug}",
+                "title": slug.replace("-", " ").title(),
+                "text": text,
+                "emoji": EMOJI.get(cat, "📄"),
+            })
+    idx_path = os.path.join(PUBLIC, "search-index.json")
+    with open(idx_path, "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False)
+    print(f"Done. {len(slugs)} pages + search-index.json ({len(index)} entries)")
 
 if __name__ == "__main__":
     main()
