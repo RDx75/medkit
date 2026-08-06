@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Cardiac Acs — MedKit" activeSlug="cardiac-acs">
+<Base title="Cardiac Acs" activeSlug="cardiac-acs">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Cardiac Acs</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -57,20 +57,15 @@ const base = import.meta.env.BASE_URL || '/';
 <p>4. <strong>Nitroglycerin</strong> (ถ้า SBP &gt; 90)</p>
 <p>5. <strong>Rapid transport</strong> — <strong>door-to-balloon &lt; 90 นาที</strong></p>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> STEMI คืออะไร?</p>
-<p><strong>A1:</strong> Coronary artery อุดตันสมบูรณ์ → ST elevation ใน ECG</p>
-<p><strong>Q2:</strong> NSTEMI คืออะไร?</p>
-<p><strong>A2:</strong> Coronary artery อุดตันบางส่วน → ST depression/T inversion, Troponin elevated</p>
-<p><strong>Q3:</strong> Atypical MI พบบ่อยในใคร?</p>
-<p><strong>A3:</strong> หญิง, เด็ก, ผู้สูงอายุ, diabetic</p>
-<p><strong>Q4:</strong> STEMI alert ต้อง door-to-balloon ภายในกี่นาที?</p>
-<p><strong>A4:</strong> &lt; 90 นาที</p>
-<p><strong>Q5:</strong> Nitroglycerin ห้ามใช้เมื่อ SBP ต่ำกว่า?</p>
-<p><strong>A5:</strong> 90 mmHg</p>
+<details class="faq"><summary>STEMI คืออะไร?</summary><div class="body">Coronary artery อุดตันสมบูรณ์ → ST elevation ใน ECG</div></details>
+<details class="faq"><summary>NSTEMI คืออะไร?</summary><div class="body">Coronary artery อุดตันบางส่วน → ST depression/T inversion, Troponin elevated</div></details>
+<details class="faq"><summary>Atypical MI พบบ่อยในใคร?</summary><div class="body">หญิง, เด็ก, ผู้สูงอายุ, diabetic</div></details>
+<details class="faq"><summary>STEMI alert ต้อง door-to-balloon ภายในกี่นาที?</summary><div class="body">&lt; 90 นาที</div></details>
+<details class="faq"><summary>Nitroglycerin ห้ามใช้เมื่อ SBP ต่ำกว่า?</summary><div class="body">90 mmHg</div></details>
 <h3>ภาษาไทย</h3>
 <p>ACS แบ่งเป็น STEMI (ST elevation, อุดตันสมบูรณ์), NSTEMI (ST depression, troponin ↑), Unstable angina (troponin normal) — Aspirin + Nitro + STEMI alert + rapid transport</p>
 <h4>Related</h4>
-<ul><li>[[Cardiology Essentials]]</li><li>[[Aspirin - Cardiac]]</li><li>[[Nitroglycerin - Chest Pain]]</li><li>[[ECG Basics - 12-Lead]]</li><li>[[Heart Failure]]</li></ul>
+<ul><li><a class="related-link" href="../ecg-basics/">ECG Basics - 12-Lead</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

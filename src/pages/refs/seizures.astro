@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Seizures — MedKit" activeSlug="seizures">
+<Base title="Seizures" activeSlug="seizures">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Seizures</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -99,16 +99,13 @@ const base = import.meta.env.BASE_URL || '/';
 <h4>⚠️ Important</h4>
 <ul><li><strong>Post-ictal confusion ≠ stroke</strong> — don't assume stroke in post-ictal patient</li><li><strong>If persistent focal deficit</strong> → think stroke (Todd's paralysis vs CVA)</li><li><strong>Todd's paralysis:</strong> Transient focal weakness after seizure (resolves in 24-48 hours)</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Status epilepticus คืออะไร?</p>
-<p><strong>A1:</strong> <strong>Seizure ≥5 minutes</strong> OR <strong>≥2 seizures without regaining consciousness</strong> — medical emergency</p>
-<p><strong>Q2:</strong> ขณะชัก ห้ามทำอะไร?</p>
-<p><strong>A2:</strong> <strong>ห้ามใส่อะไรในปาก</strong> (tongue blade, fingers) — จะ cause injury; <strong>ห้าม hold down</strong> — จะ cause fractures</p>
-<p><strong>Q3:</strong> Eclampsia treatment คืออะไร?</p>
-<p><strong>A3:</strong> <strong>Magnesium sulfate 4g IV</strong> — first-line anticonvulsant for eclampsia</p>
+<details class="faq"><summary>Status epilepticus คืออะไร?</summary><div class="body"><strong>Seizure ≥5 minutes</strong> OR <strong>≥2 seizures without regaining consciousness</strong> — medical emergency</div></details>
+<details class="faq"><summary>ขณะชัก ห้ามทำอะไร?</summary><div class="body"><strong>ห้ามใส่อะไรในปาก</strong> (tongue blade, fingers) — จะ cause injury; <strong>ห้าม hold down</strong> — จะ cause fractures</div></details>
+<details class="faq"><summary>Eclampsia treatment คืออะไร?</summary><div class="body"><strong>Magnesium sulfate 4g IV</strong> — first-line anticonvulsant for eclampsia</div></details>
 <h3>ภาษาไทย: Seizures สำหรับ EMT</h3>
 <ul><li><strong>Protect, don't restrain</strong> — ย้ายของ, ห้ามใส่อะไรในปาก</li><li><strong>Time the seizure</strong> — ≥5 min = status epilepticus</li><li><strong>Always check glucose</strong> — hypoglycemia is reversible!</li><li><strong>Post-ictal = normal</strong> — confusion after seizure is expected</li><li><strong>AMPLE history</strong> — epilepsy? meds? alcohol? trauma?</li></ul>
 <h3>Related</h3>
-<ul><li>[[Diabetic Emergencies]]</li><li>[[Poisoning Overdose]]</li><li>[[Stroke - Management]]</li><li>[[Patient Assessment Algorithm]]</li><li>[[Airway Management]]</li></ul>
+<ul><li><a class="related-link" href="../diabetic/">Diabetic Emergencies</a></li><li><a class="related-link" href="../poisoning/">Poisoning Overdose</a></li><li><a class="related-link" href="../stroke/">Stroke - Management</a></li><li><a class="related-link" href="../airway-basics/">Airway Management</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

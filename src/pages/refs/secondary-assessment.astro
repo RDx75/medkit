@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Secondary Assessment — MedKit" activeSlug="secondary-assessment">
+<Base title="Secondary Assessment" activeSlug="secondary-assessment">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Secondary Assessment</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -43,20 +43,15 @@ const base = import.meta.env.BASE_URL || '/';
 <p><strong>ทำซ้ำ</strong> primary + secondary assessment:</p>
 <ul><li><strong>Unstable patient</strong>: ทุก 5 นาที</li><li><strong>Stable patient</strong>: ทุก 15 นาที</li><li><strong>หลัง treatment</strong>: ตรวจว่าดีขึ้นไหม?</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Secondary assessment ทำเมื่อใด?</p>
-<p><strong>A1:</strong> หลัง primary assessment (ABCDE)</p>
-<p><strong>Q2:</strong> Head-to-toe exam ใช้ตัวย่ออะไร?</p>
-<p><strong>A2:</strong> DCAP-BTLS</p>
-<p><strong>Q3:</strong> SAMPLE ย่อมาจากอะไร?</p>
-<p><strong>A3:</strong> Symptoms, Allergies, Medications, Past medical history, Last oral intake, Events</p>
-<p><strong>Q4:</strong> Vitals ต้องวัดกี่ครั้ง?</p>
-<p><strong>A4:</strong> อย่างน้อย 2 ครั้ง</p>
-<p><strong>Q5:</strong> Reassessment ทำบ่อยแค่ไหน?</p>
-<p><strong>A5:</strong> Unstable = ทุก 5 นาที, Stable = ทุก 15 นาที</p>
+<details class="faq"><summary>Secondary assessment ทำเมื่อใด?</summary><div class="body">หลัง primary assessment (ABCDE)</div></details>
+<details class="faq"><summary>Head-to-toe exam ใช้ตัวย่ออะไร?</summary><div class="body">DCAP-BTLS</div></details>
+<details class="faq"><summary>SAMPLE ย่อมาจากอะไร?</summary><div class="body">Symptoms, Allergies, Medications, Past medical history, Last oral intake, Events</div></details>
+<details class="faq"><summary>Vitals ต้องวัดกี่ครั้ง?</summary><div class="body">อย่างน้อย 2 ครั้ง</div></details>
+<details class="faq"><summary>Reassessment ทำบ่อยแค่ไหน?</summary><div class="body">Unstable = ทุก 5 นาที, Stable = ทุก 15 นาที</div></details>
 <h3>ภาษาไทย</h3>
 <p>Secondary assessment ทำหลัง primary — head-to-toe exam (DCAP-BTLS) + SAMPLE history + vitals อย่างน้อย 2 ครั้ง + reassessment</p>
 <h4>Related</h4>
-<ul><li>[[Primary Assessment - ABCDE]]</li><li>[[Patient Assessment]]</li><li>[[History Taking]]</li><li>[[Trauma Assessment - DCAP-BTLS]]</li></ul>
+<ul><li><a class="related-link" href="../primary-assessment/">Primary Assessment - ABCDE</a></li><li><a class="related-link" href="../patient-assessment/">Patient Assessment</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

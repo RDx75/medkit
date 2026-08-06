@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Scene Size Up — MedKit" activeSlug="scene-size-up">
+<Base title="Scene Size Up" activeSlug="scene-size-up">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Scene Size Up</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -69,20 +69,16 @@ const base = import.meta.env.BASE_URL || '/';
 <p>สำหรับ medical calls:</p>
 <ul><li>สังเกต <strong>general impression</strong>: ดูปกติไหม? หอบ? เหงื่อ?</li><li>สังเกต <strong>activity</strong>: นั่ง? นอน? เดินได้?</li><li>สังเกต <strong>environment</strong>: มีขวดยา? มีอุปกรณ์การแพทย์?</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> SNAME หมายถึงอะไร?</p>
-<p><strong>A1:</strong> Scene safe, Number of patients, Additional resources, Mechanism of injury, Environmental conditions</p>
-<p><strong>Q2:</strong> Scene size-up ทำเมื่อใด?</p>
-<p><strong>A2:</strong> ตั้งแต่รับ call → en route → ถึง scene → ก่อนเข้าหาผู้ป่วย</p>
-<p><strong>Q3:</strong> MVA head-on คาดการณ์บาดเจ็บอะไร?</p>
-<p><strong>A3:</strong> Chest, head, femur</p>
-<p><strong>Q4:</strong> Fall จากความสูงกี่เมตร = significant MOI?</p>
-<p><strong>A4:</strong> &gt; 3 เมตร (สำหรับผู้ใหญ่)</p>
+<details class="faq"><summary>SNAME หมายถึงอะไร?</summary><div class="body">Scene safe, Number of patients, Additional resources, Mechanism of injury, Environmental conditions</div></details>
+<details class="faq"><summary>Scene size-up ทำเมื่อใด?</summary><div class="body">ตั้งแต่รับ call → en route → ถึง scene → ก่อนเข้าหาผู้ป่วย</div></details>
+<details class="faq"><summary>MVA head-on คาดการณ์บาดเจ็บอะไร?</summary><div class="body">Chest, head, femur</div></details>
+<details class="faq"><summary>Fall จากความสูงกี่เมตร = significant MOI?</summary><div class="body">&gt; 3 เมตร (สำหรับผู้ใหญ่)</div></details>
 <p><strong>Q5:</strong> Blast injury primary mechanism?</p>
 <p><strong>A5</strong>: Blast wave → damage to air-filled organs (lung, ear, GI)</p>
 <h3>ภาษาไทย</h3>
 <p>Scene size-up เป็นการประเมินสถานการณ์ด้วย SNAME ตั้งแต่รับ call จนถึง scene ช่วยคาดการณ์บาดเจ็บจาก MOI/NOI และเตรียม resources ที่จำเป็น</p>
 <h4>Related</h4>
-<ul><li>[[Scene Safety]]</li><li>[[Operations and Safety]]</li><li>[[Primary Assessment - ABCDE]]</li><li>[[Trauma Assessment]]</li></ul>
+<ul><li><a class="related-link" href="../primary-assessment/">Primary Assessment - ABCDE</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

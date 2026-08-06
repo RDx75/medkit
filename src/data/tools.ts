@@ -86,6 +86,10 @@ export const tools: Tool[] = [
   { slug: 'cpr-peds', path: 'refs/cpr-peds', title: 'CPR — Pediatric', category: 'references', group: 'cardiac', description: 'Pediatric & infant CPR differences, ratios, depths.', emoji: '👶' },
   { slug: 'aed', path: 'refs/aed', title: 'AED Usage', category: 'references', group: 'cardiac', description: 'Step-by-step automated external defibrillator use.', emoji: '⚡' },
   { slug: 'cardiac-acs', path: 'refs/cardiac-acs', title: 'Acute Coronary Syndrome', category: 'references', group: 'cardiac', description: 'Chest pain, ECG, aspirin, nitroglycerin.', emoji: '💔' },
+  { slug: 'ecg-basics', path: 'refs/ecg-basics', title: 'ECG Basics — 12-Lead', category: 'references', group: 'cardiac', description: '12-lead acquisition, leads, territories, STEMI criteria.', emoji: '📈' },
+  { slug: 'ecg-interpretation', path: 'refs/ecg-interpretation', title: 'ECG Interpretation', category: 'references', group: 'cardiac', description: '8-step ECG reading method and cardiac rhythms.', emoji: '📊' },
+  { slug: 'cardiac-rhythms-normal', path: 'refs/cardiac-rhythms-normal', title: 'Cardiac Rhythms — Normal', category: 'references', group: 'cardiac', description: 'NSR, sinus tachy/brady, junctional, PAC.', emoji: '💓' },
+  { slug: 'cardiac-rhythms-abnormal', path: 'refs/cardiac-rhythms-abnormal', title: 'Cardiac Rhythms — Abnormal', category: 'references', group: 'cardiac', description: 'AFib, flutter, SVT, VT, VF, blocks, PEA.', emoji: '🚨' },
   // Trauma
   { slug: 'bleeding-shock', path: 'refs/bleeding-shock', title: 'Bleeding & Shock', category: 'references', group: 'trauma', description: 'Hemorrhage control and shock recognition/management.', emoji: '🩸' },
   { slug: 'stop-the-bleed', path: 'refs/stop-the-bleed', title: 'STOP THE BLEED', category: 'references', group: 'trauma', description: 'Tourniquet, wound packing, pressure dressing.', emoji: '🚑' },

@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Bvm — MedKit" activeSlug="bvm">
+<Base title="Bvm" activeSlug="bvm">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Bvm</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -50,20 +50,15 @@ const base = import.meta.env.BASE_URL || '/';
 <h3>OPA/NPA กับ BVM</h3>
 <ul><li><strong>OPA</strong> (Oropharyngeal Airway): ใส่ในปาก → ป้องกัน tongue obstruction</li><li>ใช้กับ <strong>unconscious</strong> patient เท่านั้น!</li><li>ขนาด: corner of mouth → angle of jaw</li><li><strong>NPA</strong> (Nasopharyngeal Airway): ใส่ในจมูก</li><li>ใช้กับ <strong>conscious</strong> หรือ <strong>unconscious</strong> ได้</li><li>ขนาด: tip of nose → ear lobe</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> BVM 1 คนใช้เทคนิคอะไร?</p>
-<p><strong>A1:</strong> E-C clamp — E (จับ mask) + C (ยก jaw)</p>
-<p><strong>Q2:</strong> BVM rate ถ้ามี pulse?</p>
-<p><strong>A2:</strong> 10-12 /min (1 breath ทุก 5-6 วินาที)</p>
-<p><strong>Q3:</strong> Two-person BVM ดีกว่าอย่างไร?</p>
-<p><strong>A3:</strong> คนที่ 1 seal mask ด้วยทั้ง 2 มือ → seal ดีกว่า, ป้องกัน leak</p>
-<p><strong>Q4:</strong> OPA ใช้กับใคร?</p>
-<p><strong>A4:</strong> Unconscious patient เท่านั้น (ไม่มี gag reflex)</p>
-<p><strong>Q5:</strong> Gastric distension เกิดจากอะไร?</p>
-<p><strong>A5:</strong> Air เข้ากระเพาะ — ป้องกันด้วยบีบช้าๆ, ไม่เกิน volume</p>
+<details class="faq"><summary>BVM 1 คนใช้เทคนิคอะไร?</summary><div class="body">E-C clamp — E (จับ mask) + C (ยก jaw)</div></details>
+<details class="faq"><summary>BVM rate ถ้ามี pulse?</summary><div class="body">10-12 /min (1 breath ทุก 5-6 วินาที)</div></details>
+<details class="faq"><summary>Two-person BVM ดีกว่าอย่างไร?</summary><div class="body">คนที่ 1 seal mask ด้วยทั้ง 2 มือ → seal ดีกว่า, ป้องกัน leak</div></details>
+<details class="faq"><summary>OPA ใช้กับใคร?</summary><div class="body">Unconscious patient เท่านั้น (ไม่มี gag reflex)</div></details>
+<details class="faq"><summary>Gastric distension เกิดจากอะไร?</summary><div class="body">Air เข้ากระเพาะ — ป้องกันด้วยบีบช้าๆ, ไม่เกิน volume</div></details>
 <h3>ภาษาไทย</h3>
 <p>BVM เป็นอุปกรณ์ช่วยหายใจด้วยมือ ใช้ E-C clamp technique, rate 10-12/min (ถ้ามี pulse), two-person technique ดีกว่า, ต้องดู chest rise + SpO2</p>
 <h4>Related</h4>
-<ul><li>[[Airway Management]]</li><li>[[Basic Airway Adjuncts - OPA NPA]]</li><li>[[Skill - Airway Management]]</li><li>[[Primary Assessment - ABCDE]]</li></ul>
+<ul><li><a class="related-link" href="../airway-basics/">Airway Management</a></li><li><a class="related-link" href="../primary-assessment/">Primary Assessment - ABCDE</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Pediatric — MedKit" activeSlug="pediatric">
+<Base title="Pediatric" activeSlug="pediatric">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Pediatric</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -95,16 +95,13 @@ const base = import.meta.env.BASE_URL || '/';
 <h4>EMT Responsibility</h4>
 <ul><li><strong>Document carefully</strong></li><li><strong>Report suspicion</strong> to appropriate authorities</li><li><strong>Do NOT confront caregivers</strong></li><li><strong>Focus on patient care</strong></li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Pediatric cardiac arrest — most common cause?</p>
-<p><strong>A1:</strong> <strong>Respiratory failure → hypoxia → bradycardia → arrest</strong> (not primary cardiac)</p>
-<p><strong>Q2:</strong> Febrile seizure — simple vs complex?</p>
-<p><strong>A2:</strong> <strong>Simple = generalized, &lt;15 min, no recurrence</strong>; Complex = focal, &gt;15 min, or recurrence</p>
-<p><strong>Q3:</strong> Epiglottitis — ห้ามทำอะไร?</p>
-<p><strong>A3:</strong> <strong>ห้าม look in throat</strong> — may trigger complete obstruction!</p>
+<details class="faq"><summary>Pediatric cardiac arrest — most common cause?</summary><div class="body"><strong>Respiratory failure → hypoxia → bradycardia → arrest</strong> (not primary cardiac)</div></details>
+<details class="faq"><summary>Febrile seizure — simple vs complex?</summary><div class="body"><strong>Simple = generalized, &lt;15 min, no recurrence</strong>; Complex = focal, &gt;15 min, or recurrence</div></details>
+<details class="faq"><summary>Epiglottitis — ห้ามทำอะไร?</summary><div class="body"><strong>ห้าม look in throat</strong> — may trigger complete obstruction!</div></details>
 <h3>ภาษาไทย: Pediatric Emergencies สำหรับ EMT</h3>
 <ul><li><strong>PAT (Appearance, Breathing, Circulation)</strong> — ดูก่อน touch</li><li><strong>Bradycardia + poor perfusion = CPR</strong> ใน infant</li><li><strong>Broselow tape</strong> — สำคัญมากสำหรับ drug doses + equipment</li><li><strong>Febrile seizure = benign</strong> — protect, antipyretics after</li><li><strong>Epiglottitis = don't look in throat!</strong></li></ul>
 <h3>Related</h3>
-<ul><li>[[CPR Guidelines - Pediatric]]</li><li>[[Airway Anatomy]]</li><li>[[Respiratory Emergencies - Asthma COPD]]</li><li>[[Poisoning Overdose]]</li><li>[[Naloxone - Overdose Reversal]]</li><li>[[Seizures - Assessment Management]]</li></ul>
+<ul><li><a class="related-link" href="../cpr-peds/">CPR Guidelines - Pediatric</a></li><li><a class="related-link" href="../respiratory/">Respiratory Emergencies - Asthma COPD</a></li><li><a class="related-link" href="../poisoning/">Poisoning Overdose</a></li><li><a class="related-link" href="../seizures/">Seizures - Assessment Management</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

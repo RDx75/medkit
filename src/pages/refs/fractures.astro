@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Fractures — MedKit" activeSlug="fractures">
+<Base title="Fractures" activeSlug="fractures">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Fractures</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -111,16 +111,13 @@ const base = import.meta.env.BASE_URL || '/';
 <p>5. Secure straps</p>
 <p>6. Check pulse after!</p>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Open fracture Gustilo Type III ต้องทำอะไร?</p>
-<p><strong>A1:</strong> <strong>Antibiotics IV (Cefazolin 2g) + Tetanus + Surgical irrigation</strong> — infection risk สูง</p>
-<p><strong>Q2:</strong> Compartment syndrome 6 P's — earliest sign คืออะไร?</p>
-<p><strong>A2:</strong> <strong>Pain with passive stretch</strong> — earliest and most reliable sign</p>
-<p><strong>Q3:</strong> Femur fracture เสียเลือดประมาณเท่าไร?</p>
-<p><strong>A3:</strong> <strong>1-1.5L per fracture</strong> (closed) — ต้อง monitor for hypovolemic shock</p>
+<details class="faq"><summary>Open fracture Gustilo Type III ต้องทำอะไร?</summary><div class="body"><strong>Antibiotics IV (Cefazolin 2g) + Tetanus + Surgical irrigation</strong> — infection risk สูง</div></details>
+<details class="faq"><summary>Compartment syndrome 6 P's — earliest sign คืออะไร?</summary><div class="body"><strong>Pain with passive stretch</strong> — earliest and most reliable sign</div></details>
+<details class="faq"><summary>Femur fracture เสียเลือดประมาณเท่าไร?</summary><div class="body"><strong>1-1.5L per fracture</strong> (closed) — ต้อง monitor for hypovolemic shock</div></details>
 <h3>ภาษาไทย: Fracture สำหรับ EMT</h3>
 <ul><li><strong>5 P's</strong> — เช็คก่อน + หลัง splint</li><li><strong>Splint joint above + below</strong></li><li><strong>Open fracture = Antibiotics + Tetanus</strong></li><li><strong>Femur # = Traction splint + monitor shock</strong></li><li><strong>Compartment syndrome = ผ่อน splint + ส่ง OR เร็ว</strong></li></ul>
 <h3>Related</h3>
-<ul><li>[[Skill - Splinting]]</li><li>[[Trauma Assessment]]</li><li>[[Bleeding Shock]]</li><li>[[Multi-System Trauma]]</li><li>[[Head Spinal Injuries]]</li></ul>
+<ul><li><a class="related-link" href="../bleeding-shock/">Bleeding Shock</a></li><li><a class="related-link" href="../head-spine/">Head Spinal Injuries</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

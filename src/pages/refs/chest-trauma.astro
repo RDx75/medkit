@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Chest Trauma — MedKit" activeSlug="chest-trauma">
+<Base title="Chest Trauma" activeSlug="chest-trauma">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Chest Trauma</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -101,17 +101,14 @@ const base = import.meta.env.BASE_URL || '/';
 <tr><td>Aortic injury</td><td>Widened mediastinum, BP differential</td><td>Rapid transport to OR</td></tr>
 </table>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Tension pneumothorax ตำแหน่ง needle decompression ที่ไหน?</p>
-<p><strong>A1:</strong> <strong>2nd ICS, Midclavicular line</strong> (ขอบบนของซี่โครงที่ 3) หรือ 4th-5th ICS AAL</p>
-<p><strong>Q2:</strong> Beck's Triad ของ cardiac tamponade มีอะไรบ้าง?</p>
-<p><strong>A2:</strong> <strong>JVD + Hypotension + Muffled heart sounds</strong></p>
-<p><strong>Q3:</strong> Flail chest ห้ามทำอะไร?</p>
-<p><strong>A3:</strong> <strong>ห้าม strap/wrap chest</strong> — จะลด ventilation → respiratory failure</p>
+<details class="faq"><summary>Tension pneumothorax ตำแหน่ง needle decompression ที่ไหน?</summary><div class="body"><strong>2nd ICS, Midclavicular line</strong> (ขอบบนของซี่โครงที่ 3) หรือ 4th-5th ICS AAL</div></details>
+<details class="faq"><summary>Beck's Triad ของ cardiac tamponade มีอะไรบ้าง?</summary><div class="body"><strong>JVD + Hypotension + Muffled heart sounds</strong></div></details>
+<details class="faq"><summary>Flail chest ห้ามทำอะไร?</summary><div class="body"><strong>ห้าม strap/wrap chest</strong> — จะลด ventilation → respiratory failure</div></details>
 <h3>ภาษาไทย: Chest Trauma สำหรับ EMT</h3>
 <p>สิ่งที่ EMT ต้องรู้:</p>
 <ul><li><strong>Tension PNDX = Absent BS + Hypotension</strong> → Needle decompression ทันที อย่ารอ X-ray</li><li><strong>Sucking wound = 3-sided dressing</strong> (ห้ามปิด 4 ด้าน)</li><li><strong>Tamponade = Beck's Triad</strong> → IV fluid + rapid transport</li><li><strong>Flail chest = Analgesia + O2</strong> ห้าม wrap</li></ul>
 <h3>Related</h3>
-<ul><li>[[Chest Decompression]]</li><li>[[Needle Thoracostomy]]</li><li>[[Trauma Assessment]]</li><li>[[Bleeding Shock]]</li><li>[[Cardiac Arrest Algorithm]]</li></ul>
+<ul><li><a class="related-link" href="../bleeding-shock/">Bleeding Shock</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

@@ -5,9 +5,9 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="APGAR Calculator" activeSlug="apgar">
-  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>APGAR Calculator</span></div>
-  <h1>APGAR Calculator</h1>
-  <p class="cat-desc">Newborn APGAR score at 1 and 5 minutes after birth.</p>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span data-i18n="cat.calculators.title">Calculators</span> / <span data-i18n="tools.apgar.title">APGAR Calculator</span></div>
+  <h1 data-i18n="apgar.h1">APGAR Calculator</h1>
+  <p class="cat-desc" data-i18n="apgar.desc">Newborn APGAR score at 1 and 5 minutes after birth.</p>
 
   <div class="tool-ui">
     {['Appearance','Pulse','Grimace','Activity','Respiration'].map((name, idx) => (
@@ -20,12 +20,12 @@ const base = import.meta.env.BASE_URL;
         </div>
       </div>
     ))}
-    <div class="result" id="out">Score each of the five components (0–2).</div>
+    <div class="result" id="out" data-i18n="apgar.comp">Score each of the five components (0–2).</div>
   </div>
 
   <div class="article">
-    <h2>Free Online APGAR Score Calculator</h2>
-    <p>The APGAR score quickly summarises a newborn's condition at 1 and 5 minutes after birth. Each of five components — Appearance, Pulse, Grimace, Activity, Respiration — is scored 0, 1 or 2 for a total of 0–10.</p>
+    <h2 data-i18n="apgar.h2">Free Online APGAR Score Calculator</h2>
+    <p data-i18n="apgar.intro">The APGAR score quickly summarises a newborn's condition at 1 and 5 minutes after birth. Each of five components — Appearance, Pulse, Grimace, Activity, Respiration — is scored 0, 1 or 2 for a total of 0–10.</p>
     <table>
       <tr><th>Component</th><th>0</th><th>1</th><th>2</th></tr>
       <tr><td>Appearance (color)</td><td>Blue/pale</td><td>Body pink, limbs blue</td><td>All pink</td></tr>
@@ -34,13 +34,14 @@ const base = import.meta.env.BASE_URL;
       <tr><td>Activity (tone)</td><td>Floppy</td><td>Some flexion</td><td>Active</td></tr>
       <tr><td>Respiration</td><td>Absent</td><td>Weak/irregular</td><td>Strong cry</td></tr>
     </table>
-    <h3>Interpretation</h3>
+    <h3 data-i18n="apgar.h3_int">Interpretation</h3>
     <p>7–10 is generally normal; 4–6 moderately depressed; 0–3 severely depressed and needs resuscitation. A low 1-minute score prompts intervention; the 5-minute score (and beyond) tracks response.</p>
-    <div class="callout">APGAR is a rapid assessment of transition, not a diagnosis of asphyxia. Repeat at 5, 10 and 20 min if ≤ 6.</div>
+    <div class="callout" data-i18n="apgar.note">APGAR is a rapid assessment of transition, not a diagnosis of asphyxia. Repeat at 5, 10 and 20 min if ≤ 6.</div>
   </div>
 
   <script is:inline>
     const out = document.getElementById('out');
+    const t = (k) => window.__t(k);
     const comps = document.querySelectorAll('[data-comp]');
     function score() {
       let total = 0, done = true;
@@ -48,9 +49,10 @@ const base = import.meta.env.BASE_URL;
         const a = c.querySelector('.opt.active');
         if (a) total += parseInt(a.dataset.v, 10); else done = false;
       });
-      if (!done) { out.textContent = 'Score each of the five components (0–2).'; return; }
+      if (!done) { out.textContent = t('apgar.comp'); return; }
       let cls = total >= 7 ? 'ok' : (total >= 4 ? 'warn' : 'bad');
-      out.innerHTML = `<span class="big">${total}</span> / 10 <span class="tag tag-${cls}">${total >= 7 ? 'Normal' : total >= 4 ? 'Moderate' : 'Low'}</span>`;
+      let label = total >= 7 ? t('apgar.normal') : total >= 4 ? t('apgar.mod') : t('apgar.low');
+      out.innerHTML = `<span class="big">${total}</span> / 10 <span class="tag tag-${cls}">${label}</span>`;
     }
     comps.forEach((c) => c.addEventListener('click', (e) => {
       const btn = e.target.closest('.opt');
@@ -59,5 +61,7 @@ const base = import.meta.env.BASE_URL;
       btn.classList.add('active');
       score();
     }));
+    document.addEventListener('i18n:changed', score);
+    score();
   </script>
 </Base>

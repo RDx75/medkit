@@ -10,9 +10,9 @@ Usage:  python generate_refs.py
 import os, re, json
 
 SB = "O:/Obsidian/03 - Knowledge Base/Health-EMT"
-OUT = "O:/Obsidian/02 - Projects/medkit/src/pages/refs"
-TOPICS = "O:/Obsidian/02 - Projects/medkit/sb_topics.txt"
-PUBLIC = "O:/Obsidian/02 - Projects/medkit/public"
+OUT = "O:/Projects/medkit/src/pages/refs"
+TOPICS = "O:/Projects/medkit/sb_topics.txt"
+PUBLIC = "O:/Projects/medkit/public"
 
 # External study links per category (for "Learn more" footer)
 EXT_LINKS = {
@@ -36,6 +36,17 @@ EMOJI = {
     "assessment":"🔍","airway":"🫁","trauma":"🩹","medical":"💊",
     "cardiac":"❤️","peds-obs":"👶","pharmacology":"💉","ops":"🚨"
 }
+
+# Display titles that slug.title() would mangle (acronyms etc.)
+TITLE_OVERRIDES = {
+    "ecg-basics": "ECG Basics — 12-Lead",
+    "ecg-interpretation": "ECG Interpretation",
+    "cardiac-rhythms-normal": "Cardiac Rhythms — Normal",
+    "cardiac-rhythms-abnormal": "Cardiac Rhythms — Abnormal",
+}
+
+def display_title(slug):
+    return TITLE_OVERRIDES.get(slug, slug.replace("-", " ").title())
 
 def parse_topics():
     out = []
@@ -145,13 +156,36 @@ def table_to_html(rows):
     html.append("</table>")
     return "\n".join(html)
 
-def gen_page(slug, src, cat, ref):
+def post_process(html, slug_map):
+    """Turn SB artifacts into proper web UI:
+    1. '## Quiz' Q/A blocks -> FAQ <details> accordions
+    2. '### Related' [[wikilinks]] -> real links to existing ref pages (drop if no page)
+    """
+    # 1) Quiz Q/A -> accordion. Pattern: <p><strong>Q1:</strong> q</p>\n<p><strong>A1:</strong> a</p>
+    html = re.sub(
+        r'<p><strong>Q\d+:</strong>\s*(.*?)</p>\s*<p><strong>A\d+:</strong>\s*(.*?)</p>',
+        lambda m: f'<details class="faq"><summary>{m.group(1).strip()}</summary><div class="body">{m.group(2).strip()}</div></details>',
+        html, flags=re.DOTALL)
+    # 2) Related wikilinks -> real links (slug match) or drop entirely
+    html = re.sub(
+        r'<li>\[\[([^\]|]+)(?:\|[^\]]+)?\]\]</li>',
+        lambda m: related_link(m.group(1).strip(), slug_map),
+        html)
+    return html
+
+def related_link(title, slug_map):
+    slug = slug_map.get(title)
+    if slug:
+        return '<li><a class="related-link" href="../%s/">%s</a></li>' % (slug, title)
+    return ""  # no matching ref page -> remove
+
+def gen_page(slug, src, cat, ref, slug_map):
     path = os.path.join(SB, src)
     if not os.path.exists(path):
         print(f"  [WARN] missing: {src}")
         return None
     md = read_md(path)
-    body = md_to_html(md)
+    body = post_process(md_to_html(md), slug_map)
     emoji = EMOJI.get(cat, "📄")
     ext = EXT_LINKS.get(cat, [])
     links = "\n".join(f'      <li><a href="{u}" target="_blank" rel="noopener">{n} ↗</a></li>' for n,u in ext)
@@ -160,8 +194,8 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="{slug.replace('-',' ').title()} — MedKit" activeSlug="{slug}">
-  <div class="breadcrumb"><a href={{base}}>MedKit</a> / <span>References</span> / <span>{slug.replace('-',' ').title()}</span></div>
+<Base title="{display_title(slug)}" activeSlug="{slug}">
+  <div class="breadcrumb"><a href={{base}}>MedKit</a> / <span>References</span> / <span>{display_title(slug)}</span></div>
   <article class="ref-page">
     <div class="ref-body">
 {body}
@@ -187,10 +221,14 @@ const base = import.meta.env.BASE_URL || '/';
 def main():
     os.makedirs(OUT, exist_ok=True)
     topics = parse_topics()
+    # Map SB source filename (without .md) -> slug for Related wikilink resolution
+    slug_map = {}
+    for slug, src, cat, ref in topics:
+        slug_map[os.path.splitext(os.path.basename(src))[0]] = slug
     print(f"Generating {len(topics)} reference pages...")
     slugs = []
     for slug, src, cat, ref in topics:
-        r = gen_page(slug, src, cat, ref)
+        r = gen_page(slug, src, cat, ref, slug_map)
         if r: slugs.append((r, cat))
     # write search index for full-text search (public/ -> dist root)
     os.makedirs(PUBLIC, exist_ok=True)
@@ -203,7 +241,7 @@ def main():
             text = md_to_text(md)
             index.append({
                 "path": f"refs/{slug}",
-                "title": slug.replace("-", " ").title(),
+                "title": display_title(slug),
                 "text": text,
                 "emoji": EMOJI.get(cat, "📄"),
             })

@@ -28,6 +28,10 @@
 - respiratory          | Respiratory Emergencies - Asthma COPD.md | medical | GINA/GOLD
 - poisoning            | Poisoning Overdose.md              | medical    | AHA/ACEP
 - cardiac-acs          | Acute Coronary Syndrome.md         | cardiac    | AHA 2025
+- ecg-basics           | ECG Basics - 12-Lead.md            | cardiac    | AHA 2025
+- ecg-interpretation   | ECG Interpretation.md              | cardiac    | AHA 2025
+- cardiac-rhythms-normal   | Cardiac Rhythms - Normal.md  | cardiac    | AHA 2025
+- cardiac-rhythms-abnormal | Cardiac Rhythms - Abnormal.md | cardiac   | AHA 2025
 - pharmacology         | Pharmacology for EMT.md            | pharmacology | NHTSA
 - meds-overview        | EMT Medication Overview.md         | pharmacology | NHTSA
 - pediatric            | Pediatric Emergencies.md           | peds-obs   | AAP

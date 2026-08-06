@@ -5,64 +5,66 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="Drug Dose by Weight" activeSlug="drug-dose">
-  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>Drug Dose by Weight</span></div>
-  <h1>Drug Dose by Weight</h1>
-  <p class="cat-desc">Weight-based dosing (mg/kg) with a maximum-dose guard.</p>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span data-i18n="cat.calculators.title">Calculators</span> / <span data-i18n="tools.drug-dose.title">Drug Dose by Weight</span></div>
+  <h1 data-i18n="drug.h1">Drug Dose by Weight</h1>
+  <p class="cat-desc" data-i18n="drug.desc">Weight-based dosing (mg/kg) with a maximum-dose guard.</p>
 
   <div class="tool-ui">
     <div class="row">
       <div class="field">
-        <label>Weight (kg)</label>
+        <label data-i18n="drug.wt">Weight (kg)</label>
         <input id="wt" type="number" value="60" min="0" step="0.1" />
       </div>
       <div class="field">
-        <label>Dose (mg/kg)</label>
+        <label data-i18n="drug.perkg">Dose (mg/kg)</label>
         <input id="perkg" type="number" value="10" min="0" step="0.1" />
       </div>
     </div>
     <div class="row">
       <div class="field">
-        <label>Max dose (mg, optional)</label>
+        <label data-i18n="drug.max">Max dose (mg, optional)</label>
         <input id="maxd" type="number" placeholder="e.g. 500" min="0" step="1" />
       </div>
       <div class="field">
-        <label>Concentration (mg/mL, optional)</label>
+        <label data-i18n="drug.conc">Concentration (mg/mL, optional)</label>
         <input id="conc" type="number" placeholder="e.g. 50" min="0" step="0.1" />
       </div>
     </div>
-    <button class="btn" id="calc">Calculate</button>
-    <div class="result" id="out">Enter weight and dose per kg.</div>
+    <button class="btn" id="calc" data-i18n="drug.calc">Calculate</button>
+    <div class="result" id="out" data-i18n="drug.enter">Enter weight and dose per kg.</div>
   </div>
 
   <div class="article">
-    <h2>Free Online Weight-Based Drug Dose Calculator</h2>
-    <p>Paediatric and many adult medications are dosed per kilogram of body weight. This calculator multiplies the prescribed mg/kg by the patient's weight and, if you enter a maximum dose, caps the result to prevent overdose.</p>
+    <h2 data-i18n="drug.h2">Free Online Weight-Based Drug Dose Calculator</h2>
+    <p data-i18n="drug.intro">Paediatric and many adult medications are dosed per kilogram of body weight. This calculator multiplies the prescribed mg/kg by the patient's weight and, if you enter a maximum dose, caps the result to prevent overdose.</p>
     <p><code>Dose (mg) = weight(kg) × dose(mg/kg)</code> &nbsp;→&nbsp; capped at max if provided.</p>
     <p>If you enter a concentration, the required volume is also shown: <code>Volume (mL) = Dose(mg) ÷ Concentration(mg/mL)</code></p>
-    <div class="callout danger">This tool performs arithmetic only. Always verify against the prescriber's order, your institution protocol, and the drug monograph before administration. Round to appropriate syringe precision.</div>
+    <div class="callout danger" data-i18n="drug.warn">This tool performs arithmetic only. Always verify against the prescriber's order, your institution protocol, and the drug monograph before administration. Round to appropriate syringe precision.</div>
     <h3>FAQ</h3>
-    <details class="faq"><summary>Why set a maximum dose?</summary><div class="body">Many drugs have a ceiling dose regardless of weight (e.g. to avoid toxicity in larger patients). The guard stops the calculation exceeding that ceiling.</div></details>
-    <details class="faq"><summary>Should I use ideal or actual body weight?</summary><div class="body">It depends on the drug and protocol. Some agents use actual body weight, others use ideal or adjusted body weight. Follow local guidance.</div></details>
+    <details class="faq"><summary data-i18n="drug.faq1q">Why set a maximum dose?</summary><div class="body" data-i18n="drug.faq1a">Many drugs have a ceiling dose regardless of weight (e.g. to avoid toxicity in larger patients). The guard stops the calculation exceeding that ceiling.</div></details>
+    <details class="faq"><summary data-i18n="drug.faq2q">Should I use ideal or actual body weight?</summary><div class="body" data-i18n="drug.faq2a">It depends on the drug and protocol. Some agents use actual body weight, others use ideal or adjusted body weight. Follow local guidance.</div></details>
   </div>
 
   <script is:inline>
     const out = document.getElementById('out');
+    const t = (k) => window.__t(k);
     function run() {
       const wt = parseFloat(document.getElementById('wt').value);
       const perkg = parseFloat(document.getElementById('perkg').value);
       const maxd = parseFloat(document.getElementById('maxd').value);
       const conc = parseFloat(document.getElementById('conc').value);
-      if (!wt || !perkg) { out.textContent = 'Enter weight and dose per kg.'; return; }
+      if (!wt || !perkg) { out.textContent = t('drug.enter'); return; }
       let dose = wt * perkg;
       let capped = false;
       if (maxd && dose > maxd) { dose = maxd; capped = true; }
       let html = `<span class="big">${dose.toFixed(1)}</span> mg`;
-      if (capped) html += ` <span class="tag tag-warn">capped at max</span>`;
-      if (conc) html += `<br/><span style="font-size:15px">= ${(dose / conc).toFixed(2)} mL at ${conc} mg/mL</span>`;
+      if (capped) html += ` <span class="tag tag-warn">${t('drug.capped')}</span>`;
+      if (conc) html += `<br/><span style="font-size:15px">= ${(dose / conc).toFixed(2)} mL @ ${conc} mg/mL</span>`;
       out.innerHTML = html;
     }
     document.getElementById('calc').addEventListener('click', run);
     ['wt','perkg','maxd','conc'].forEach((id) => document.getElementById(id).addEventListener('input', run));
+    document.addEventListener('i18n:changed', run);
     run();
   </script>
 </Base>

@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Primary Assessment — MedKit" activeSlug="primary-assessment">
+<Base title="Primary Assessment" activeSlug="primary-assessment">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Primary Assessment</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -51,20 +51,15 @@ const base = import.meta.env.BASE_URL || '/';
 <h4>Sick or Not Sick?</h4>
 <ul><li><strong>Sick</strong>: ดูเจ็บป่วย → ต้องรักษาเร่งด่วน</li><li><strong>Not sick</strong>: ดูปกติ → ตรวจอย่างละเอียด</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> ABCDE ย่อมาจากอะไร?</p>
-<p><strong>A1:</strong> Airway, Breathing, Circulation, Disability, Expose</p>
-<p><strong>Q2:</strong> ถ้า airway ไม่ patent ต้องทำอะไร?</p>
-<p><strong>A2:</strong> Head-tilt chin-lift / Jaw thrust / Suction / OPA/NPA</p>
-<p><strong>Q3:</strong> SpO2 เป้าหมาย?</p>
-<p><strong>A3:</strong> ≥ 94%</p>
-<p><strong>Q4:</strong> Capillary refill ปกติ?</p>
-<p><strong>A4:</strong> &lt; 2 วินาที</p>
-<p><strong>Q5:</strong> ถ้า GCS &lt; 13 ต้องทำอะไร?</p>
-<p><strong>A5:</strong> ส่ง ER ด่วน — significant brain injury</p>
+<details class="faq"><summary>ABCDE ย่อมาจากอะไร?</summary><div class="body">Airway, Breathing, Circulation, Disability, Expose</div></details>
+<details class="faq"><summary>ถ้า airway ไม่ patent ต้องทำอะไร?</summary><div class="body">Head-tilt chin-lift / Jaw thrust / Suction / OPA/NPA</div></details>
+<details class="faq"><summary>SpO2 เป้าหมาย?</summary><div class="body">≥ 94%</div></details>
+<details class="faq"><summary>Capillary refill ปกติ?</summary><div class="body">&lt; 2 วินาที</div></details>
+<details class="faq"><summary>ถ้า GCS &lt; 13 ต้องทำอะไร?</summary><div class="body">ส่ง ER ด่วน — significant brain injury</div></details>
 <h3>ภาษาไทย</h3>
 <p>Primary assessment ใช้ ABCDE: Airway (เปิดทางเดินหายใจ), Breathing (หายใจ), Circulation (เลือด), Disability (ประสาท), Expose (เปลือยตัว) แก้ไขทันทีทุกขั้น</p>
 <h4>Related</h4>
-<ul><li>[[Patient Assessment]]</li><li>[[Secondary Assessment - SAMPLE]]</li><li>[[Vital Signs - Normal Ranges]]</li><li>[[Trauma Assessment]]</li></ul>
+<ul><li><a class="related-link" href="../patient-assessment/">Patient Assessment</a></li><li><a class="related-link" href="../secondary-assessment/">Secondary Assessment - SAMPLE</a></li><li><a class="related-link" href="../vital-signs/">Vital Signs - Normal Ranges</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

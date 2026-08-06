@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="ECG Basics — 12-Lead" activeSlug="ecg-basics">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>ECG Basics — 12-Lead</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>ECG Basics — 12-Lead</h2>
+<blockquote>"12-lead ECG = ภาพถ่ายหัวใจ 12 มุม — EMT ต้อง acquire ได้ แม่นยำ"</blockquote>
+<h3>บทนำ</h3>
+<p>12-lead ECG เป็นเครื่องมือสำคัญในการวินิจฉัย cardiac emergencies EMT-B ต้องสามารถ <strong>acquire</strong> 12-lead ECG ได้อย่างถูกต้อง แม้ interpret เป็น scope ของ Paramedic/ER</p>
+<h3>12 Leads</h3>
+<h4>Limb Leads (แขน + ขา)</h4>
+<table>
+<tr><th>Lead</th><th>ตำแหน่ง</th><th>มุมมอง</th></tr>
+<tr><td><strong>I</strong></td><td>RA → LA</td><td>ซ้าย (0°)</td></tr>
+<tr><td><strong>II</strong></td><td>RA → LL</td><td>ล่างขวา (+60°)</td></tr>
+<tr><td><strong>III</strong></td><td>LA → LL</td><td>ล่างซ้าย (+120°)</td></tr>
+<tr><td><strong>aVR</strong></td><td>RA (reference)</td><td>ขวาบน (-150°)</td></tr>
+<tr><td><strong>aVL</strong></td><td>LA (reference)</td><td>ซ้ายบน (-30°)</td></tr>
+<tr><td><strong>aVF</strong></td><td>LL (reference)</td><td>ล่าง (+90°)</td></tr>
+</table>
+<h4>Precordial Leads (หน้าอก)</h4>
+<table>
+<tr><th>Lead</th><th>ตำแหน่ง</th></tr>
+<tr><td><strong>V1</strong></td><td>4th ICS, right sternal border</td></tr>
+<tr><td><strong>V2</strong></td><td>4th ICS, left sternal border</td></tr>
+<tr><td><strong>V3</strong></td><td>Midway V2-V4</td></tr>
+<tr><td><strong>V4</strong></td><td>5th ICS, midclavicular line</td></tr>
+<tr><td><strong>V5</strong></td><td>5th ICS, anterior axillary line</td></tr>
+<tr><td><strong>V6</strong></td><td>5th ICS, midaxillary line</td></tr>
+</table>
+<h3>Coronary Artery Territories</h3>
+<table>
+<tr><th>Leads</th><th>Artery</th><th>Wall</th></tr>
+<tr><td><strong>V1-V4</strong></td><td>LAD (Left Anterior Descending)</td><td>Anterior</td></tr>
+<tr><td><strong>II, III, aVF</strong></td><td>RCA (Right Coronary Artery)</td><td>Inferior</td></tr>
+<tr><td><strong>I, aVL, V5-V6</strong></td><td>LCx (Left Circumflex)</td><td>Lateral</td></tr>
+</table>
+<blockquote><strong>STEMI = ST elevation ใน leads ที่เกี่ยวข้อง → activate cath lab!</strong></blockquote>
+<h3>วิธี Acquire 12-Lead</h3>
+<p>1. เตรียมผู้ป่วย: นอนราบ, ผ่อนคลาย, เปลือยตัวส่วนบน</p>
+<p>2. จัด electrode ตามตำแหน่ง (ด้านบน)</p>
+<p>3. ตรวจว่า leads ต่อถูก</p>
+<p>4. บังคับให้ผู้ป่วย <strong>นิ่ง</strong> (motion artifact = ผิดพลาด)</p>
+<p>5. กด record</p>
+<p>6. ตรวจ quality: ดู baseline, artifact</p>
+<p>7. ถ้า STEMI → <strong>โทร STEMI alert ทันที!</strong></p>
+<h3>STEMI Criteria</h3>
+<ul><li><strong>ST elevation ≥ 1 mm</strong> ใน 2+ contiguous leads</li><li><strong>ST elevation ≥ 2 mm</strong> ใน V1-V3</li><li><strong>New LBBB</strong> + clinical suspicion</li></ul>
+<blockquote>⚠️ <strong>STEMI = STEMI alert → cath lab activation!</strong></blockquote>
+<h3>สิ่งที่ EMT ต้องทำเมื่อ STEMI</h3>
+<p>1. Acquire 12-lead</p>
+<p>2. ตรวจ STEMI criteria</p>
+<p>3. <strong>โทร STEMI alert</strong> → ER + cath lab</p>
+<p>4. ส่ง 12-lead (ถ้ามี capability)</p>
+<p>5. Aspirin 325 mg (ถ้ายังไม่ได้ให้)</p>
+<p>6. Nitroglycerin (ถ้า SBP &gt; 90)</p>
+<p>7. Rapid transport to PCI-capable hospital</p>
+<h3>Quiz</h3>
+<details class="faq"><summary>Leads II, III, aVF ดู wall ไหน?</summary><div class="body">Inferior wall (RCA territory)</div></details>
+<details class="faq"><summary>Leads V1-V4 ดู wall ไหน?</summary><div class="body">Anterior wall (LAD territory)</div></details>
+<details class="faq"><summary>STEMI criteria?</summary><div class="body">ST elevation ≥ 1 mm ใน 2+ contiguous leads (≥ 2 mm in V1-V3)</div></details>
+<details class="faq"><summary>เมื่อพบ STEMI ต้องทำอะไร?</summary><div class="body">STEMI alert → cath lab activation + rapid transport</div></details>
+<details class="faq"><summary>V4 วางที่ไหน?</summary><div class="body">5th ICS, midclavicular line</div></details>
+<h3>ภาษาไทย</h3>
+<p>12-lead ECG ดูหัวใจ 12 มุม: limb leads (I, II, III, aVR, aVL, aVF) + precordial leads (V1-V6) STEMI = ST elevation ≥ 1 mm → STEMI alert + cath lab</p>
+<h4>Related</h4>
+<ul><li><a class="related-link" href="../ecg-interpretation/">ECG Interpretation</a></li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://cpr.heart.org/" target="_blank" rel="noopener">AHA CPR & ECC ↗</a></li>
+      <li><a href="https://doi.org/10.1161/CIR.0000000000001183" target="_blank" rel="noopener">AHA 2025 Guidelines ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA 2025</p>
+      </div>
+    </aside>
+  </article>
+</Base>

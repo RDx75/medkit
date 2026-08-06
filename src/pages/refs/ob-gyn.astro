@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Ob Gyn — MedKit" activeSlug="ob-gyn">
+<Base title="Ob Gyn" activeSlug="ob-gyn">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Ob Gyn</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -119,16 +119,13 @@ const base = import.meta.env.BASE_URL || '/';
 <h4>Vaginal Bleeding (Non-Pregnant)</h4>
 <ul><li><strong>Causes:</strong> Menorrhagia, fibroids, cancer, trauma, coagulopathy</li><li><strong>Treatment:</strong> Shock management, rapid transport</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Prolapsed cord — ทำอย่างไร?</p>
-<p><strong>A1:</strong> <strong>Push presenting part UP off cord + Trendelenburg + rapid transport</strong> for C-section</p>
-<p><strong>Q2:</strong> Eclampsia — first-line anticonvulsant?</p>
-<p><strong>A2:</strong> <strong>Magnesium sulfate 4g IV</strong> (NOT diazepam as first-line)</p>
-<p><strong>Q3:</strong> Ectopic pregnancy — think of it when?</p>
-<p><strong>A3:</strong> <strong>Any woman of childbearing age + abdominal pain + shock</strong> — always consider ectopic!</p>
+<details class="faq"><summary>Prolapsed cord — ทำอย่างไร?</summary><div class="body"><strong>Push presenting part UP off cord + Trendelenburg + rapid transport</strong> for C-section</div></details>
+<details class="faq"><summary>Eclampsia — first-line anticonvulsant?</summary><div class="body"><strong>Magnesium sulfate 4g IV</strong> (NOT diazepam as first-line)</div></details>
+<details class="faq"><summary>Ectopic pregnancy — think of it when?</summary><div class="body"><strong>Any woman of childbearing age + abdominal pain + shock</strong> — always consider ectopic!</div></details>
 <h3>ภาษาไทย: OB-GYN Emergencies สำหรับ EMT</h3>
 <ul><li><strong>Normal delivery</strong> — Support, don't pull, suction mouth first</li><li><strong>Prolapsed cord = push up + Trendelenburg</strong></li><li><strong>Shoulder dystocia = McRoberts + suprapubic pressure (NOT fundal)</strong></li><li><strong>Eclampsia = Magnesium sulfate IV</strong></li><li><strong>Ectopic pregnancy = always consider</strong> in women with abdominal pain + shock</li></ul>
 <h3>Related</h3>
-<ul><li>[[Seizures - Assessment Management]]</li><li>[[Allergic Reaction Anaphylaxis]]</li><li>[[Pediatric Emergencies]]</li><li>[[Bleeding Shock]]</li><li>[[Patient Assessment Algorithm]]</li></ul>
+<ul><li><a class="related-link" href="../seizures/">Seizures - Assessment Management</a></li><li><a class="related-link" href="../allergic-anaphylaxis/">Allergic Reaction Anaphylaxis</a></li><li><a class="related-link" href="../pediatric/">Pediatric Emergencies</a></li><li><a class="related-link" href="../bleeding-shock/">Bleeding Shock</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

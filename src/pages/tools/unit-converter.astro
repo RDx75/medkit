@@ -6,27 +6,33 @@ const base = import.meta.env.BASE_URL;
 
 <Base title="Unit Converter" activeSlug="unit-converter">
   <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>Unit Converter</span></div>
-  <h1>Unit Converter</h1>
-  <p class="cat-desc">Temperature, weight, volume and length conversions for clinical use.</p>
+  <h1 data-i18n="unit.h1">Unit Converter</h1>
+  <p class="cat-desc" data-i18n="unit.desc">Temperature, weight, volume, length, pressure and lab-value conversions for clinical use.</p>
 
   <div class="tool-ui">
     <div class="field">
-      <label>Type</label>
+      <label data-i18n="unit.type">Type</label>
       <div class="opts" id="type">
-        <button class="opt active" data-v="temp">Temperature</button>
-        <button class="opt" data-v="weight">Weight</button>
-        <button class="opt" data-v="volume">Volume</button>
-        <button class="opt" data-v="length">Length</button>
+        <button class="opt active" data-v="temp" data-i18n="unit.temp">Temperature</button>
+        <button class="opt" data-v="weight" data-i18n="unit.weight">Weight</button>
+        <button class="opt" data-v="volume" data-i18n="unit.volume">Volume</button>
+        <button class="opt" data-v="length" data-i18n="unit.length">Length</button>
+        <button class="opt" data-v="pressure">Pressure</button>
+        <button class="opt" data-v="glucose">Glucose</button>
+        <button class="opt" data-v="creatinine">Creatinine</button>
+        <button class="opt" data-v="bun">BUN</button>
+        <button class="opt" data-v="hba1c">HbA1c</button>
+        <button class="opt" data-v="electrolyte">Electrolytes</button>
       </div>
     </div>
     <div class="row">
       <div class="field">
-        <label>From</label>
+        <label data-i18n="unit.from">From</label>
         <input id="val" type="number" value="37" step="any" />
         <select id="from" style="margin-top:8px"></select>
       </div>
       <div class="field">
-        <label>To</label>
+        <label data-i18n="unit.to">To</label>
         <div class="result" id="out" style="margin-top:0">—</div>
         <select id="to" style="margin-top:8px"></select>
       </div>
@@ -34,18 +40,24 @@ const base = import.meta.env.BASE_URL;
   </div>
 
   <div class="article">
-    <h2>Free Online Medical Unit Converter</h2>
-    <p>Convert between the units clinicians meet daily: °C/°F, kg/lb, mL/L, cm/in and more. All conversions run locally — type a value and the result updates instantly.</p>
+    <h2 data-i18n="unit.h2">Free Online Medical Unit Converter</h2>
+    <p data-i18n="unit.intro">Convert between the units clinicians meet daily: °C/°F, kg/lb, mL/L, cm/in, mmHg/kPa and lab values (glucose, creatinine, BUN, HbA1c). All conversions run locally — type a value and the result updates instantly.</p>
     <h3>Common clinical conversions</h3>
     <table>
       <tr><th>Quantity</th><th>From → To</th><th>Factor / formula</th></tr>
       <tr><td>Temp</td><td>°C → °F</td><td>°F = °C × 9/5 + 32</td></tr>
       <tr><td>Weight</td><td>kg → lb</td><td>× 2.2046</td></tr>
-      <tr><td>Volume</td><td>mL → L</td><td>÷ 1000</td></tr>
-      <tr><td>Length</td><td>cm → in</td><td>× 0.3937</td></tr>
+      <tr><td>Pressure</td><td>mmHg → kPa</td><td>× 0.1333</td></tr>
+      <tr><td>Glucose</td><td>mg/dL → mmol/L</td><td>÷ 18.018</td></tr>
+      <tr><td>Creatinine</td><td>mg/dL → µmol/L</td><td>× 88.4</td></tr>
+      <tr><td>BUN</td><td>mg/dL → mmol/L</td><td>÷ 2.801</td></tr>
+      <tr><td>HbA1c</td><td>% (DCCT) → mmol/mol (IFCC)</td><td>(% − 2.15) × 10.929</td></tr>
+      <tr><td>Electrolytes</td><td>mEq/L ↔ mmol/L</td><td>1 : 1 (monovalent ions)</td></tr>
     </table>
     <h3>FAQ</h3>
-    <details class="faq"><summary>Why does temperature use a formula, not a factor?</summary><div class="body">The Celsius and Fahrenheit scales have different zero points, so conversion requires both a multiplier and an offset, not a simple ratio.</div></details>
+    <details class="faq"><summary data-i18n="unit.faq1q">Why does temperature use a formula, not a factor?</summary><div class="body" data-i18n="unit.faq1a">The Celsius and Fahrenheit scales have different zero points, so conversion requires both a multiplier and an offset, not a simple ratio.</div></details>
+    <details class="faq"><summary>Why do lab conversions use molar mass?</summary><div class="body">Converting mg/dL to mmol/L divides by the substance's molar mass (e.g. glucose 180.18 g/mol). Each lab test therefore has its own factor.</div></details>
+    <details class="faq"><summary>Is mEq/L always equal to mmol/L?</summary><div class="body">For monovalent ions (Na⁺, K⁺, Cl⁻, HCO₃⁻) the charge is 1, so mEq/L = mmol/L. For divalent ions (Ca²⁺, Mg²⁺) multiply mmol/L × 2 to get mEq/L.</div></details>
   </div>
 
   <script is:inline>
@@ -54,13 +66,25 @@ const base = import.meta.env.BASE_URL;
       weight: { kg: 1, g: 1000, lb: 2.2046226, oz: 35.274 },
       volume: { L: 1, mL: 1000, 'fl oz': 33.814, 'cup': 4.22675 },
       length: { m: 1, cm: 100, mm: 1000, in: 39.3701, ft: 3.28084 },
+      pressure: { mmHg: 1, kPa: 0.133322, 'cmH2O': 1.35951, atm: 0.00131579 },
+      // Lab panels: base = mg/dL, factor converts mg/dL -> the unit shown
+      glucose: { 'mg/dL': 1, 'mmol/L': 0.0555 },
+      creatinine: { 'mg/dL': 1, 'µmol/L': 88.4 },
+      bun: { 'mg/dL': 1, 'mmol/L': 0.3571 },
+      electrolyte: { 'mEq/L': 1, 'mmol/L': 1 },
     };
     const labels = {
       temp: { C: '°C', F: '°F', K: 'K' },
       weight: { kg: 'kg', g: 'g', lb: 'lb', oz: 'oz' },
       volume: { L: 'L', mL: 'mL', 'fl oz': 'fl oz', 'cup': 'cup' },
       length: { m: 'm', cm: 'cm', mm: 'mm', in: 'in', ft: 'ft' },
+      pressure: { mmHg: 'mmHg', kPa: 'kPa', 'cmH2O': 'cmH₂O', atm: 'atm' },
+      glucose: { 'mg/dL': 'mg/dL', 'mmol/L': 'mmol/L' },
+      creatinine: { 'mg/dL': 'mg/dL', 'µmol/L': 'µmol/L' },
+      bun: { 'mg/dL': 'mg/dL', 'mmol/L': 'mmol/L' },
+      electrolyte: { 'mEq/L': 'mEq/L', 'mmol/L': 'mmol/L' },
     };
+    // HbA1c special panel: % (DCCT) <-> mmol/mol (IFCC) — handled separately
     let cur = 'temp';
     const fromSel = document.getElementById('from');
     const toSel = document.getElementById('to');
@@ -71,17 +95,26 @@ const base = import.meta.env.BASE_URL;
       const opts = Object.keys(units[cur]).map((u) => `<option value="${u}">${labels[cur][u]}</option>`).join('');
       fromSel.innerHTML = opts;
       toSel.innerHTML = opts;
-      // sensible defaults
       const ks = Object.keys(units[cur]);
       if (cur === 'temp') { fromSel.value = 'C'; toSel.value = 'F'; }
+      else if (cur === 'glucose') { fromSel.value = 'mg/dL'; toSel.value = 'mmol/L'; }
+      else if (cur === 'creatinine') { fromSel.value = 'mg/dL'; toSel.value = 'µmol/L'; }
+      else if (cur === 'bun') { fromSel.value = 'mg/dL'; toSel.value = 'mmol/L'; }
       else { fromSel.value = ks[0]; toSel.value = ks[1] || ks[0]; }
     }
     function run() {
       const v = parseFloat(valIn.value);
       if (isNaN(v)) { out.textContent = '—'; return; }
+      if (cur === 'hba1c') {
+        // % DCCT <-> mmol/mol IFCC : mmol/mol = (% - 2.15) * 10.929
+        const fromIsPct = fromSel.value === 'pct';
+        const outVal = fromIsPct ? (v - 2.15) * 10.929 : (v / 10.929) + 2.15;
+        const label = fromIsPct ? 'mmol/mol' : '% (DCCT)';
+        out.innerHTML = `<span class="big">${outVal.toFixed(1)}</span> ${label}`;
+        return;
+      }
       const f = units[cur][fromSel.value];
       const t = units[cur][toSel.value];
-      // Convert source value into the base unit (C for temp, 1 for others).
       let inBase;
       if (cur === 'temp') {
         inBase = (fromSel.value === 'C') ? v : (fromSel.value === 'F') ? (v - 32) * 5 / 9 : v - 273.15;
@@ -97,6 +130,18 @@ const base = import.meta.env.BASE_URL;
       b.classList.add('active'); cur = b.dataset.v; fill(); run();
     });
     [fromSel, toSel, valIn].forEach((el) => el.addEventListener('input', run));
+    // HbA1c needs its own unit set (not factor-based)
+    const hba1cOpts = '<option value="pct">% (DCCT)</option><option value="ifcc">mmol/mol (IFCC)</option>';
+    const origFill = fill;
+    fill = function () {
+      if (cur === 'hba1c') {
+        fromSel.innerHTML = hba1cOpts;
+        toSel.innerHTML = hba1cOpts;
+        fromSel.value = 'pct'; toSel.value = 'ifcc';
+      } else {
+        origFill();
+      }
+    };
     fill(); run();
   </script>
 </Base>

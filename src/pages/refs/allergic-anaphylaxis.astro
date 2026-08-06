@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Allergic Anaphylaxis — MedKit" activeSlug="allergic-anaphylaxis">
+<Base title="Allergic Anaphylaxis" activeSlug="allergic-anaphylaxis">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Allergic Anaphylaxis</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -87,16 +87,13 @@ const base = import.meta.env.BASE_URL || '/';
 <h4>Biphasic Anaphylaxis</h4>
 <ul><li>Occurs in <strong>5-20%</strong> of cases</li><li>Typically <strong>8-10 ชม.</strong> after initial episode</li><li>Can occur up to <strong>72 ชม.</strong> later</li><li><strong>Observation:</strong> Minimum 4-6 ชม. after resolution</li><li><strong>Discharge with:</strong> Epinephrine auto-injector prescription, allergy referral, anaphylaxis action plan</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Anaphylaxis first-line treatment?</p>
-<p><strong>A1:</strong> <strong>Epinephrine 0.3-0.5mg IM</strong> (anterolateral thigh) — NEVER delay</p>
-<p><strong>Q2:</strong> Biphasic anaphylaxis เกิดเมื่อไหร่?</p>
-<p><strong>A2:</strong> <strong>1-72 ชม.</strong> after initial episode (usually 8-10 ชม.) → monitor 4-6 ชม.</p>
-<p><strong>Q3:</strong> Patient on β-blockers + anaphylaxis resistant to epinephrine — ให้อะไร?</p>
-<p><strong>A3:</strong> <strong>Glucagon 1-5mg IV</strong> — bypasses β-receptors</p>
+<details class="faq"><summary>Anaphylaxis first-line treatment?</summary><div class="body"><strong>Epinephrine 0.3-0.5mg IM</strong> (anterolateral thigh) — NEVER delay</div></details>
+<details class="faq"><summary>Biphasic anaphylaxis เกิดเมื่อไหร่?</summary><div class="body"><strong>1-72 ชม.</strong> after initial episode (usually 8-10 ชม.) → monitor 4-6 ชม.</div></details>
+<details class="faq"><summary>Patient on β-blockers + anaphylaxis resistant to epinephrine — ให้อะไร?</summary><div class="body"><strong>Glucagon 1-5mg IV</strong> — bypasses β-receptors</div></details>
 <h3>ภาษาไทย: Anaphylaxis สำหรับ EMT</h3>
 <ul><li><strong>Epinephrine IM ทันที</strong> — อย่ารอ antihistamine</li><li><strong>Anaphylaxis ไม่ต้องมี hives</strong> — 10-20% ไม่มี skin signs</li><li><strong>Biphasic reaction</strong> — monitor 4-6 ชม.</li><li><strong>ถ้าได้ epi แล้วไม่ดี</strong> → repeat ทุก 5-15 นาที + IV fluid + albuterol</li><li><strong>Pregnant = ยังให้ epi</strong> — fetal distress แย่กว่า side effects</li></ul>
 <h3>Related</h3>
-<ul><li>[[Respiratory Emergencies - Asthma COPD]]</li><li>[[Epinephrine - Usage Dosage]]</li><li>[[Airway Management]]</li><li>[[IV Fluid Therapy]]</li><li>[[Albuterol - Bronchospasm]]</li></ul>
+<ul><li><a class="related-link" href="../respiratory/">Respiratory Emergencies - Asthma COPD</a></li><li><a class="related-link" href="../airway-basics/">Airway Management</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

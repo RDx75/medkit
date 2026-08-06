@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Oxygen Therapy — MedKit" activeSlug="oxygen-therapy">
+<Base title="Oxygen Therapy" activeSlug="oxygen-therapy">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Oxygen Therapy</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -57,20 +57,15 @@ const base = import.meta.env.BASE_URL || '/';
 <p><strong>ตัวอย่าง</strong>: E tank ที่ 2000 psi, flow 10 L/min</p>
 <p>= (2000 × 0.28) / 10 = <strong>56 นาที</strong></p>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Nasal cannula ให้ O2 ที่ flow rate เท่าไหร่?</p>
-<p><strong>A1:</strong> 1-6 L/min (FiO2 24-44%)</p>
-<p><strong>Q2:</strong> NRB mask ต้องใช้ flow rate อย่างน้อยเท่าไหร่?</p>
-<p><strong>A2:</strong> 10-15 L/min (เพื่อให้ reservoir bag ไม่ยุบ)</p>
-<p><strong>Q3:</strong> COPD patient ควรให้ O2 อย่างไร?</p>
-<p><strong>A3:</strong> ต่ำๆ (2-4 L/min NC หรือ 24-28% Venturi) → target SpO2 88-92% (เพราะ hypoxic drive)</p>
-<p><strong>Q4:</strong> SpO2 เป้าหมายสำหรับผู้ป่วยทั่วไป?</p>
-<p><strong>A4:</strong> ≥ 94%</p>
-<p><strong>Q5:</strong> BVM ให้ FiO2 เท่าไหร่?</p>
-<p><strong>A5:</strong> ~100% (ถ้ามี reservoir bag และ O2 flow 15 L/min)</p>
+<details class="faq"><summary>Nasal cannula ให้ O2 ที่ flow rate เท่าไหร่?</summary><div class="body">1-6 L/min (FiO2 24-44%)</div></details>
+<details class="faq"><summary>NRB mask ต้องใช้ flow rate อย่างน้อยเท่าไหร่?</summary><div class="body">10-15 L/min (เพื่อให้ reservoir bag ไม่ยุบ)</div></details>
+<details class="faq"><summary>COPD patient ควรให้ O2 อย่างไร?</summary><div class="body">ต่ำๆ (2-4 L/min NC หรือ 24-28% Venturi) → target SpO2 88-92% (เพราะ hypoxic drive)</div></details>
+<details class="faq"><summary>SpO2 เป้าหมายสำหรับผู้ป่วยทั่วไป?</summary><div class="body">≥ 94%</div></details>
+<details class="faq"><summary>BVM ให้ FiO2 เท่าไหร่?</summary><div class="body">~100% (ถ้ามี reservoir bag และ O2 flow 15 L/min)</div></details>
 <h3>ภาษาไทย</h3>
 <p>ออกซิเจน (O2) เป็นยาที่ให้ผ่านการสูดหายใจ อุปกรณ์หลักใน EMS คือ nasal cannula (1-6 L/min) และ NRB mask (10-15 L/min) ตรวจ SpO2 ก่อนและหลังให้ O2 เป้าหมาย SpO2 ≥ 94% (ยกเว้น COPD → 88-92%)</p>
 <h4>Related</h4>
-<ul><li>[[EMT Medication Overview]]</li><li>[[Airway Management]]</li><li>[[Respiratory Emergencies - Asthma COPD]]</li><li>[[Skill - Oxygen Administration]]</li></ul>
+<ul><li><a class="related-link" href="../meds-overview/">EMT Medication Overview</a></li><li><a class="related-link" href="../airway-basics/">Airway Management</a></li><li><a class="related-link" href="../respiratory/">Respiratory Emergencies - Asthma COPD</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

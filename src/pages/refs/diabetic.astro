@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Diabetic — MedKit" activeSlug="diabetic">
+<Base title="Diabetic" activeSlug="diabetic">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Diabetic</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -66,16 +66,13 @@ Brain cannot store glucose → needs continuous supply</code></pre>
 <tr><td><strong>TZDs</strong></td><td>Pioglitazone</td><td>⭐ Low</td></tr>
 </table>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Hypoglycemia ในผู้ป่วยที่ได้ sulfonylurea มีอะไรพิเศษ?</p>
-<p><strong>A1:</strong> <strong>Recurrent hypoglycemia</strong> — drug ออกฤทธิ์นาน ต้อง monitor ต่อเนื่อง + glucose infusion</p>
-<p><strong>Q2:</strong> DKA vs HHS — อันไหนมี Kussmaul breathing?</p>
-<p><strong>A2:</strong> <strong>DKA</strong> — มี acidosis → Kussmaul breathing; HHS ไม่มี acidosis → ไม่มี Kussmaul</p>
-<p><strong>Q3:</strong> Alcoholic + hypoglycemia — Glucagon อาจไม่ได้ผลเพราะอะไร?</p>
-<p><strong>A3:</strong> <strong>No liver glycogen stores</strong> — alcohol depletes glycogen → glucagon can't release glucose</p>
+<details class="faq"><summary>Hypoglycemia ในผู้ป่วยที่ได้ sulfonylurea มีอะไรพิเศษ?</summary><div class="body"><strong>Recurrent hypoglycemia</strong> — drug ออกฤทธิ์นาน ต้อง monitor ต่อเนื่อง + glucose infusion</div></details>
+<details class="faq"><summary>DKA vs HHS — อันไหนมี Kussmaul breathing?</summary><div class="body"><strong>DKA</strong> — มี acidosis → Kussmaul breathing; HHS ไม่มี acidosis → ไม่มี Kussmaul</div></details>
+<details class="faq"><summary>Alcoholic + hypoglycemia — Glucagon อาจไม่ได้ผลเพราะอะไร?</summary><div class="body"><strong>No liver glycogen stores</strong> — alcohol depletes glycogen → glucagon can't release glucose</div></details>
 <h3>ภาษาไทย: Diabetic Emergencies สำหรับ EMT</h3>
 <ul><li><strong>Hypoglycemia = ฉุกเฉินทันที</strong> — oral glucose if alert, D50 IV or Glucagon IM if unconscious</li><li><strong>Always check glucose</strong> ใน every altered mental status patient</li><li><strong>DKA = Kussmaul + fruity breath</strong> (Type 1)</li><li><strong>HHS = extreme glucose + no acidosis</strong> (Type 2, elderly)</li><li><strong>Treat the patient, not the number</strong></li></ul>
 <h3>Related</h3>
-<ul><li>[[Oral Glucose - Hypoglycemia]]</li><li>[[Naloxone - Overdose Reversal]]</li><li>[[Seizures - Assessment Management]]</li><li>[[Patient Assessment Algorithm]]</li></ul>
+<ul><li><a class="related-link" href="../seizures/">Seizures - Assessment Management</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

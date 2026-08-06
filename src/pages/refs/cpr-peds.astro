@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Cpr Peds — MedKit" activeSlug="cpr-peds">
+<Base title="Cpr Peds" activeSlug="cpr-peds">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Cpr Peds</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -55,20 +55,15 @@ const base = import.meta.env.BASE_URL || '/';
 <h3>When to Stop CPR</h3>
 <ul><li>ผู้ป่วย <strong>ROSC</strong> (Return of Spontaneous Circulation)</li><li><strong>Paramedic มาถึง</strong> และส่งต่อ</li><li><strong>Exhausted</strong> — ไม่สามารถทำต่อได้</li><li><strong>DNR</strong> — มีเอกสาร DNR ที่ถูกต้อง</li><li><strong>Unsafe scene</strong> — scene ไม่ปลอดภัย</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> สาเหตุหลักของ cardiac arrest ในเด็ก?</p>
-<p><strong>A1:</strong> Respiratory failure (ไม่ใช่ cardiac เหมือนผู้ใหญ่)</p>
-<p><strong>Q2:</strong> Compression depth ใน infant?</p>
-<p><strong>A2:</strong> 4 cm (1/3 AP diameter)</p>
-<p><strong>Q3:</strong> Ratio ใน pediatric CPR 2 rescuers?</p>
-<p><strong>A3:</strong> 15:2</p>
-<p><strong>Q4:</strong> Infant 1 rescuer ใช้อะไรกด?</p>
-<p><strong>A4:</strong> 2 นิ้ว (index + middle finger) below nipple line</p>
-<p><strong>Q5:</strong> Drowning ให้อะไรก่อนเริ่ม CPR?</p>
-<p><strong>A5:</strong> 5 rescue breaths ก่อน (เพราะสาเหตุหลักคือ hypoxia)</p>
+<details class="faq"><summary>สาเหตุหลักของ cardiac arrest ในเด็ก?</summary><div class="body">Respiratory failure (ไม่ใช่ cardiac เหมือนผู้ใหญ่)</div></details>
+<details class="faq"><summary>Compression depth ใน infant?</summary><div class="body">4 cm (1/3 AP diameter)</div></details>
+<details class="faq"><summary>Ratio ใน pediatric CPR 2 rescuers?</summary><div class="body">15:2</div></details>
+<details class="faq"><summary>Infant 1 rescuer ใช้อะไรกด?</summary><div class="body">2 นิ้ว (index + middle finger) below nipple line</div></details>
+<details class="faq"><summary>Drowning ให้อะไรก่อนเริ่ม CPR?</summary><div class="body">5 rescue breaths ก่อน (เพราะสาเหตุหลักคือ hypoxia)</div></details>
 <h3>ภาษาไทย</h3>
 <p>Pediatric CPR แตกต่างจาก adult: สาเหตุหลักคือ respiratory failure, compression depth 1/3 AP diameter, 2 rescuers = 15:2, infant ใช้ 2 นิ้ว/2 thumb, drowning ให้ 5 breaths ก่อน</p>
 <h4>Related</h4>
-<ul><li>[[Skill - CPR AED]]</li><li>[[Pediatric Emergencies]]</li><li>[[CPR Guidelines - Adult]]</li><li>[[AED Usage]]</li></ul>
+<ul><li><a class="related-link" href="../pediatric/">Pediatric Emergencies</a></li><li><a class="related-link" href="../cpr-adult/">CPR Guidelines - Adult</a></li><li><a class="related-link" href="../aed/">AED Usage</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

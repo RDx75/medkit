@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Vital Signs — MedKit" activeSlug="vital-signs">
+<Base title="Vital Signs" activeSlug="vital-signs">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Vital Signs</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -110,20 +110,15 @@ const base = import.meta.env.BASE_URL || '/';
 <tr><td><strong>Glucose</strong></td><td>&lt; 60 (hypoglycemia)</td></tr>
 </table>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> HR ปกติของ adult?</p>
-<p><strong>A1:</strong> 60-100 bpm</p>
-<p><strong>Q2:</strong> RR ปกติของ infant?</p>
-<p><strong>A2:</strong> 25-50 /min</p>
-<p><strong>Q3:</strong> SBP &lt; เท่าไหร่ = shock?</p>
-<p><strong>A3:</strong> &lt; 90 mmHg</p>
-<p><strong>Q4:</strong> GCS 15 หมายถึงอะไร?</p>
-<p><strong>A4:</strong> Fully alert — Eyes 4 + Verbal 5 + Motor 6 = 15</p>
-<p><strong>Q5:</strong> SpO2 target ใน COPD patient?</p>
-<p><strong>A5:</strong> 88-92%</p>
+<details class="faq"><summary>HR ปกติของ adult?</summary><div class="body">60-100 bpm</div></details>
+<details class="faq"><summary>RR ปกติของ infant?</summary><div class="body">25-50 /min</div></details>
+<details class="faq"><summary>SBP &lt; เท่าไหร่ = shock?</summary><div class="body">&lt; 90 mmHg</div></details>
+<details class="faq"><summary>GCS 15 หมายถึงอะไร?</summary><div class="body">Fully alert — Eyes 4 + Verbal 5 + Motor 6 = 15</div></details>
+<details class="faq"><summary>SpO2 target ใน COPD patient?</summary><div class="body">88-92%</div></details>
 <h3>ภาษาไทย</h3>
 <p>ค่าสัญญาณชีพปกติแตกต่างตามอายุ: HR เด็กเร็วกว่าผู้ใหญ่, BP เด็กต่ำกว่า, RR เด็กเร็วกว่า EMT ต้องจำค่าปกติของแต่ละกลุ่มอายุ เพื่อระบุว่าผู้ป่วยผิดปกติ</p>
 <h4>Related</h4>
-<ul><li>[[Vital Signs Reference]]</li><li>[[Patient Assessment]]</li><li>[[Primary Assessment - ABCDE]]</li><li>[[Pediatric Emergencies]]</li></ul>
+<ul><li><a class="related-link" href="../patient-assessment/">Patient Assessment</a></li><li><a class="related-link" href="../primary-assessment/">Primary Assessment - ABCDE</a></li><li><a class="related-link" href="../pediatric/">Pediatric Emergencies</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

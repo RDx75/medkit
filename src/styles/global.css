@@ -122,7 +122,7 @@ code, pre, kbd { font-family: var(--mono); }
 .side-link.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .side-link .ico { font-size: 15px; width: 20px; text-align: center; }
 
-.main { padding: 28px 32px 60px; max-width: 880px; width: 100%; }
+.main { padding: 28px 32px 60px; max-width: 880px; width: 100%; margin: 0 auto; }
 @media (max-width: 860px) { .main { padding: 22px 18px 50px; } }
 
 .breadcrumb { color: var(--text-faint); font-size: 13px; margin-bottom: 14px; }
@@ -288,6 +288,7 @@ code, pre, kbd { font-family: var(--mono); }
 .ref-links li { margin: 0.4rem 0; }
 .ref-links a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
 .ref-links a:hover { text-decoration: underline; }
+.ref-body .related-link { color: var(--accent); font-weight: 600; }
 .ref-card .src { font-size: 0.78rem; color: var(--text-faint); border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 0.5rem; }
 @media (max-width: 820px) { .ref-page { grid-template-columns: 1fr; } .ref-side { position: static; } }
 

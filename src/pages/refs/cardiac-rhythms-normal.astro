@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Cardiac Rhythms — Normal" activeSlug="cardiac-rhythms-normal">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Cardiac Rhythms — Normal</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Cardiac Rhythms — จังหวะหัวใจปกติ</h2>
+<blockquote>"รู้จักความปกติ จะรู้ว่าอะไรผิดปกติ"</blockquote>
+<h3>Normal Sinus Rhythm (NSR) — จังหวะปกติ</h3>
+<h4>ลักษณะ</h4>
+<table>
+<tr><th>องค์ประกอบ</th><th>ค่าปกติ</th></tr>
+<tr><td>Rate</td><td>60-100 bpm</td></tr>
+<tr><td>Rhythm</td><td>Regular (เท่ากัน)</td></tr>
+<tr><td>P wave</td><td>มีก่อน QRS ทุกครั้ง, เหมือนกัน, upright ใน II</td></tr>
+<tr><td>PR interval</td><td>0.12-0.20 วินาที (3-5 ช่องเล็ก)</td></tr>
+<tr><td>QRS</td><td>&lt;0.12 วินาที (แคบ)</td></tr>
+<tr><td>T wave</td><td>Upright เดียวกับ QRS ทิศ</td></tr>
+<tr><td>QTc</td><td>&lt;440ms</td></tr>
+</table>
+<p><strong>NSR คือ baseline</strong> — ทุก rhythm ที่ต่างออกไปคือ abnormal</p>
+<h3>Sinus Tachycardia — หัวใจเต้นเร็วปกติ</h3>
+<h4>ลักษณะ</h4>
+<ul><li>Rate <strong>&gt;100 bpm</strong> (สูงสุด ~150-180 ใน adults)</li><li><strong>Regular</strong>, P wave ปกติก่อน QRS ทุกครั้ง</li><li>PR, QRS, T ปกติ — เพียงแต่เร็วขึ้น</li></ul>
+<h4>สาเหตุ (เรียงจากบ่อยไปหายาย)</h4>
+<p>1. <strong>การตอบสนองปกติ:</strong> ออกกำลังกาย, ตื่นตระหนก, เจ็บปวด, ไข้</p>
+<p>2. <strong>Shock (Early):</strong> ร่างกย์พยายาม compensate → หัวใจเต้นเร็ว</p>
+<p>3. <strong>Hypovolemia:</strong> เสียเลือด, ขาดน้ำ</p>
+<p>4. <strong>Heart failure:</strong> หัวใจพยายาม compensate</p>
+<p>5. <strong>ยา:</strong> Albuterol, Atropine, Epinephrine, Caffeine</p>
+<p>6. <strong>โรค:</strong> ไทรอยด์สูง, PE, Sepsis</p>
+<h4>การรักษา</h4>
+<ul><li><strong>รักษาสาเหตุ</strong> — ไม่ใช่ให้ยาช้าหัวใจ</li><li>ถ้า compensating shock → อย่าให้ beta-blocker! (จะทำให้ crash)</li></ul>
+<h3>Sinus Bradycardia — หัวใจเต้นช้า</h3>
+<h4>ลักษณะ</h4>
+<ul><li>Rate <strong>&lt;60 bpm</strong></li><li><strong>Regular</strong>, P wave ปกติก่อน QRS ทุกครั้ง</li><li>อาจเป็น <strong>ปกติ</strong> ในนักกีฬา, หลับ, increased vagal tone</li></ul>
+<h4>สาเหตุ</h4>
+<p>1. <strong>ปกติ:</strong> Athlete's heart, sleeping, young healthy</p>
+<p>2. <strong>ยา:</strong> Beta-blocker, CCB (Diltiazem, Verapamil), Digoxin, Opioids</p>
+<p>3. <strong>โรค:</strong> Hypothermia, Hypothyroidism, Increased ICP (Cushing's reflex → Brady + HTN)</p>
+<p>4. <strong>Conduction disease:</strong> SSS (Sick Sinus Syndrome)</p>
+<h4>การรักษา</h4>
+<ul><li><strong>Asymptomatic:</strong> Observe → ไม่ต้องรักษา</li><li><strong>Symptomatic (Hypotension, AMS, chest pain):</strong></li><li><strong>Atropine 0.5mg IV</strong> ทุก 3-5 นาที (สูงสุด 3mg)</li><li>ถ้า Atropine ไม่ได้ผล → <strong>Transcutaneous pacing</strong></li><li>Dopamine/Epinephrine infusion (backup)</li></ul>
+<h4>Symptomatic Bradycardia คืออะไร</h4>
+<ul><li>หัวใจเต้นช้า <strong>+</strong> อาการเช่น:</li><li>Hypotension (SBP &lt;90)</li><li>Altered mental status</li><li>Shock signs</li><li>Chest pain</li><li>Heart failure</li></ul>
+<h3>Sinus Arrhythmia — หัวใจเต้นไม่สม่ำเสมอเล็กน้อย</h3>
+<ul><li>Rate เร็วขึ้นตอนหายใจเข้า ช้าลงตอนหายใจออก (phasic variation)</li><li>P wave ปกติ, QRS ปกติ — <strong>เป็น variant ปกติ</strong></li><li>พบบ่อยในเด็ก/วัยรุ่น</li><li><strong>ไม่ต้องรักษา</strong></li></ul>
+<h3>Sinus Arrest / Sinus Exit Block</h3>
+<h4>Sinus Arrest</h4>
+<ul><li>SA node ไม่ส่งสั�ญาณ 1 รอบ → เวลาว่าง (pause) ไม่มี P wave</li><li>Pause ไม่เป็น multiple ของ P-P interval</li></ul>
+<h4>Sinus Exit Block</h4>
+<ul><li>SA node ส่งสัญญาณแต่ <strong>ไม่สามารถ fire ออกมาได้</strong> → Pause เป็น multiple ของ P-P interval</li><li><strong>Wenckebach type</strong> — P-P สั้นลงจนหาย 1 รอบ</li></ul>
+<h4>การรักษา</h4>
+<ul><li>Mild → Observe</li><li>Symptomatic → <strong>Atropine</strong> หรือ <strong>Pacemaker</strong> (ถ้า chronic)</li></ul>
+<h3>Junctional Rhythms — จังหวะจาก AV node</h3>
+<h4>เมื่อไหร่เกิด Junctional Rhythm</h4>
+<ul><li>SA node ทำงานช้ากว่า AV node (&lt;40-60 bpm) → AV node รับช่วง</li><li><strong>Escape rhythm ช่วยชีวิต</strong> — ป้องกัน asystole</li></ul>
+<h4>ลักษณะ</h4>
+<ul><li>Rate <strong>40-60 bpm</strong>, Regular</li><li>P wave: <strong>Absent</strong> หรือ <strong>Retrograde</strong> (กลับ) หรือหลัง QRS</li><li>QRS แคบ (เหมือน NSR) — เพราะวิ่งลง bundle of His</li></ul>
+<h4>Accelerated Junctional Rhythm</h4>
+<ul><li>Rate <strong>60-100 bpm</strong> — เร็วกว่า escape rhythm ปกติ</li><li>พบใน Digoxin toxicity, post-cardiac surgery, ischemia</li></ul>
+<h4>Junctional Tachycardia</h4>
+<ul><li>Rate <strong>&gt;100 bpm</strong></li><li>เหมือน SVT แต่จาก AV node</li><li>รักษา: หาสาเหตุ, ลดยาที่เป็นสาเหตุ</li></ul>
+<h3>PAC (Premature Atrial Contraction) — หัวใจเต้นสะดุดจาก Atrium</h3>
+<ul><li>P wave ที่ <strong>เร็วกว่าควร</strong> — รูปร่างอาจต่างจาก P wave ปกติ</li><li>Compensation pause หลัง PAC (ไม่ complete)</li><li><strong>ไม่ต้องรักษา</strong> — พบได้ในคนปกติ (caffeine, stress, alcohol)</li><li>แต่ถ้าเกิดบ่อย → อาจเป็นสัญญาณกาเนิด SVT</li></ul>
+<h3>WAP (Wandering Atrial Pacemaker)</h3>
+<ul><li>P wave เปลี่ยนรูปร่าง (สูง/ต่ำ/กลับ) แต่ละ beat</li><li>Rate ปกติหรือช้า</li><li><strong>ปกติ</strong> พบใน young athletes — ไม่ต้องรักษา</li></ul>
+<h3>MAT (Multifocal Atrial Tachycardia)</h3>
+<ul><li><strong>≥3 รูปแบบ P wave ต่างกัน</strong> + rate &gt;100 bpm + Irregular</li><li><strong>สาเหตุหลัก:</strong> Severe lung disease (COPD), Theophylline toxicity</li><li><strong>รักษา:</strong> Treat underlying lung disease, <strong>Magnesium</strong> (ไม่ใช่ beta-blocker — จะทำให้ COPD worse)</li></ul>
+<h3>ตารางสรุป Normal &amp; Benign Rhythms</h3>
+<table>
+<tr><th>Rhythm</th><th>Rate</th><th>Key Feature</th><th>รักษา</th></tr>
+<tr><td>NSR</td><td>60-100</td><td>P + Regular</td><td>None</td></tr>
+<tr><td>Sinus Tachy</td><td>&gt;100</td><td>P + Regular</td><td>หาสาเหตุ</td></tr>
+<tr><td>Sinus Brady</td><td>&lt;60</td><td>P + Regular</td><td>Atropine (ถ้า symptomatic)</td></tr>
+<tr><td>Sinus Arrhythmia</td><td>Variable</td><td>P + Respiratory variation</td><td>None</td></tr>
+<tr><td>Junctional Escape</td><td>40-60</td><td>No P / Retrograde P</td><td>None (ถ้า asymptomatic)</td></tr>
+<tr><td>Accelerated Junctional</td><td>60-100</td><td>No P</td><td>หาสาเหตุ</td></tr>
+<tr><td>PAC</td><td>Variable</td><td>Early different P</td><td>None</td></tr>
+<tr><td>WAP</td><td>Normal</td><td>P ≥3 morphologies</td><td>None</td></tr>
+<tr><td>MAT</td><td>&gt;100</td><td>P ≥3 morphologies</td><td>Treat lung disease + Mg</td></tr>
+</table>
+<h3>Quiz</h3>
+<details class="faq"><summary>นักกีฬา 25 ปี HR 48 bpm, Regular, P wave ปกติ ควรทำอย่างไร?</summary><div class="body"><strong>Observe</strong> — Sinus bradycardia ที่เป็นปกติในนักกีฬา (athlete's heart) ไม่ต้องรักษา</div></details>
+<details class="faq"><summary>ผู้ป่วย COPD มาด้วย HR 120, Irregular, P wave 3 รูปแบบ MAT ควรให้ยาอะไร?</summary><div class="body"><strong>Magnesium</strong> + รักษา COPD — ไม่ใช่ beta-blocker (จะ worsen bronchospasm)</div></details>
+<h3>ภาษาไทย: จังหวะปกติสำหรับ EMT</h3>
+<p>สิ่งที่ EMT ต้องรู้:</p>
+<ul><li><strong>NSR = ปกติ</strong> (Regular + มี P + 60-100)</li><li><strong>Sinus Tachy = ร่ากย์ตอบสนอง</strong> (ไม่ใช่โรค)</li><li><strong>Sinus Brady + ปกติ = OK</strong> (นักกีฬา, หลับ)</li><li><strong>Brady + ปัญหา</strong> = แจ้ง ALS</li></ul>
+<h3>Related</h3>
+<ul><li><a class="related-link" href="../cardiac-rhythms-abnormal/">Cardiac Rhythms - Abnormal</a></li><li><a class="related-link" href="../ecg-interpretation/">ECG Interpretation</a></li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://cpr.heart.org/" target="_blank" rel="noopener">AHA CPR & ECC ↗</a></li>
+      <li><a href="https://doi.org/10.1161/CIR.0000000000001183" target="_blank" rel="noopener">AHA 2025 Guidelines ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA 2025</p>
+      </div>
+    </aside>
+  </article>
+</Base>

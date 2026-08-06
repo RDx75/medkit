@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Respiratory — MedKit" activeSlug="respiratory">
+<Base title="Respiratory" activeSlug="respiratory">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Respiratory</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -90,16 +90,13 @@ const base = import.meta.env.BASE_URL || '/';
 <tr><td><strong>Silent chest</strong></td><td>—</td><td>Severe obstruction + exhaustion = near-fatal</td></tr>
 </table>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> COPD patient — SpO2 target เท่าไหร่?</p>
-<p><strong>A1:</strong> <strong>88-92%</strong> — titrate O2 to target, don't over-oxygenate but don't let them desaturate</p>
-<p><strong>Q2:</strong> Asthma silent chest หมายถึงอะไร?</p>
-<p><strong>A2:</strong> <strong>Near-fatal asthma</strong> — severe obstruction + exhaustion → imminent respiratory arrest</p>
-<p><strong>Q3:</strong> Anaphylaxis first-line treatment?</p>
-<p><strong>A3:</strong> <strong>Epinephrine 0.3-0.5mg IM</strong> (anterolateral thigh) — never delay epinephrine</p>
+<details class="faq"><summary>COPD patient — SpO2 target เท่าไหร่?</summary><div class="body"><strong>88-92%</strong> — titrate O2 to target, don't over-oxygenate but don't let them desaturate</div></details>
+<details class="faq"><summary>Asthma silent chest หมายถึงอะไร?</summary><div class="body"><strong>Near-fatal asthma</strong> — severe obstruction + exhaustion → imminent respiratory arrest</div></details>
+<details class="faq"><summary>Anaphylaxis first-line treatment?</summary><div class="body"><strong>Epinephrine 0.3-0.5mg IM</strong> (anterolateral thigh) — never delay epinephrine</div></details>
 <h3>ภาษาไทย: Respiratory Emergencies สำหรับ EMT</h3>
 <ul><li><strong>Silent chest = danger</strong> — imminent arrest</li><li><strong>COPD O2 target 88-92%</strong> — don't over-oxygenate</li><li><strong>Anaphylaxis = Epinephrine IM first</strong></li><li><strong>CPAP</strong> effective สำหรับ pulmonary edema + severe asthma/COPD</li><li><strong>Know your wheezes vs stridor vs crackles</strong></li></ul>
 <h3>Related</h3>
-<ul><li>[[Airway Management]]</li><li>[[Allergic Reaction Anaphylaxis]]</li><li>[[CPAP and BiPAP]]</li><li>[[Oxygen Therapy]]</li><li>[[Albuterol - Bronchospasm]]</li><li>[[Epinephrine - Usage Dosage]]</li></ul>
+<ul><li><a class="related-link" href="../airway-basics/">Airway Management</a></li><li><a class="related-link" href="../allergic-anaphylaxis/">Allergic Reaction Anaphylaxis</a></li><li><a class="related-link" href="../oxygen-therapy/">Oxygen Therapy</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

@@ -5,54 +5,56 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="MAP Calculator" activeSlug="map">
-  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>MAP Calculator</span></div>
-  <h1>MAP Calculator</h1>
-  <p class="cat-desc">Mean Arterial Pressure from systolic and diastolic blood pressure.</p>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span data-i18n="cat.calculators.title">Calculators</span> / <span data-i18n="tools.map.title">MAP Calculator</span></div>
+  <h1 data-i18n="map.h1">MAP Calculator</h1>
+  <p class="cat-desc" data-i18n="map.desc">Mean Arterial Pressure from systolic and diastolic blood pressure.</p>
 
   <div class="tool-ui">
     <div class="row">
       <div class="field">
-        <label>Systolic BP (mmHg)</label>
+        <label data-i18n="map.sys">Systolic BP (mmHg)</label>
         <input id="sys" type="number" value="120" min="0" step="1" />
       </div>
       <div class="field">
-        <label>Diastolic BP (mmHg)</label>
+        <label data-i18n="map.dia">Diastolic BP (mmHg)</label>
         <input id="dia" type="number" value="80" min="0" step="1" />
       </div>
     </div>
-    <button class="btn" id="calc">Calculate</button>
-    <div class="result" id="out">Enter values and press Calculate.</div>
+    <button class="btn" id="calc" data-i18n="map.calc">Calculate</button>
+    <div class="result" id="out" data-i18n="map.enter">Enter values and press Calculate.</div>
   </div>
 
   <div class="article">
-    <h2>Free Online MAP Calculator</h2>
-    <p>Mean Arterial Pressure (MAP) is the average pressure in a patient's arteries during one cardiac cycle. It better reflects perfusion of vital organs than a single systolic or diastolic reading.</p>
+    <h2 data-i18n="map.h2">Free Online MAP Calculator</h2>
+    <p data-i18n="map.intro">Mean Arterial Pressure (MAP) is the average pressure in a patient's arteries during one cardiac cycle. It better reflects perfusion of vital organs than a single systolic or diastolic reading.</p>
     <p><code>MAP = Diastolic + (Systolic − Diastolic) / 3</code></p>
-    <h3>Interpretation</h3>
+    <h3 data-i18n="map.h3_int">Interpretation</h3>
     <table>
-      <tr><th>MAP</th><th>Meaning</th></tr>
+      <tr><th>MAP</th><th data-i18n="map.h3_int">Meaning</th></tr>
       <tr><td>≥ 70 mmHg</td><td>Generally adequate organ perfusion</td></tr>
       <tr><td>&lt; 65 mmHg</td><td>Consider support to maintain perfusion</td></tr>
     </table>
-    <h3>FAQ</h3>
-    <details class="faq"><summary>Why weight diastolic more?</summary><div class="body">The heart spends roughly two-thirds of the cycle in diastole, so MAP sits closer to diastolic than to the arithmetic mean.</div></details>
-    <div class="callout">MAP is a guide; assess perfusion with clinical signs (capillary refill, urine output, mental status) too.</div>
+    <h3 data-i18n="map.h3_faq">FAQ</h3>
+    <details class="faq"><summary data-i18n="map.faq1q">Why weight diastolic more?</summary><div class="body" data-i18n="map.faq1a">The heart spends roughly two-thirds of the cycle in diastole, so MAP sits closer to diastolic than to the arithmetic mean.</div></details>
+    <div class="callout" data-i18n="map.note">MAP is a guide; assess perfusion with clinical signs (capillary refill, urine output, mental status) too.</div>
   </div>
 
   <script is:inline>
     const out = document.getElementById('out');
+    const t = (k) => window.__t(k);
     function run() {
       const sys = parseFloat(document.getElementById('sys').value);
       const dia = parseFloat(document.getElementById('dia').value);
-      if (!sys || !dia) { out.textContent = 'Enter both systolic and diastolic.'; return; }
+      if (!sys || !dia) { out.textContent = t('map.enter_both'); return; }
       const map = dia + (sys - dia) / 3;
       const cls = map >= 70 ? 'ok' : (map >= 65 ? 'warn' : 'bad');
-      const label = map >= 70 ? 'Adequate' : (map >= 65 ? 'Borderline' : 'Low');
+      const label = map >= 70 ? t('map.adeq') : (map >= 65 ? t('map.border') : t('map.low'));
       out.innerHTML = `<span class="big">${map.toFixed(0)}</span> mmHg <span class="tag tag-${cls}">${label}</span>`;
     }
     document.getElementById('calc').addEventListener('click', run);
     document.getElementById('sys').addEventListener('input', run);
     document.getElementById('dia').addEventListener('input', run);
+    document.addEventListener('i18n:changed', run);
     run();
   </script>
 </Base>

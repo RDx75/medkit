@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Aed — MedKit" activeSlug="aed">
+<Base title="Aed" activeSlug="aed">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Aed</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -80,18 +80,15 @@ const base = import.meta.env.BASE_URL || '/';
 <tr><td>กลัว AED จะ shock คนปกติ</td><td>AED วิเคราะห์อัตโนมัติ — ไม่ shock ถ้าไม่ใช่ VF/VT</td></tr>
 </table>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> AED แนะนำ shock สำหรับ rhythm ใด?</p>
-<p><strong>A1:</strong> <strong>VF (Ventricular Fibrillation) และ pulseless VT</strong> เท่านั้น</p>
-<p><strong>Q2:</strong> ขณะ AED วิเคราะห์ rhythm ควรทำอะไร?</p>
-<p><strong>A2:</strong> <strong>หยุดสัมผัสผู้ป่วย</strong> — ทุกคนห่างออก จน AED บอกผล</p>
-<p><strong>Q3:</strong> ผู้ป่วยมี pacemaker ใต้ left clavicle แปะ pad อย่างไร?</p>
-<p><strong>A3:</strong> <strong>ห่างจาก device อย่างน้อย 2.5 ซม.</strong> — ป้องกัน current ไม่ผ่านหัวใจ</p>
+<details class="faq"><summary>AED แนะนำ shock สำหรับ rhythm ใด?</summary><div class="body"><strong>VF (Ventricular Fibrillation) และ pulseless VT</strong> เท่านั้น</div></details>
+<details class="faq"><summary>ขณะ AED วิเคราะห์ rhythm ควรทำอะไร?</summary><div class="body"><strong>หยุดสัมผัสผู้ป่วย</strong> — ทุกคนห่างออก จน AED บอกผล</div></details>
+<details class="faq"><summary>ผู้ป่วยมี pacemaker ใต้ left clavicle แปะ pad อย่างไร?</summary><div class="body"><strong>ห่างจาก device อย่างน้อย 2.5 ซม.</strong> — ป้องกัน current ไม่ผ่านหัวใจ</div></details>
 <h3>ภาษาไทย: AED สำหรับ EMT</h3>
 <p><strong>สำหรับ EMT ทุกระดับ:</strong></p>
 <ul><li>AED ใช้ง่าย — เปิดเครื่องแล้วทำตามเสียงบอก</li><li><strong>อย่ากลัว</strong> — AED จะไม่ shock คนที่ไม่ควร shock</li><li><strong>CPR + AED = โอกาสรอดสูงสุด</strong></li><li>ทุกนาทีที่ delay defibrillation = โอกาสรอดลด 7-10%</li></ul>
 <p><strong>"Shock early, shock fast — AED saves lives"</strong></p>
 <h3>Related</h3>
-<ul><li>[[Defibrillation]]</li><li>[[CPR Guidelines - Adult]]</li><li>[[Cardiac Arrest Algorithm]]</li><li>[[Cardiac Rhythms - Abnormal]]</li></ul>
+<ul><li><a class="related-link" href="../cpr-adult/">CPR Guidelines - Adult</a></li><li><a class="related-link" href="../cardiac-rhythms-abnormal/">Cardiac Rhythms - Abnormal</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Pharmacology — MedKit" activeSlug="pharmacology">
+<Base title="Pharmacology" activeSlug="pharmacology">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Pharmacology</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -73,20 +73,15 @@ const base = import.meta.env.BASE_URL || '/';
 <h3>Points to Remember</h3>
 <ul><li>ถ้าไม่แน่ใจ → <strong>ถาม Online Medical Control</strong> ก่อนให้ยา</li><li>อ่านฉลากยาก่อนใช้ทุกครั้ง</li><li>ตรวจ allergy ก่อนให้ยาทุกครั้ง</li><li>ถ้าเกิด adverse reaction → หยุดยา, ดูแลผู้ป่วย, บันทึก, รายงาน</li><li><strong>"When in doubt, don't give"</strong> — ถ้าไม่แน่ใจ อย่าให้ยา</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> EMT-B สามารถให้ยาได้กี่ตัว?</p>
-<p><strong>A1:</strong> ~5-8 ตัว (ตาม protocol): O2, ASA, NTG, Glucose, Epi, Albuterol, Naloxone</p>
-<p><strong>Q2:</strong> ผู้ป่วยแพ้ยา สับสน ชีพจรเร็ว เหงื่อออก — เป็นอะไร?</p>
-<p><strong>A2:</strong> Hypoglycemia → ถ้ารู้สติ → Oral Glucose</p>
-<p><strong>Q3:</strong> ทำไมต้องระวัง Nitroglycerin ในผู้ป่วยที่ใช้ Viagra?</p>
-<p><strong>A3:</strong> เพราะจะทำให้ความดันตกระเด็น (severe hypotension)</p>
-<p><strong>Q4:</strong> ยาที่ EMT ช่วยผู้ป่วยกินเองได้?</p>
-<p><strong>A4:</strong> Nitroglycerin (patient's own), EpiPen (patient's own), Albuterol MDI (patient's own)</p>
-<p><strong>Q5:</strong> ถ้าไม่แน่ใจว่าควรให้ยาหรือไม่?</p>
-<p><strong>A5:</strong> ถาม Online Medical Control ก่อน — "When in doubt, don't give"</p>
+<details class="faq"><summary>EMT-B สามารถให้ยาได้กี่ตัว?</summary><div class="body">~5-8 ตัว (ตาม protocol): O2, ASA, NTG, Glucose, Epi, Albuterol, Naloxone</div></details>
+<details class="faq"><summary>ผู้ป่วยแพ้ยา สับสน ชีพจรเร็ว เหงื่อออก — เป็นอะไร?</summary><div class="body">Hypoglycemia → ถ้ารู้สติ → Oral Glucose</div></details>
+<details class="faq"><summary>ทำไมต้องระวัง Nitroglycerin ในผู้ป่วยที่ใช้ Viagra?</summary><div class="body">เพราะจะทำให้ความดันตกระเด็น (severe hypotension)</div></details>
+<details class="faq"><summary>ยาที่ EMT ช่วยผู้ป่วยกินเองได้?</summary><div class="body">Nitroglycerin (patient's own), EpiPen (patient's own), Albuterol MDI (patient's own)</div></details>
+<details class="faq"><summary>ถ้าไม่แน่ใจว่าควรให้ยาหรือไม่?</summary><div class="body">ถาม Online Medical Control ก่อน — "When in doubt, don't give"</div></details>
 <h3>ภาษาไทย</h3>
 <p>เภสัชวิทยาสำหรับ EMT คือความรู้เกี่ยวกับยาที่ EMT-B ใช้ในสนาม ประกอบด้วยยา ~5-8 ตัว ต้องรู้ข้อบ่งใช้ ข้อห้ามใช้ ขนาดยา เส้นทาง และ 5 Rights ก่อนให้ยาทุกครั้ง</p>
 <h4>Related</h4>
-<ul><li>[[EMT Medication Overview]]</li><li>[[Medication Administration]]</li><li>[[Medications — EMT Scope]]</li><li>[[ACLS Medications]]</li></ul>
+<ul><li><a class="related-link" href="../meds-overview/">EMT Medication Overview</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

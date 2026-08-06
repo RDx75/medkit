@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Meds Overview — MedKit" activeSlug="meds-overview">
+<Base title="Meds Overview" activeSlug="meds-overview">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Meds Overview</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -40,16 +40,13 @@ const base = import.meta.env.BASE_URL || '/';
 <h3>💡 Tips</h3>
 <ul><li>ถ้าผู้ป่วยกินยาตัวเองอยู่แล้ว เช่น Nitroglycerin ที่พกติดตัว → EMT ช่วยให้ repeat dose ได้ (ถ้า SBP ยัง &gt; 90)</li><li>Aspirin ถ้าผู้ป่วยกิน ASA 81mg อยู่ทุกวัน → ให้ 325 mg เพิ่ม (chewable) ได้</li><li>ถ้าไม่แน่ใจ → ถึงศูย์ก่อนจะให้ยา Online Medical Control</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> ก่อนให้ยา EMT ต้องตรวจสอบอะไรบ้าง?</p>
-<p><strong>A1:</strong> 5 Rights — Right patient, drug, dose, route, time + ประวัติการแพ้ยา</p>
-<p><strong>Q2:</strong> Nitroglycerin ห้ามใช้เมื่อ SBP ต่ำกว่า?</p>
-<p><strong>A2:</strong> 90 mmHg</p>
-<p><strong>Q3:</strong> Naloxone ให้ผ่านเส้นทางไหน?</p>
-<p><strong>A3:</strong> Intranasal (IN) หรือ IM</p>
+<details class="faq"><summary>ก่อนให้ยา EMT ต้องตรวจสอบอะไรบ้าง?</summary><div class="body">5 Rights — Right patient, drug, dose, route, time + ประวัติการแพ้ยา</div></details>
+<details class="faq"><summary>Nitroglycerin ห้ามใช้เมื่อ SBP ต่ำกว่า?</summary><div class="body">90 mmHg</div></details>
+<details class="faq"><summary>Naloxone ให้ผ่านเส้นทางไหน?</summary><div class="body">Intranasal (IN) หรือ IM</div></details>
 <h3>ภาษาไทย</h3>
 <p>EMT Medication Overview เป็นพื้นฐานสำคัญ — ต้องรู้ยาที่ตัวเองสามารถให้ได้ ข้อบ่งใช้ ข้อห้าม และขนาดยา เพื่อความปลอดภัยของผู้ป่วยและผู้ดูแล</p>
 <h4>Related</h4>
-<ul><li>[[Pharmacology for EMT]]</li><li>[[Medication Administration]]</li><li>[[Medications — EMT Scope]]</li></ul>
+<ul><li><a class="related-link" href="../pharmacology/">Pharmacology for EMT</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

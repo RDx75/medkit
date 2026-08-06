@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Burns — MedKit" activeSlug="burns">
+<Base title="Burns" activeSlug="burns">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Burns</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -91,17 +91,14 @@ Anterior Torso: 18%     Posterior Torso: 18%
 <h3>Electrical Burn — Special Considerations</h3>
 <ul><li><strong>Cardiac monitoring ทุก patient</strong> ที่ high-voltage injury (เสี่ยง arrhythmia 24-48 ชม.)</li><li><strong>Compartment syndrome</strong> — internal burn → muscle necrosis → edema → compartment pressure ↑ → ต้อง fasciotomy</li><li><strong>Myoglobinuria</strong> — muscle breakdown → myoglobin → renal failure → ต้อง aggressive fluid + alkalinize urine</li><li><strong>Spinal injury</strong> — violent muscle contraction → fracture/dislocation</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Chemical burn จากสารด่าง (base) และกรด (acid) อันไหนแย่กว่า?</p>
-<p><strong>A1:</strong> <strong>Base (ด่าง)</strong> — liquefactive necrosis ละลาย tissue ต่อเนื่อง, acid เป็น coagulation necrosis self-limiting</p>
-<p><strong>Q2:</strong> Burn Center referral criteria สำหรับ partial-thickness burn?</p>
-<p><strong>A2:</strong> <strong>&gt;10% TBSA</strong> หรือ burn ที่หน้า/มือ/เท้า/อวัยวะเพศ/joints</p>
-<p><strong>Q3:</strong> CO poisoning SpO2 จะแสดงค่าอย่างไร?</p>
-<p><strong>A3:</strong> <strong>SpO2 ปกติ/สูง</strong> — pulse oximetry ไม่แยก COHb ได้ → ต้องเช็ค COHb level</p>
+<details class="faq"><summary>Chemical burn จากสารด่าง (base) และกรด (acid) อันไหนแย่กว่า?</summary><div class="body"><strong>Base (ด่าง)</strong> — liquefactive necrosis ละลาย tissue ต่อเนื่อง, acid เป็น coagulation necrosis self-limiting</div></details>
+<details class="faq"><summary>Burn Center referral criteria สำหรับ partial-thickness burn?</summary><div class="body"><strong>&gt;10% TBSA</strong> หรือ burn ที่หน้า/มือ/เท้า/อวัยวะเพศ/joints</div></details>
+<details class="faq"><summary>CO poisoning SpO2 จะแสดงค่าอย่างไร?</summary><div class="body"><strong>SpO2 ปกติ/สูง</strong> — pulse oximetry ไม่แยก COHb ได้ → ต้องเช็ค COHb level</div></details>
 <h3>ภาษาไทย: Burn สำหรับ EMT</h3>
 <p>สิ่งที่ EMT ต้องรู้:</p>
 <ul><li><strong>หยุด burn, ล้างน้ำเย็น, ห้ามใช้น้ำแข็ง</strong></li><li><strong>3rd degree = ขาด/ดำ + ไม่ปวด</strong> → ต้อง skin graft</li><li><strong>Inhalation injury = ส่ง Burn Center</strong> — ด่วนที่สุด (airway อาจปิด)</li><li><strong>Chemical = ล้างน้ำรอบ 20-30 นาที</strong> ห้าม neutralize</li><li><strong>Electrical = cardiac monitor + check urine (myoglobinuria)</strong></li></ul>
 <h3>Related</h3>
-<ul><li>[[Burn Assessment]]</li><li>[[Trauma Assessment]]</li><li>[[Bleeding Shock]]</li><li>[[Chest Trauma]]</li><li>[[Airway Management]]</li></ul>
+<ul><li><a class="related-link" href="../bleeding-shock/">Bleeding Shock</a></li><li><a class="related-link" href="../chest-trauma/">Chest Trauma</a></li><li><a class="related-link" href="../airway-basics/">Airway Management</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

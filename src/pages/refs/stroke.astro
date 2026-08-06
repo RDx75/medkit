@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Stroke — MedKit" activeSlug="stroke">
+<Base title="Stroke" activeSlug="stroke">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Stroke</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -107,16 +107,13 @@ T — Time to call (โทรขอความช่วยเหลือทั
 <h3>TIA (Transient Ischemic Attack)</h3>
 <ul><li><strong>Transient neurological deficit</strong> — resolves within 24 hours (usually &lt;1 hour)</li><li><strong>No permanent infarction</strong> on imaging</li><li><strong>BUT: High risk of full stroke!</strong> — 10-20% within 90 days (highest in first 48 hours)</li><li><strong>ABCD² score:</strong> Age, BP, Clinical features, Duration, Diabetes → risk stratification</li><li><strong>Treatment:</strong> Urgent evaluation, antiplatelets, carotid imaging, risk factor management</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> FAST หมายถึงอะไร?</p>
-<p><strong>A1:</strong> <strong>Face drooping + Arm weakness + Speech difficulty + Time to call</strong></p>
-<p><strong>Q2:</strong> Time window สำหรับ IV tPA?</p>
-<p><strong>A3:</strong> <strong>0-4.5 hours</strong> from symptom onset (last known well)</p>
-<p><strong>Q3:</strong> Large vessel occlusion suspected ส่งไหน?</p>
-<p><strong>A3:</strong> <strong>Comprehensive Stroke Center</strong> (thrombectomy capable) — bypass primary stroke center</p>
+<details class="faq"><summary>FAST หมายถึงอะไร?</summary><div class="body"><strong>Face drooping + Arm weakness + Speech difficulty + Time to call</strong></div></details>
+<details class="faq"><summary>Time window สำหรับ IV tPA?</summary><div class="body"><strong>0-4.5 hours</strong> from symptom onset (last known well)</div></details>
+<details class="faq"><summary>Large vessel occlusion suspected ส่งไหน?</summary><div class="body"><strong>Comprehensive Stroke Center</strong> (thrombectomy capable) — bypass primary stroke center</div></details>
 <h3>ภาษาไทย: Stroke สำหรับ EMT</h3>
 <ul><li><strong>FAST assessment</strong> — Face, Arm, Speech, Time</li><li><strong>Check glucose</strong> — rule out hypoglycemia</li><li><strong>Rapid transport</strong> to stroke center</li><li><strong>Time last known well</strong> — สำคัญที่สุดสำหรับ treatment decision</li><li><strong>Don't delay</strong> — IV, BP treatment secondary to transport</li></ul>
 <h3>Related</h3>
-<ul><li>[[Seizures - Assessment Management]]</li><li>[[Diabetic Emergencies]]</li><li>[[Patient Assessment Algorithm]]</li><li>[[Head Spinal Injuries]]</li></ul>
+<ul><li><a class="related-link" href="../seizures/">Seizures - Assessment Management</a></li><li><a class="related-link" href="../diabetic/">Diabetic Emergencies</a></li><li><a class="related-link" href="../head-spine/">Head Spinal Injuries</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

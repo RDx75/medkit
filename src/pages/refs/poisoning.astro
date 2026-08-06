@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 const base = import.meta.env.BASE_URL || '/';
 ---
 
-<Base title="Poisoning — MedKit" activeSlug="poisoning">
+<Base title="Poisoning" activeSlug="poisoning">
   <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Poisoning</span></div>
   <article class="ref-page">
     <div class="ref-body">
@@ -165,16 +165,13 @@ const base = import.meta.env.BASE_URL || '/';
 <h4>⚠️ Important</h4>
 <ul><li><strong>Pulse oximetry is FALSELY NORMAL</strong> — can't distinguish COHb from O2Hb</li><li><strong>Cherry-red skin</strong> — rare, late sign</li><li><strong>Treatment:</strong> 100% O2 (reduces CO half-life from 5h → 90 min)</li><li><strong>Hyperbaric O2:</strong> COHb &gt;25%, pregnant, neurological symptoms, cardiac involvement</li></ul>
 <h3>Quiz</h3>
-<p><strong>Q1:</strong> Opioid overdose triad คืออะไร?</p>
-<p><strong>A1:</strong> <strong>Pinpoint pupils + Respiratory depression + Coma</strong> → Naloxone</p>
-<p><strong>Q2:</strong> Activated charcoal ให้เมื่อไหร่?</p>
-<p><strong>A2:</strong> <strong>Within 1 hour</strong> of ingestion, alert patient, patent airway</p>
-<p><strong>Q3:</strong> CO poisoning — pulse oximetry จะแสดงอะไร?</p>
-<p><strong>A3:</strong> <strong>Falsely normal</strong> — can't distinguish COHb from O2Hb → need COHb level</p>
+<details class="faq"><summary>Opioid overdose triad คืออะไร?</summary><div class="body"><strong>Pinpoint pupils + Respiratory depression + Coma</strong> → Naloxone</div></details>
+<details class="faq"><summary>Activated charcoal ให้เมื่อไหร่?</summary><div class="body"><strong>Within 1 hour</strong> of ingestion, alert patient, patent airway</div></details>
+<details class="faq"><summary>CO poisoning — pulse oximetry จะแสดงอะไร?</summary><div class="body"><strong>Falsely normal</strong> — can't distinguish COHb from O2Hb → need COHb level</div></details>
 <h3>ภาษาไทย: Poisoning สำหรับ EMT</h3>
 <ul><li><strong>ABCs first</strong> — decontaminate if needed</li><li><strong>Identify toxidrome</strong> — Opioid? Sympathomimetic? Anticholinergic? Cholinergic?</li><li><strong>Activated charcoal</strong> within 1 hour if alert</li><li><strong>Naloxone</strong> for opioid overdose</li><li><strong>Don't induce vomiting</strong> for caustics/hydrocarbons</li><li><strong>CO = 100% O2</strong> — pulse oximetry lies!</li></ul>
 <h3>Related</h3>
-<ul><li>[[Naloxone - Overdose Reversal]]</li><li>[[Activated Charcoal - Poisoning]]</li><li>[[Allergic Reaction Anaphylaxis]]</li><li>[[Diabetic Emergencies]]</li><li>[[Patient Assessment Algorithm]]</li></ul>
+<ul><li><a class="related-link" href="../allergic-anaphylaxis/">Allergic Reaction Anaphylaxis</a></li><li><a class="related-link" href="../diabetic/">Diabetic Emergencies</a></li></ul>
     </div>
     <aside class="ref-side">
       <div class="ref-card">

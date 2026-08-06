@@ -5,13 +5,13 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="GCS Calculator" activeSlug="gcs">
-  <div class="breadcrumb"><a href={base}>MedKit</a> / Calculators / <span>GCS Calculator</span></div>
-  <h1>GCS Calculator</h1>
-  <p class="cat-desc">Glasgow Coma Scale — Eye, Verbal, Motor summed to a score of 3–15.</p>
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span data-i18n="cat.calculators.title">Calculators</span> / <span data-i18n="tools.gcs.title">GCS Calculator</span></div>
+  <h1 data-i18n="gcs.h1">GCS Calculator</h1>
+  <p class="cat-desc" data-i18n="gcs.desc">Glasgow Coma Scale — Eye, Verbal, Motor summed to a score of 3–15.</p>
 
   <div class="tool-ui">
     <div class="field">
-      <label>Eye Opening (E)</label>
+      <label data-i18n="gcs.eye">Eye Opening (E)</label>
       <div class="opts" id="eye">
         <button class="opt" data-v="4">4 · Spontaneous</button>
         <button class="opt" data-v="3">3 · To speech</button>
@@ -20,7 +20,7 @@ const base = import.meta.env.BASE_URL;
       </div>
     </div>
     <div class="field">
-      <label>Verbal Response (V)</label>
+      <label data-i18n="gcs.verbal">Verbal Response (V)</label>
       <div class="opts" id="verbal">
         <button class="opt" data-v="5">5 · Oriented</button>
         <button class="opt" data-v="4">4 · Confused</button>
@@ -30,7 +30,7 @@ const base = import.meta.env.BASE_URL;
       </div>
     </div>
     <div class="field">
-      <label>Motor Response (M)</label>
+      <label data-i18n="gcs.motor">Motor Response (M)</label>
       <div class="opts" id="motor">
         <button class="opt" data-v="6">6 · Obeys</button>
         <button class="opt" data-v="5">5 · Localises</button>
@@ -40,26 +40,27 @@ const base = import.meta.env.BASE_URL;
         <button class="opt" data-v="1">1 · None</button>
       </div>
     </div>
-    <div class="result" id="out">Select a response in each row.</div>
+    <div class="result" id="out" data-i18n="gcs.select">Select a response in each row.</div>
   </div>
 
   <div class="article">
-    <h2>Free Online Glasgow Coma Scale Calculator</h2>
-    <p>The GCS is a neurological scale that assesses a person's level of consciousness after a brain injury. It sums three components — Eye, Verbal and Motor — for a total between 3 (deep coma) and 15 (fully alert).</p>
-    <h3>Interpretation</h3>
+    <h2 data-i18n="gcs.h2">Free Online Glasgow Coma Scale Calculator</h2>
+    <p data-i18n="gcs.intro">The GCS is a neurological scale that assesses a person's level of consciousness after a brain injury. It sums three components — Eye, Verbal and Motor — for a total between 3 (deep coma) and 15 (fully alert).</p>
+    <h3 data-i18n="gcs.h3_int">Interpretation</h3>
     <table>
-      <tr><th>Total</th><th>Category</th></tr>
-      <tr><td>13–15</td><td>Mild impairment</td></tr>
-      <tr><td>9–12</td><td>Moderate impairment</td></tr>
-      <tr><td>3–8</td><td>Severe — consider intubation</td></tr>
+      <tr><th>Total</th><th data-i18n="gcs.h3_int">Category</th></tr>
+      <tr><td>13–15</td><td data-i18n="gcs.mild">Mild impairment</td></tr>
+      <tr><td>9–12</td><td data-i18n="gcs.moderate">Moderate impairment</td></tr>
+      <tr><td>3–8</td><td data-i18n="gcs.severe">Severe — consider intubation</td></tr>
     </table>
-    <p class="callout danger">In intubated or aphasic patients, record "NT" (not testable) for the verbal component and document the reason. A GCS ≤ 8 typically warrants airway protection.</p>
-    <h3>FAQ</h3>
-    <details class="faq"><summary>Can I use GCS in children?</summary><div class="body">The standard GCS applies to older children and adults. Infants use a paediatric adaptation where the verbal scale is replaced by a "best verbal/irritability" scale.</div></details>
+    <p class="callout danger" data-i18n="gcs.warn">In intubated or aphasic patients, record "NT" (not testable) for the verbal component and document the reason. A GCS ≤ 8 typically warrants airway protection.</p>
+    <h3 data-i18n="gcs.h3_faq">FAQ</h3>
+    <details class="faq"><summary data-i18n="gcs.faq1q">Can I use GCS in children?</summary><div class="body" data-i18n="gcs.faq1a">The standard GCS applies to older children and adults. Infants use a paediatric adaptation where the verbal scale is replaced by a "best verbal/irritability" scale.</div></details>
   </div>
 
   <script is:inline>
     const out = document.getElementById('out');
+    const t = (k) => window.__t(k);
     const groups = ['eye', 'verbal', 'motor'];
     function score() {
       let total = 0, done = true;
@@ -68,10 +69,10 @@ const base = import.meta.env.BASE_URL;
         if (active) total += parseInt(active.dataset.v, 10);
         else done = false;
       });
-      if (!done) { out.textContent = 'Select a response in each row.'; return; }
-      let cls = 'ok', label = 'Mild';
-      if (total <= 8) { cls = 'bad'; label = 'Severe'; }
-      else if (total <= 12) { cls = 'warn'; label = 'Moderate'; }
+      if (!done) { out.textContent = t('gcs.select'); return; }
+      let cls = 'ok', label = t('gcs.mild');
+      if (total <= 8) { cls = 'bad'; label = t('gcs.severe'); }
+      else if (total <= 12) { cls = 'warn'; label = t('gcs.moderate'); }
       out.innerHTML = `<span class="big">${total}</span> / 15 <span class="tag tag-${cls}">${label}</span>`;
     }
     groups.forEach((g) => {
@@ -83,5 +84,7 @@ const base = import.meta.env.BASE_URL;
         score();
       });
     });
+    document.addEventListener('i18n:changed', score);
+    score();
   </script>
 </Base>

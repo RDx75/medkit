@@ -1,0 +1,165 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<Base title="Cardiac Rhythms — Abnormal" activeSlug="cardiac-rhythms-abnormal">
+  <div class="breadcrumb"><a href={base}>MedKit</a> / <span>References</span> / <span>Cardiac Rhythms — Abnormal</span></div>
+  <article class="ref-page">
+    <div class="ref-body">
+<h2>Cardiac Rhythms — จังหวะผิดปกติ &amp; ฉุกเฉน</h2>
+<blockquote>"รู้จัก rhythm ผิดปกติ = ช่วยชีวิตได้"</blockquote>
+<h3>Supraventricular Arrhythmias</h3>
+<h4>Atrial Fibrillation (AFib) ⭐</h4>
+<h5>ลักษณะ</h5>
+<ul><li><strong>Irregularly irregular</strong> — R-R interval ไม่เท่ากันเลย</li><li><strong>ไม่มี P wave</strong> — แทนที่ด้วย <strong>f wave</strong> (fibrillation waves) ยึกยือ</li><li>QRS แคบ (&lt;0.12 วิ) — ถ้าไม่มี bundle branch block</li></ul>
+<h5>กลไก</h5>
+<ul><li>เซลล์หลายแห่งในหัวใจห้องบนปล่อยสัญญาณพร้อมกัน (chaotic)</li><li>AV node รับสัญญาณมั่วๆ ลงไป → ventricular rate ไม่สม่ำเสมอ</li></ul>
+<h5>ประเภท</h5>
+<table>
+<tr><th>Type</th><th>Rate</th><th>หมายเหตุ</th></tr>
+<tr><td>AF with slow ventricular response</td><td>&lt;60</td><td>อาจเกิดจาก AV block, ยา</td></tr>
+<tr><td>AF with moderate ventricular response</td><td>60-100</td><td>Controlled</td></tr>
+<tr><td><strong>AF with Rapid Ventricular Response (RVR)</strong></td><td><strong>&gt;100</strong></td><td><strong>ต้องรักษาเร่งด่วน</strong></td></tr>
+</table>
+<h5>สาเหตุ</h5>
+<p>1. <strong>Cardiac:</strong> ความดันสูง, โรคหัวใจ, โรคลิ้นหัวใจ, heart failure</p>
+<p>2. <strong>Non-cardiac:</strong> ไทรอยด์สูง, PE, sepsis, alcohol ("holiday heart"), electrolyte imbalance</p>
+<p>3. <strong>Idiopathic:</strong> Lone AF (ไม่พบสาเหตุ)</p>
+<h5>ภาวะแทรกซ้อน</h5>
+<ul><li><strong>Stroke</strong> — ก้อนเลือดใน left atrium หลุดไปอุดสมอง (เสี่ยง เพิ่ม 5 เท่า!)</li><li><strong>Heart failure</strong> — หัวใจเต้นเร็วนาน → หัว่างหัวใจ ดี้ด → pump failure</li></ul>
+<h5>การรักษา</h5>
+<p><strong>Stable Patient:</strong></p>
+<ul><li>Rate control: <strong>Amiodarone</strong> 150mg IV, <strong>Digoxin</strong> (ถ้ามี heart failure)</li><li>Anticoagulation: <strong>Warfarin</strong> (INR 2-3) หรือ <strong>DOACs</strong> (Dabigatran, Rivaroxaban, Apixaban)</li><li>Cardioversion: ทำ <strong>echo ก่อน</strong> (เช็ค thrombus!) หรือให้ warfarin 3 สัปดาห์ก่อน</li></ul>
+<p><strong>Unstable Patient (hypotension, AMS, chest pain):</strong></p>
+<ul><li><strong>Synchronized Cardioversion</strong> 120-200J ทันที</li><li>Echo guide ถ้าทำได้</li></ul>
+<h5>AF + WPW = DANGEROUS ⚠️</h5>
+<ul><li>Irregular wide complex tachycardia (QRS กว้าง)</li><li><strong>ห้ามให้ Digoxin, Verapamil, Diltiazem</strong> — block AV node → ทาง accessory pathway เร็วขึ้น → VF!</li><li><strong>ให้ Amiodarone</strong> หรือ <strong>Cardioversion</strong></li><li>Long term: <strong>Catheter ablation</strong></li></ul>
+<p>---</p>
+<h4>Atrial Flutter</h4>
+<h5>ลักษณะ</h5>
+<ul><li><strong>Sawtooth pattern</strong> (Flutter waves) คล้ายฟันเลื่อย — มองเห็นชัดใน leads II, III, aVF</li><li>Atrial rate ~300 bpm</li><li>Ventricular rate: 150 (2:1 conduction), 75 (4:1), หรือ variable</li><li><strong>ถ้าหมุนเร็วมากอาจมองไม่เห็น sawtooth</strong> → ดูเหมือน SVT</li></ul>
+<h5>กลไก</h5>
+<ul><li>Reentry circuit ใน right atrium หมุนเป็นวงเวียน (counterclockwise ตามปกติ)</li><li>AV node ป้องกันไม่ให้ลงทั้งหมด</li></ul>
+<h5>การรักษา</h5>
+<ul><li>Rate control: เหมือน AF (Amiodarone, CCB)</li><li>Cardioversion: ต่ำกว่า AF (50-100J)</li><li>Anticoagulation: <strong>เหมือน AF</strong> — เสี่ยง stroke เท่ากัน</li><li>Definitive: Catheter ablation (flutter ablation success rate &gt;95%)</li></ul>
+<p>---</p>
+<h4>SVT (Supraventricular Tachycardia) ⭐</h4>
+<h5>ลักษณะ</h5>
+<ul><li><strong>Regular narrow complex tachycardia</strong>, rate <strong>150-250 bpm</strong></li><li>P wave: <strong>ไม่เห็น</strong> หรือซ่อนอยู่ใน T wave</li><li><strong>Onset &amp; offset ทันที</strong> — "flip a switch"</li></ul>
+<h5>ประเภท</h5>
+<table>
+<tr><th>Type</th><th>กลไก</th><th>ความถี่</th></tr>
+<tr><td><strong>AVNRT</strong> (60% of SVT)</td><td>Reentry within AV node (fast/slow pathway)</td><td>150-250</td></tr>
+<tr><td><strong>AVRT</strong> (30% of SVT)</td><td>Reentry via accessory pathway (WPW)</td><td>150-250</td></tr>
+<tr><td>Atrial Tachycardia</td><td>1 ectopic focus in atrium</td><td>100-250</td></tr>
+<tr><td>Atrial Flutter</td><td>Reentry circuit in atrium</td><td>Ventricular ~150</td></tr>
+</table>
+<h5>การรักษา SVT (Stable)</h5>
+<p><strong>Step 1: Vagal Maneuvers</strong> (ทำก่อน — ไม่มี risk)</p>
+<ul><li><strong>Valsalva:</strong> บีบจมูก + กลันหายใจเข้า + เบ่งแรง (bear down) 15 วินาที</li><li><strong>Carotid sinus massage:</strong> นวด carotid ที่ขอบบนของ thyroid cartilage → <strong>ฟังก่อน!</strong> ถ้ามี bruit (เสียงฟู่) = ห้ามนวด</li><li><strong>Cold water immersion:</strong> จุ่มหน้าในน้ำเย็น 10-15 วิ (diving reflex)</li></ul>
+<p><strong>Step 2: Adenosine</strong></p>
+<ul><li><strong>6mg IV push เร็ว</strong> (ใน large vein — antecubital) → <strong>Saline flush 20cc</strong> ทันที</li><li>ถ้าไม่หาย → <strong>12mg IV push</strong> (อีก 1-2 นาที)</li><li>ถ้าไม่หายอีก → คิด VT → Amiodarone หรือ Cardioversion</li><li><strong>Adenosine half-life = 10 วินาที</strong> — ฉีดช้า = ไม่ได้ผล</li><li>ผู้ป่วยอาจรู้สึก: หวิว, เวียนศีรษะ, ร้อนวูบ, "feeling of impending doom" — <strong>ปกติ</strong> ผ่านไปใน 30 วินาที</li><li><strong>ระวัง:</strong> Asthma (อาจเกิด bronchospasm), WPW + AF (อาจเร็วขึ้น)</li></ul>
+<p><strong>Step 3: ถ้า Adenosine ไม่ได้ผล</strong></p>
+<ul><li><strong>Synchronized Cardioversion</strong> 50-100J</li><li>หรือ <strong>Amiodarone</strong> 150mg IV over 10 min</li><li>หรือ <strong>Diltiazem/Verapamil</strong> 2.5-5mg IV (ถ้าแน่ใจว่าเป็น SVT ไม่ใช่ VT)</li></ul>
+<p>---</p>
+<h3>Ventricular Arrhythmias ⭐⭐</h3>
+<h4>PVC (Premature Ventricular Contraction)</h4>
+<h5>ลักษณะ</h5>
+<ul><li><strong>Wide QRS</strong> (&gt;0.12 วิ) ที่เร็วกว่าควร (premature)</li><li><strong>ไม่มี P wave</strong> ก่อน PVC</li><li><strong>Compensatory pause</strong> หลัง PVC (complete)</li><li>T wave กลับทิศจาก QRS</li></ul>
+<h5>สาเหตุ</h5>
+<ul><li>ปกติในคนเป็นปกติ (caffeine, stress, fatigue)</li><li>Hypokalemia, Hypomagnesemia, Hypoxia</li><li>Ischemia, Heart failure, Digoxin toxicity</li><li>Post-MI (risk of VF)</li></ul>
+<h5>การรักษา</h5>
+<ul><li><strong>Asymptomatic → Observe</strong></li><li><strong>Symptomatic / frequent →</strong> หาสาเหตุ (check K, Mg, O2)</li><li><strong>Post-MI + frequent PVC → Amiodarone</strong> (ป้องกัน VF)</li></ul>
+<p>---</p>
+<h4>Ventricular Tachycardia (VT) ⭐⭐</h4>
+<h5>ลักษณะ</h5>
+<ul><li><strong>Wide complex tachycardia</strong> (QRS ≥0.12 วินาที)</li><li>Rate <strong>100-250 bpm</strong></li><li>Regular หรือ slightly irregular</li><li><strong>AV dissociation</strong> (P waves วิ่งคนละจังหวะจาก QRS) — pathognomonic</li></ul>
+<h5>ประเภท</h5>
+<table>
+<tr><th>Type</th><th>QRS</th><th>หมายเหตุ</th></tr>
+<tr><td><strong>Monomorphic VT</strong></td><td>QRS เหมือนกันทุก beat</td><td>พบบ่อยสุด</td></tr>
+<tr><td><strong>Polymorphic VT</strong></td><td>QRS เปลี่ยนรูปแบบ</td><td>ถ้า QT ยาว = Torsade</td></tr>
+<tr><td><strong>Torsade de Pointes</strong></td><td>QRS "twists" รอบ baseline</td><td>QT ยาว → Mg 2g IV</td></tr>
+<tr><td><strong>VF</strong></td><td>คลื่นกระจุย ไม่มี QRS</td><td>ช็อตเร็วที่สุด</td></tr>
+</table>
+<h5>การรักษา VT</h5>
+<p><strong>Stable (มี pulse, มี BP):</strong></p>
+<ul><li><strong>Amiodarone 150mg IV over 10 min</strong> → repeat 150mg → then 1mg/min drip</li><li>หรือ <strong>Procainamide</strong> 20-50mg/min (ห้ามให้ถ้า QT ยาว)</li><li>หรือ <strong>Lidocaine</strong> 1-1.5mg/kg IV (alternative)</li><li><strong>Synchronized Cardioversion</strong> 100J ถ้ายาไม่ได้ผล</li></ul>
+<p><strong>Unstable (hypotension, AMS, chest pain):</strong></p>
+<ul><li><strong>Synchronized Cardioversion</strong> 100J → 200J → 300J → 360J</li></ul>
+<p><strong>Pulseless VT:</strong></p>
+<ul><li><strong>Defibrillation</strong> (unsynchronized) 120-200J → CPR 2 min → repeat</li><li><strong>Shockable rhythm</strong> — เหมือน VF</li></ul>
+<p><strong>Torsade de Pointes:</strong></p>
+<ul><li><strong>Magnesium Sulfate 2g IV push</strong> (ไม่สน QT ยาวหรือไม่ — ให้ Mg เลย!)</li><li>Overdrive pacing (HR 100-120) ถ้า Mg ไม่ได้ผล</li><li><strong>ห้ามให้ Amiodarone, Procainamide</strong> (prolong QT → worse!)</li></ul>
+<p>---</p>
+<h4>Ventricular Fibrillation (VF) ⭐⭐⭐</h4>
+<h5>ลักษณะ</h5>
+<ul><li><strong>คลื่นกระจุย</strong> — ไม่มี QRS ชัดเจน</li><li>ไม่มี organized electrical activity</li><li><strong>ไม่มี cardiac output</strong> → ไม่มี pulse → cardiac arrest</li></ul>
+<h5>ประเภท</h5>
+<ul><li><strong>Coarse VF</strong> — คลื่นใหญ่ → โอกาสช็อตสูงกว่า</li><li><strong>Fine VF</strong> — คลื่นเล็ก → ดูเหมือน asystole → <strong>อาจช็อตได้!</strong></li><li><strong>PEA masquerading as fine VF</strong> — ต้องเช็ค pulse</li></ul>
+<h5>การรักษา (VF Protocol)</h5>
+<p>1. <strong>CPR ทันที</strong> (อย่ารอ!)</p>
+<p>2. <strong>Defibrillation</strong> 120-200J (Biphasic) → <strong>CPR 2 นาที</strong></p>
+<p>3. <strong>Defibrillation</strong> → <strong>CPR 2 นาที</strong> → <strong>Epinephrine 1mg IV</strong></p>
+<p>4. <strong>Defibrillation</strong> → <strong>CPR 2 นาที</strong> → <strong>Amiodarone 300mg IV</strong></p>
+<p>5. <strong>Defibrillation</strong> → <strong>CPR 2 นาที</strong> → <strong>Amiodarone 150mg IV</strong> (1 รอบ)</p>
+<p>6. ทำซ้ำ — หาสาเหตุ (H's &amp; T's)</p>
+<h5>Refractory VF (ช็อต &gt;3 รอบไม่หาย)</h5>
+<ul><li>Double sequential defibrillation (2 เครื่องช็อตพร้อมกัน)</li><li><strong>Amiodarone</strong> → ถ้าไม่หาย → <strong>Lidocaine</strong></li><li>หาสาเหตุ: <strong>PE, tension pneumothorax, MI, electrolyte</strong></li></ul>
+<p>---</p>
+<h3>Heart Blocks ⭐</h3>
+<h4>1st Degree AV Block</h4>
+<ul><li><strong>PR &gt;0.20 วินาที</strong> (5+ ช่องเล็ก) — คงที่</li><li>ทุก P wave มี QRS ตาม</li><li><strong>มักไม่ต้องรักษา</strong> — หาสาเหตุ (ยา, increased vagal tone)</li><li>พบใน athletes, young adults</li></ul>
+<h4>2nd Degree Type I (Wenckebach / Mobitz I)</h4>
+<ul><li><strong>PR ยาวขึ้นเรื่อยๆ</strong> จน QRS หลุด 1 beat แล้ววนใหม่</li><li>R-R interval <strong>สั้นลง</strong>ก่อน QRS หลุด</li><li><strong>มัก benign</strong> — พบใน young, athletes, increased vagal tone</li><li><strong>ไม่ต้องใส่ pacemaker</strong> (นอกจาก symptomatic)</li></ul>
+<h4>2nd Degree Type II (Mobitz II) ⚠️</h4>
+<ul><li><strong>PR คงที่</strong> แต่ QRS หลุดแบบไม่คาดคิด (2:1, 3:1, 4:1)</li><li><strong>QRS กว้าง</strong> (bundle branch involvement)</li><li><strong>อันตรายกว่า Type I</strong> — อาจ progress เป็น complete heart block</li><li><strong>ต้องใส่ pacemaker</strong> (permanent)</li></ul>
+<h4>3rd Degree (Complete Heart Block) ⚠️⚠️</h4>
+<ul><li><strong>P waves กับ QRS แยกกันเลย</strong> — ไม่เกี่ยวกันเลย</li><li>Atrial rate &gt; Ventricular rate</li><li><strong>Escape rhythm:</strong></li><li>Junctional: 40-60 bpm, QRS แคบ</li><li>Ventricular: 20-40 bpm, QRS กว้าง (อันตรายกว่า)</li><li><strong>ต้องใส่ pacemaker</strong> — ถ้า unstable → <strong>Transcutaneous pacing</strong> ทันที</li></ul>
+<p>---</p>
+<h3>Pre-excitation Syndromes</h3>
+<h4>Wolff-Parkinson-White (WPW)</h4>
+<ul><li><strong>Short PR</strong> (&lt;0.12) + <strong>Delta wave</strong> (slurred upstroke of QRS) + <strong>Wide QRS</strong></li><li>Accessory pathway (Bundle of Kent) ข้าม AV node</li><li><strong>SVT (AVRT):</strong> Narrow complex (orthodromic) หรือ Wide complex (antidromic)</li><li><strong>AF + WPW:</strong> Irregular wide complex → <strong>ห้าม Digoxin/CCB</strong> → Amiodarone/Cardioversion</li><li>Definitive: <strong>Catheter ablation</strong> (&gt;95% success)</li></ul>
+<h4>Lown-Ganong-Levine (LGL)</h4>
+<ul><li>Short PR interval แต่ <strong>ไม่มี delta wave</strong> (QRS ปกติ)</li><li>มี bypass tract (James fiber) ข้าม AV node แต่ไม่ผ่าน ventricular muscle</li><li>เสี่ยง SVT แต่ไม่เสี่ยง WPW-type AF</li></ul>
+<p>---</p>
+<h3>ตารางสรุป Emergency Rhythms</h3>
+<table>
+<tr><th>Rhythm</th><th>Shockable?</th><th>Rate</th><th>Key Feature</th><th>รักษา</th></tr>
+<tr><td>AFib</td><td>❌</td><td>Variable</td><td>Irregularly irregular, no P</td><td>Rate control + anticoag</td></tr>
+<tr><td>Atrial Flutter</td><td>❌</td><td>~150 (2:1)</td><td>Sawtooth</td><td>Rate control + anticoag</td></tr>
+<tr><td>SVT</td><td>❌ (sync if unstable)</td><td>150-250</td><td>Regular narrow, no P</td><td>Vagal → Adenosine → Cardioversion</td></tr>
+<tr><td>VT (stable)</td><td>❌</td><td>100-250</td><td>Wide regular</td><td>Amiodarone</td></tr>
+<tr><td>VT (unstable)</td><td>✅ Sync</td><td>100-250</td><td>Wide regular</td><td>Cardioversion</td></tr>
+<tr><td>Pulseless VT</td><td>✅</td><td>100-250</td><td>Wide, no pulse</td><td>Defib + CPR</td></tr>
+<tr><td>VF</td><td>✅</td><td>None</td><td>Chaotic</td><td>Defib + CPR</td></tr>
+<tr><td>Torsade</td><td>✅</td><td>150-250</td><td>Twisting wide QRS</td><td>Mg 2g IV</td></tr>
+<tr><td>Asystole</td><td>❌</td><td>None</td><td>Flat line</td><td>CPR + Epi</td></tr>
+<tr><td>PEA</td><td>❌</td><td>Variable</td><td>ECG but no pulse</td><td>CPR + Epi + H's &amp; T's</td></tr>
+<tr><td>3rd Degree HB</td><td>❌</td><td>20-60</td><td>P &amp; QRS independent</td><td>Pacemaker</td></tr>
+</table>
+<h3>Quiz</h3>
+<details class="faq"><summary>ผู้ป่วย ECG: Regular narrow complex tachycardia 180 bpm, ไม่เห็น P wave คืออะไร?</summary><div class="body">SVT — รักษา: Valsalva → Adenosine 6mg IV → Cardioversion</div></details>
+<details class="faq"><summary>VT + Hypotension ควรทำอะไร?</summary><div class="body"><strong>Synchronized Cardioversion</strong> 100J ทันที — unstable VT ต้องช็อต ไม่ใช่ให้ยา</div></details>
+<details class="faq"><summary>WPQ + AF ห้ามให้ยาอะไร?</summary><div class="body">Digoxin, Verapamil, Diltiazem — block AV node → accessory pathway เร็วขึ้น → VF</div></details>
+<h3>ภาษาไทย: Arrhythmia สำหรับ EMT</h3>
+<p>สิ่งสำคัญที่ EMT ต้องรู้:</p>
+<ul><li><strong>Shockable = VF + Pulseless VT</strong> → ช็อต!</li><li><strong>Non-shockable = Asystole + PEA</strong> → CPR + Epi</li><li><strong>SVT = Regular narrow fast</strong> → แจ้ง ALS ให้ Adenosine</li><li><strong>AF = Irregularly irregular</strong> → แจ้งโรงพยาบาล</li><li><strong>VT = Wide fast</strong> → แจ้ง ALS ด่วน</li></ul>
+<p><strong>"When in doubt, shock it out"</strong> — ถ้าไม่แน่ใจ แต่ patient pulseless → ช็อต (AED จะบอกเอง)</p>
+<h3>Related</h3>
+<ul><li><a class="related-link" href="../cardiac-rhythms-normal/">Cardiac Rhythms - Normal</a></li><li><a class="related-link" href="../ecg-interpretation/">ECG Interpretation</a></li><li><a class="related-link" href="../cardiac-acs/">Acute Coronary Syndrome</a></li></ul>
+    </div>
+    <aside class="ref-side">
+      <div class="ref-card">
+        <h3>Study further</h3>
+        <p class="muted">ตรวจสอบกับอาจารย์และแนวทางปฏิบัติล่าสุดเสมอ</p>
+        <ul class="ref-links">
+      <li><a href="https://cpr.heart.org/" target="_blank" rel="noopener">AHA CPR & ECC ↗</a></li>
+      <li><a href="https://doi.org/10.1161/CIR.0000000000001183" target="_blank" rel="noopener">AHA 2025 Guidelines ↗</a></li>
+        </ul>
+        <p class="src">Source: AHA 2025</p>
+      </div>
+    </aside>
+  </article>
+</Base>
