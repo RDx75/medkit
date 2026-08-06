@@ -8,6 +8,16 @@ your browser**, nothing is uploaded, no account needed.
 
 **https://rdx75.github.io/medkit/**
 
+## ✨ Features
+
+- **🧮 7 calculators** — BMI, BSA, GCS, APGAR, MAP, drug dosing, unit conversion
+- **📚 34 EMT references** — auto-generated from the Second Brain vault (Obsidian)
+- **✍️ EMT Quiz** — 60+ questions across 8 topics, category filter, shuffled every round
+- **🌐 i18n EN/TH** — one-click language toggle
+- **⚡ SPA-like navigation** — Astro View Transitions, scroll position preserved
+- **🔍 ⌘K search** — full-text search over every tool + reference
+- **🎨 Theme** — dark/light, accent color, font size & family controls
+
 ## 🧰 Tools
 
 ### Calculators
@@ -19,29 +29,51 @@ your browser**, nothing is uploaded, no account needed.
 | [GCS Calculator](https://rdx75.github.io/medkit/tools/gcs/) | Glasgow Coma Scale (3–15) |
 | [APGAR Calculator](https://rdx75.github.io/medkit/tools/apgar/) | Newborn APGAR score |
 | [Drug Dose by Weight](https://rdx75.github.io/medkit/tools/drug-dose/) | Weight-based dosing with max-dose guard |
-| [Unit Converter](https://rdx75.github.io/medkit/tools/unit-converter/) | Temp, weight, volume, length |
+| [Unit Converter](https://rdx75.github.io/medkit/tools/unit-converter/) | Temp, weight, volume, length + **clinical**: pressure (mmHg/kPa/cmH₂O/atm), glucose, creatinine, BUN, HbA1c, electrolytes |
 
-### References
-| Tool | Description |
-|------|-------------|
-| [CPR / BLS Guide](https://rdx75.github.io/medkit/tools/cpr/) | Adult/child/infant CPR steps |
-| [Vital Signs Ranges](https://rdx75.github.io/medkit/tools/vital-signs/) | Normal ranges by age |
+### References (34 — from the Second Brain vault)
+- **Assessment (5):** Scene Size-Up · Primary Assessment (ABCDE) · Secondary Assessment (SAMPLE) · Vital Signs Ranges · Patient Assessment
+- **Airway & Breathing (4):** Airway Management · OPA / NPA Adjuncts · Bag-Valve-Mask · Oxygen Therapy
+- **Cardiac (8):** CPR — Adult · CPR — Pediatric · AED Usage · Acute Coronary Syndrome · ECG Basics — 12-Lead · ECG Interpretation · Cardiac Rhythms — Normal · Cardiac Rhythms — Abnormal
+- **Trauma (6):** Bleeding & Shock · STOP THE BLEED · Fractures & Dislocations · Head & Spinal Injuries · Chest Trauma · Burns
+- **Medical (7):** Medical Emergencies · Allergic Reaction & Anaphylaxis · Diabetic Emergencies · Seizures · Stroke · Respiratory Emergencies · Poisoning & Overdose
+- **Pharmacology (2):** Pharmacology · EMT Medications
+- **Special Populations (2):** Pediatric Emergencies · OB-GYN Emergencies
 
 ### Study
 | Tool | Description |
 |------|-------------|
-| [EMT Quiz](https://rdx75.github.io/medkit/tools/quiz/) | Practice questions for EMT study |
+| [EMT Quiz](https://rdx75.github.io/medkit/tools/quiz/) | 60+ practice questions, 8 topics (BLS, Airway, Cardiac, Trauma, Medical, Pharmacology, Assessment, Special), category + count selection, shuffled every round |
 
 ## 🛠️ Stack
 
-- **Astro** (static site, no backend)
-- Plain CSS with dark/light theme, ⌘K search palette, responsive grid
+- **Astro** (static site, no backend) + TypeScript
+- Plain CSS with dark/light theme, accent colors, ⌘K search palette, responsive grid
+- **i18n**: EN/TH dictionary in `src/data/i18n.ts`
+- **View Transitions**: SPA-like navigation with per-page scroll restoration
 - Deploy: **GitHub Pages** via GitHub Actions (`.github/workflows/deploy.yml`)
   — build output goes to `gh-pages/medkit/` so the site lives at `/medkit/`
+
+## 🔄 SB → Web pipeline
+
+Reference pages are **generated from the Obsidian vault**, not hand-written:
+
+```
+sb_topics.txt  →  generate_refs.py  →  src/pages/refs/*.astro  +  public/search-index.json
+```
+
+- `sb_topics.txt` maps each slug → SB source file → category → external reference
+- `generate_refs.py` reads notes from `O:/Obsidian/03 - Knowledge Base/Health-EMT/`
+- `## Quiz` sections in the notes become FAQ accordions (`<details>`)
+- `### Related` wikilinks resolve to real in-site links (or are dropped)
+
+**Add a new reference:** drop the note in the vault → add one line to `sb_topics.txt`
+→ add one entry in `src/data/tools.ts` → run `python3 generate_refs.py && npm run build` → push.
 
 ## 🚀 Run locally
 
 ```bash
+python3 generate_refs.py   # only if you changed SB topics
 npm install
 npm run dev      # http://localhost:4321
 npm run build    # static output in dist/
@@ -51,13 +83,17 @@ npm run build    # static output in dist/
 
 ```
 src/
-  data/tools.ts          # central registry — add a tool here + a page to list it
-  layouts/Base.astro     # shell: header, sidebar, search, theme, footer
+  data/tools.ts          # central registry — add a tool + page to list it
+  data/i18n.ts           # EN/TH dictionary
+  data/questions.ts      # quiz question bank (60+ questions, 8 categories)
+  layouts/Base.astro     # shell: header, sidebar, search, theme, i18n, transitions
   pages/                 # index + about/privacy/terms
-  pages/tools/*.astro    # one page per calculator/reference
+  pages/tools/*.astro    # one page per calculator/study tool
+  pages/refs/*.astro     # generated by generate_refs.py (don't edit by hand)
   styles/global.css      # all styling
 public/
   favicon.svg
+  search-index.json      # full-text search index (generated)
 ```
 
 **Adding a new tool** = create `src/pages/tools/<slug>.astro` + one entry in `src/data/tools.ts`.
