@@ -318,32 +318,22 @@ const allSearch = [...toolSearch, ...refSearch];
         } catch (err) { /* ignore malformed href */ }
       });
 
-      // ---- Scroll restoration across View Transitions ----
-      // Remember each page's scrollY in sessionStorage; restore it after a
-      // View Transition swap so navigating via the sidebar doesn't jump to top.
-      // If the destination page was never visited, keep the source scroll
-      // position (so reading one long ref page → next ref page doesn't jump).
-      const SCROLL_KEY = 'medkit_scroll';
-      let lastScroll = 0;
-      // 1) Save current scroll before leaving (on swap-start)
+      // ---- Sidebar: keep its scroll position across View Transitions ----
+      // The sidebar is a long sticky column; when the user scrolls it to reach
+      // a lower item and clicks, we don't want it to snap back to the top.
+      const SB_KEY = 'medkit_sidebar_scroll';
       document.addEventListener('astro:before-swap', () => {
-        try {
-          lastScroll = window.scrollY;
-          const map = JSON.parse(sessionStorage.getItem(SCROLL_KEY) || '{}');
-          map[location.pathname] = window.scrollY;
-          sessionStorage.setItem(SCROLL_KEY, JSON.stringify(map));
-        } catch (e) {}
+        const sb = document.getElementById('sidebar');
+        if (sb) {
+          try { sessionStorage.setItem(SB_KEY, String(sb.scrollTop)); } catch (e) {}
+        }
       });
-      // 2) Restore after arriving (on swap, before paint so no flash)
       document.addEventListener('astro:after-swap', () => {
-        try {
-          const map = JSON.parse(sessionStorage.getItem(SCROLL_KEY) || '{}');
-          const saved = (map[location.pathname] !== undefined) ? map[location.pathname] : lastScroll;
-          requestAnimationFrame(() => {
-            const max = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-            window.scrollTo(0, Math.min(saved, max));
-          });
-        } catch (e) {}
+        const sb = document.getElementById('sidebar');
+        if (sb) {
+          const saved = parseInt(sessionStorage.getItem(SB_KEY) || '0', 10) || 0;
+          requestAnimationFrame(() => { sb.scrollTop = saved; });
+        }
       });
     </script>
   </body>
