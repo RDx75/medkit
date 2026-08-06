@@ -39,7 +39,7 @@ const base = import.meta.env.BASE_URL;
     <div class="callout" data-i18n="map.note">MAP is a guide; assess perfusion with clinical signs (capillary refill, urine output, mental status) too.</div>
   </div>
 
-  <script is:inline>
+  <script is:inline data-astro-rerun>
     const out = document.getElementById('out');
     const t = (k) => window.__t(k);
     function run() {

@@ -45,7 +45,7 @@ const base = import.meta.env.BASE_URL;
     <details class="faq"><summary data-i18n="drug.faq2q">Should I use ideal or actual body weight?</summary><div class="body" data-i18n="drug.faq2a">It depends on the drug and protocol. Some agents use actual body weight, others use ideal or adjusted body weight. Follow local guidance.</div></details>
   </div>
 
-  <script is:inline>
+  <script is:inline data-astro-rerun>
     const out = document.getElementById('out');
     const t = (k) => window.__t(k);
     function run() {

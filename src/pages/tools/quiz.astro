@@ -47,7 +47,7 @@ const base = import.meta.env.BASE_URL;
     <div class="callout" data-i18n="quiz.note">Quiz progress is not uploaded. This is for self-testing only — always confirm answers against your course material and instructor.</div>
   </div>
 
-  <script is:inline define:vars={{ questions }}>
+  <script is:inline define:vars={{ questions }} data-astro-rerun>
     // Fisher–Yates shuffle — fresh order every round
     function shuffle(arr) {
       const a = arr.slice();

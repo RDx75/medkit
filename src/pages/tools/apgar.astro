@@ -39,7 +39,7 @@ const base = import.meta.env.BASE_URL;
     <div class="callout" data-i18n="apgar.note">APGAR is a rapid assessment of transition, not a diagnosis of asphyxia. Repeat at 5, 10 and 20 min if ≤ 6.</div>
   </div>
 
-  <script is:inline>
+  <script is:inline data-astro-rerun>
     const out = document.getElementById('out');
     const t = (k) => window.__t(k);
     const comps = document.querySelectorAll('[data-comp]');

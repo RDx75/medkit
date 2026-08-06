@@ -42,7 +42,7 @@ const base = import.meta.env.BASE_URL || '/';
     <div class="callout danger" data-i18n="bmi.warn">BMI is a screening tool only and is not a diagnostic measure of health or body composition.</div>
   </div>
 
-  <script is:inline>
+  <script is:inline data-astro-rerun>
     const out = document.getElementById('out');
     const t = (k) => window.__t(k);
     function classify(bmi) {

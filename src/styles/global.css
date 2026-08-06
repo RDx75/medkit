@@ -41,6 +41,11 @@
 
 html { scroll-behavior: smooth; }
 
+/* Astro View Transitions: keep scroll stable across navigations instead of
+   jumping to top. Save per-path scrollY in sessionStorage and restore it
+   after each swap. */
+html { scroll-padding-top: 0; }
+
 body {
   margin: 0;
   font-family: var(--sans);
