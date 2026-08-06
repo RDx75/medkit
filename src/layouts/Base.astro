@@ -302,6 +302,19 @@ const allSearch = [...toolSearch, ...refSearch];
 
       // Apply i18n on load
       window.__applyI18n();
+
+      // ---- Prevent "jump to top" when clicking a link to the CURRENT page ----
+      // (e.g. tapping the active sidebar item reloads the page and scrolls up)
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href]');
+        if (!a) return;
+        try {
+          const u = new URL(a.href, location.href);
+          if (u.origin === location.origin && u.pathname === location.pathname && !u.hash) {
+            e.preventDefault();
+          }
+        } catch (err) { /* ignore malformed href */ }
+      });
     </script>
   </body>
 </html>
