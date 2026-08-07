@@ -1,6 +1,0 @@
-name = "medkit"
-compatibility_date = "2025-01-01"
-
-# Cloudflare Pages project (static). Deploy with: wrangler pages deploy dist
-# Custom domain med.mark.com is configured in the Cloudflare dashboard
-# (DNS tab -> Add record / Pages -> Custom domains).

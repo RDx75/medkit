@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 // links resolve under the repo path. Files are uploaded to the artifact root
 // (the /medkit/ part comes from the repo name, not a folder).
 export default defineConfig({
-  site: 'https://med.mark.com',
+  site: 'https://rdx75.github.io/medkit/',
   base: '/medkit/',
   output: 'static',
   trailingSlash: 'ignore',

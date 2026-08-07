@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """
 MedKit SB-to-Web generator
-Reads core EMT topics from SB (O:/Obsidian/03 - Knowledge Base/Health-EMT)
+Reads core EMT topics from your Second Brain vault (Health-EMT)
 and generates Astro reference pages under src/pages/refs/ with i18n shell
 + external reference links. Run BEFORE `npm run build`.
 
 Usage:  python generate_refs.py
 """
 import os, re, json
+from pathlib import Path
 
-SB = "O:/Obsidian/03 - Knowledge Base/Health-EMT"
-OUT = "O:/Projects/medkit/src/pages/refs"
-TOPICS = "O:/Projects/medkit/sb_topics.txt"
-PUBLIC = "O:/Projects/medkit/public"
+REPO = Path(__file__).resolve().parent
+# SB vault location: set MEDKIT_SB env var, or default to a relative path from repo root.
+SB = Path(os.environ.get("MEDKIT_SB", str(REPO / "../../Obsidian/03 - Knowledge Base/Health-EMT")))
+OUT = REPO / "src" / "pages" / "refs"
+TOPICS = REPO / "sb_topics.txt"
+PUBLIC = REPO / "public"
 
 # External study links per category (for "Learn more" footer)
 EXT_LINKS = {
@@ -180,8 +183,8 @@ def related_link(title, slug_map):
     return ""  # no matching ref page -> remove
 
 def gen_page(slug, src, cat, ref, slug_map):
-    path = os.path.join(SB, src)
-    if not os.path.exists(path):
+    path = SB / src
+    if not path.exists():
         print(f"  [WARN] missing: {src}")
         return None
     md = read_md(path)
@@ -213,30 +216,30 @@ const base = import.meta.env.BASE_URL || '/';
   </article>
 </Base>
 '''
-    outp = os.path.join(OUT, f"{slug}.astro")
+    outp = OUT / f"{slug}.astro"
     with open(outp, "w", encoding="utf-8") as f:
         f.write(tpl)
     return slug
 
 def main():
-    os.makedirs(OUT, exist_ok=True)
+    OUT.mkdir(parents=True, exist_ok=True)
     topics = parse_topics()
     # Map SB source filename (without .md) -> slug for Related wikilink resolution
     slug_map = {}
     for slug, src, cat, ref in topics:
-        slug_map[os.path.splitext(os.path.basename(src))[0]] = slug
+        slug_map[Path(src).stem] = slug
     print(f"Generating {len(topics)} reference pages...")
     slugs = []
     for slug, src, cat, ref in topics:
         r = gen_page(slug, src, cat, ref, slug_map)
         if r: slugs.append((r, cat))
     # write search index for full-text search (public/ -> dist root)
-    os.makedirs(PUBLIC, exist_ok=True)
+    PUBLIC.mkdir(parents=True, exist_ok=True)
     index = []
     for slug, cat in slugs:
         src_name = next((p[1] for p in topics if p[0] == slug), "")
-        src_path = os.path.join(SB, src_name)
-        if src_name and os.path.exists(src_path):
+        src_path = SB / src_name
+        if src_name and src_path.exists():
             md = read_md(src_path)
             text = md_to_text(md)
             index.append({
@@ -245,7 +248,7 @@ def main():
                 "text": text,
                 "emoji": EMOJI.get(cat, "📄"),
             })
-    idx_path = os.path.join(PUBLIC, "search-index.json")
+    idx_path = PUBLIC / "search-index.json"
     with open(idx_path, "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False)
     print(f"Done. {len(slugs)} pages + search-index.json ({len(index)} entries)")
